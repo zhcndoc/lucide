@@ -1,90 +1,90 @@
-# Contributor Covenant Code of Conduct
+# 贡献者公约行为准则
 
-This Code of Conduct outlines our expectations for participant behavior as well as the consequences for unacceptable behavior within our community. We are committed to providing a welcoming, safe, and inclusive environment for all members of our community.
+本行为准则概述了我们对参与者行为的期望，以及在社区内出现不可接受行为时所对应的后果。我们致力于为所有社区成员提供一个友好、安全、包容的环境。
 
-## Our Pledge
+## 我们的承诺
 
-We pledge to make our community welcoming, safe, and equitable for all.
+我们承诺让我们的社区对所有人都保持友好、安全且公平。
 
-We are committed to fostering an environment that respects and promotes the dignity, rights, and contributions of all individuals, regardless of characteristics including race, ethnicity, caste, color, age, physical characteristics, neurodiversity, disability, sex or gender, gender identity or expression, sexual orientation, language, philosophy or religion, national or social origin, socio-economic position, level of education, or other status. The same privileges of participation are extended to everyone who participates in good faith and in accordance with this Covenant.
+我们致力于营造一个尊重并促进所有个人的尊严、权利和贡献的环境，不论其种族、族裔、种姓、肤色、年龄、身体特征、神经多样性、残障、性别或性别认同、性别表达、性取向、语言、哲学或宗教、国家或社会出身、社会经济地位、受教育程度或其他身份如何。只要以善意并遵守本公约参与，所有参与者都享有同等的参与权利。
 
-## Encouraged Behaviors
+## 倡导的行为
 
-While acknowledging differences in social norms, we all strive to meet our community's expectations for positive behavior. We also understand that our words and actions may be interpreted differently than we intend based on culture, background, or native language.
+尽管我们承认社会规范存在差异，但我们都应努力满足社区对积极行为的期望。我们也理解，由于文化、背景或母语不同，我们的言语和行为可能会被以不同于我们本意的方式解读。
 
-With these considerations in mind, we agree to behave mindfully toward each other and act in ways that center our shared values, including:
+考虑到这些因素，我们同意彼此之间谨慎行事，并以体现我们共同价值观的方式行动，包括：
 
-1. Respecting the **purpose of our community**, our activities, and our ways of gathering.
-2. Engaging **kindly and honestly** with others.
-3. Respecting **different viewpoints** and experiences.
-4. **Taking responsibility** for our actions and contributions.
-5. Gracefully giving and accepting **constructive feedback**.
-6. Committing to **repairing harm** when it occurs.
-7. Behaving in other ways that promote and sustain the **well-being of our community**.
-
-
-## Restricted Behaviors
-
-We agree to restrict the following behaviors in our community. Instances, threats, and promotion of these behaviors are violations of this Code of Conduct.
-
-1. **Harassment.** Violating explicitly expressed boundaries or engaging in unnecessary personal attention after any clear request to stop.
-2. **Character attacks.** Making insulting, demeaning, or pejorative comments directed at a community member or group of people.
-3. **Stereotyping or discrimination.** Characterizing anyone’s personality or behavior on the basis of immutable identities or traits.
-4. **Sexualization.** Behaving in a way that would generally be considered inappropriately intimate in the context or purpose of the community.
-5. **Violating confidentiality**. Sharing or acting on someone's personal or private information without their permission.
-6. **Endangerment.** Causing, encouraging, or threatening violence or other harm toward any person or group.
-7. Behaving in other ways that **threaten the well-being** of our community.
-
-### Other Restrictions
-
-1. **Misleading identity.** Impersonating someone else for any reason, or pretending to be someone else to evade enforcement actions.
-2. **Failing to credit sources.** Not properly crediting the sources of content you contribute.
-3. **Promotional materials**. Sharing marketing or other commercial content in a way that is outside the norms of the community.
-4. **Irresponsible communication.** Failing to responsibly present content which includes, links or describes any other restricted behaviors.
+1. 尊重**我们社区的宗旨**、活动以及聚集方式。
+2. 以**友善和诚实**的方式与他人互动。
+3. 尊重**不同的观点**和经历。
+4. 对我们的行为和贡献**承担责任**。
+5. 以得体的方式给予并接受**建设性反馈**。
+6. 承诺在造成伤害时**修复伤害**。
+7. 以其他有助于促进并维持我们社区**福祉**的方式行事。
 
 
-## Reporting an Issue
+## 受限行为
 
-Tensions can occur between community members even when they are trying their best to collaborate. Not every conflict represents a code of conduct violation, and this Code of Conduct reinforces encouraged behaviors and norms that can help avoid conflicts and minimize harm.
+我们同意在社区内限制以下行为。实施、威胁或宣扬这些行为均违反本行为准则。
 
-When an incident does occur, it is important to report it promptly. To report a possible violation, email: [info@lucide.dev](mailto:info@lucide.dev)
+1. **骚扰。** 违反明确表达的边界，或在被明确要求停止后仍进行不必要的个人打扰。
+2. **人格攻击。** 针对社区成员或某一群体发表侮辱、贬低或轻蔑性评论。
+3. **刻板化或歧视。** 基于不可改变的身份或特征来定义任何人的人格或行为。
+4. **性化。** 在社区的语境或目的下，以通常会被视为不恰当亲昵的方式行事。
+5. **违反保密原则。** 未经允许分享或利用他人的个人或私人信息。
+6. **危害行为。** 对任何个人或群体造成、鼓动或威胁暴力或其他伤害。
+7. 以其他方式**威胁社区福祉**的行为。
 
-Community Moderators take reports of violations seriously and will make every effort to respond in a timely manner. They will investigate all reports of code of conduct violations, reviewing messages, logs, and recordings, or interviewing witnesses and other participants. Community Moderators will keep investigation and enforcement actions as transparent as possible while prioritizing safety and confidentiality. In order to honor these values, enforcement actions are carried out in private with the involved parties, but communicating to the whole community may be part of a mutually agreed upon resolution.
+### 其他限制
 
-
-## Addressing and Repairing Harm
-
-If an investigation by the Community Moderators finds that this Code of Conduct has been violated, the following enforcement ladder may be used to determine how best to repair harm, based on the incident's impact on the individuals involved and the community as a whole. Depending on the severity of a violation, lower rungs on the ladder may be skipped.
-
-1) Warning
-   1) Event: A violation involving a single incident or series of incidents.
-   2) Consequence: A private, written warning from the Community Moderators.
-   3) Repair: Examples of repair include a private written apology, acknowledgement of responsibility, and seeking clarification on expectations.
-2) Temporarily Limited Activities
-   1) Event: A repeated incidence of a violation that previously resulted in a warning, or the first incidence of a more serious violation.
-   2) Consequence: A private, written warning with a time-limited cooldown period designed to underscore the seriousness of the situation and give the community members involved time to process the incident. The cooldown period may be limited to particular communication channels or interactions with particular community members.
-   3) Repair: Examples of repair may include making an apology, using the cooldown period to reflect on actions and impact, and being thoughtful about re-entering community spaces after the period is over.
-3) Temporary Suspension
-   1) Event: A pattern of repeated violation which the Community Moderators have tried to address with warnings, or a single serious violation.
-   2) Consequence: A private written warning with conditions for return from suspension. In general, temporary suspensions give the person being suspended time to reflect upon their behavior and possible corrective actions.
-   3) Repair: Examples of repair include respecting the spirit of the suspension, meeting the specified conditions for return, and being thoughtful about how to reintegrate with the community when the suspension is lifted.
-4) Permanent Ban
-   1) Event: A pattern of repeated code of conduct violations that other steps on the ladder have failed to resolve, or a violation so serious that the Community Moderators determine there is no way to keep the community safe with this person as a member.
-   2) Consequence: Access to all community spaces, tools, and communication channels is removed. In general, permanent bans should be rarely used, should have strong reasoning behind them, and should only be resorted to if working through other remedies has failed to change the behavior.
-   3) Repair: There is no possible repair in cases of this severity.
-
-This enforcement ladder is intended as a guideline. It does not limit the ability of Community Managers to use their discretion and judgment, in keeping with the best interests of our community.
+1. **误导性身份。** 出于任何原因冒充他人，或为规避执行措施而假扮他人。
+2. **未注明来源。** 未正确标注你所贡献内容的来源。
+3. **宣传材料。** 以不符合社区规范的方式分享营销或其他商业内容。
+4. **不负责任的沟通。** 未能负责任地呈现包含、链接到或描述任何其他受限行为的内容。
 
 
-## Scope
+## 报告问题
 
-This Code of Conduct applies within all community spaces, and also applies when an individual is officially representing the community in public or other spaces. Examples of representing our community include using an official email address, posting via an official social media account, or acting as an appointed representative at an online or offline event.
+即使社区成员已尽最大努力合作，彼此之间也可能出现紧张关系。并非每一次冲突都意味着违反行为准则，本行为准则强化了有助于避免冲突并将伤害最小化的倡导行为和规范。
+
+当事件发生时，及时报告非常重要。要报告可能的违规行为，请发送电子邮件至：[info@lucide.dev](mailto:info@lucide.dev)
+
+社区版主会认真对待违规报告，并尽一切努力及时回应。他们将调查所有行为准则违规报告，审阅消息、日志和录音，或采访证人和其他参与者。社区版主会在优先保障安全和保密性的前提下，尽可能保持调查和执行措施的透明度。为尊重这些价值观，执行措施会在与相关方私下进行，但向整个社区通报也可能成为双方共同商定的解决方案的一部分。
 
 
-## Attribution
+## 处理并修复伤害
 
-This Code of Conduct is adapted from the Contributor Covenant, version 3.0, permanently available at [https://www.contributor-covenant.org/version/3/0/](https://www.contributor-covenant.org/version/3/0/).
+如果社区版主的调查认定本行为准则已被违反，可依据以下执行阶梯，结合事件对相关个人及整个社区的影响，决定如何最好地修复伤害。根据违规严重程度，可能会跳过阶梯中较低的层级。
 
-Contributor Covenant is stewarded by the Organization for Ethical Source and licensed under CC BY-SA 4.0. To view a copy of this license, visit [https://creativecommons.org/licenses/by-sa/4.0/](https://creativecommons.org/licenses/by-sa/4.0/)
+1) 警告
+   1) 事件：涉及单次事件或一系列事件的违规。
+   2) 后果：由社区版主发出的私下书面警告。
+   3) 修复：修复的示例包括私下书面道歉、承认责任，以及就期望进行澄清。
+2) 暂时限制活动
+   1) 事件：曾因违规收到警告后再次发生的违规，或首次发生较严重的违规。
+   2) 后果：私下书面警告，并附带一个限时冷静期，旨在强调事态严重性，并给予相关社区成员时间消化事件。冷静期可能仅限于特定沟通渠道，或仅限于与特定社区成员的互动。
+   3) 修复：修复的示例可能包括道歉、利用冷静期反思自己的行为及其影响，以及在期限结束后重新回到社区空间时保持谨慎。
+3) 暂时停权
+   1) 事件：社区版主已尝试通过警告处理但仍持续发生的重复违规模式，或单次严重违规。
+   2) 后果：附带恢复条件的私下书面警告。一般而言，暂时停权会给予被停权者时间反思其行为以及可能的纠正措施。
+   3) 修复：修复的示例包括尊重停权的精神、满足指定的恢复条件，以及在停权解除后谨慎地重新融入社区。
+4) 永久封禁
+   1) 事件：其他阶梯措施未能解决的重复行为模式，或严重到社区版主认定无法在此人继续作为成员的情况下维持社区安全的违规。
+   2) 后果：将移除其对所有社区空间、工具和沟通渠道的访问权限。一般而言，永久封禁应极少使用，应有充分理由，仅在尝试其他补救措施后仍无法改变行为时才采用。
+   3) 修复：在此严重程度下不存在可行的修复方式。
 
-For answers to common questions about Contributor Covenant, see the FAQ at [https://www.contributor-covenant.org/faq](https://www.contributor-covenant.org/faq). Translations are provided at [https://www.contributor-covenant.org/translations](https://www.contributor-covenant.org/translations). Additional enforcement and community guideline resources can be found at [https://www.contributor-covenant.org/resources](https://www.contributor-covenant.org/resources). The enforcement ladder was inspired by the work of [Mozilla’s code of conduct team](https://github.com/mozilla/inclusion).
+此执行阶梯旨在作为指南。它不限制社区管理者在符合我们社区最佳利益的前提下，凭借裁量和判断采取行动的能力。
+
+
+## 适用范围
+
+本行为准则适用于所有社区空间，也适用于个人在公共场合或其他场合正式代表社区时。代表我们社区的例子包括使用官方电子邮件地址、通过官方社交媒体账号发布内容，或在线上或线下活动中作为受委任代表行事。
+
+
+## 署名
+
+本行为准则改编自《Contributor Covenant》3.0 版，永久可见于 [https://www.contributor-covenant.org/version/3/0/](https://www.contributor-covenant.org/version/3/0/)。
+
+Contributor Covenant 由 Organization for Ethical Source 负责维护，并采用 CC BY-SA 4.0 许可证。要查看该许可证副本，请访问 [https://creativecommons.org/licenses/by-sa/4.0/](https://creativecommons.org/licenses/by-sa/4.0/)
+
+有关 Contributor Covenant 的常见问题解答，请参见 [https://www.contributor-covenant.org/faq](https://www.contributor-covenant.org/faq)。翻译版本可在 [https://www.contributor-covenant.org/translations](https://www.contributor-covenant.org/translations) 获取。更多执行与社区指南资源可在 [https://www.contributor-covenant.org/resources](https://www.contributor-covenant.org/resources) 查阅。该执行阶梯的灵感来源于 [Mozilla 行为准则团队](https://github.com/mozilla/inclusion) 的工作。

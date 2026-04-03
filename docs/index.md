@@ -7,7 +7,7 @@ titleTemplate: false
 head:
   - - link
     - rel: canonical
-      content: https://lucide.dev/
+      content: https://lucide.zhcndoc.com/
 
 hero:
   name: |

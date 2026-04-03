@@ -19,7 +19,7 @@ const {MessageSquare} = require('lucide-static');
 
 :::
 
-> 注意：每个图标名称均采用帕斯卡命名法（PascalCase）。你可以在 [Lucide 图标页面](https://lucide.dev/icons) 找到图标名称。
+> 注意：每个图标名称均采用帕斯卡命名法（PascalCase）。你可以在 [Lucide 图标页面](https://lucide.zhcndoc.com/icons) 找到图标名称。
 
 
 ## Node.js 示例

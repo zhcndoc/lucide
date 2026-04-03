@@ -209,7 +209,7 @@ Lucide 图标也可作为 web 字体使用。要使用它们，你首先需要�
 
 :::
 
-包含后，使用格式 `icon-{kebab-case-name}`。你可以从 [Lucide Icons 页面](https://lucide.dev/icons) 复制图标名称。
+包含后，使用格式 `icon-{kebab-case-name}`。你可以从 [Lucide Icons 页面](https://lucide.zhcndoc.com/icons) 复制图标名称。
 
 ```html
 <div class="icon-house"></div>

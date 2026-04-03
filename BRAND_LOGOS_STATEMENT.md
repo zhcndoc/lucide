@@ -1,73 +1,73 @@
-# Brand Logos Statement
+# 品牌 Logo 声明
 
-Our official stance on including brand logos in Lucide
+Lucide 关于是否包含品牌 Logo 的官方立场
 
 ## TL;DR
 
-Lucide **does not accept** brand logos, and we do not plan to add them in the future.
+Lucide **不接受**品牌 Logo，我们也不计划在未来添加它们。
 
-This is due to a combination of **legal restrictions**, **design consistency concerns**, and **practical maintenance reasons**.
+这是由于**法律限制**、**设计一致性顾虑**以及**实际维护原因**等多方面因素造成的。
 
-If you need brand logos, we recommend [Simple Icons](https://simpleicons.org/), which provides an extensive, legally safer collection of brand marks.
+如果你需要品牌 Logo，我们推荐使用 [Simple Icons](https://simpleicons.org/)，它提供了一个范围广泛、在法律上更安全的品牌标志集合。
 
 ---
 
-## 1. Historical Context
+## 1. 历史背景
 
-This is not a new debate — other icon sets have gone through the same discussion:
+这并不是一个新争论——其他图标集也经历过同样的讨论：
 
-- **Material Design Icons** [deprecated all brand icons](https://github.com/Templarian/MaterialDesign/issues/6602) because they didn't fit the style, didn't work well in one color, and often looked out of place in a 24×24px grid.
-- **Feather Icons** [came to the same conclusion](https://github.com/feathericons/feather/issues/763): brand logos have their own style, and forcing them into another inevitably leads to aesthetic compromises.
-- **Lucide** learned from these examples — we'd rather focus on making a consistent set of non-brand icons that all work together.
+- **Material Design Icons** [弃用了所有品牌图标](https://github.com/Templarian/MaterialDesign/issues/6602)，因为它们不符合风格、在单色下表现不好，而且在 24×24px 网格中经常显得格格不入。
+- **Feather Icons** [也得出了同样的结论](https://github.com/feathericons/feather/issues/763)：品牌 Logo 有它们自己的风格，而强行把它们塞进另一种风格里，最终 неиз免会导致审美上的妥协。
+- **Lucide** 从这些例子中吸取了经验——我们更愿意专注于打造一套一致的、非品牌类图标，让它们能够协同工作。
 
-## 2. Legal Considerations
+## 2. 法律考虑
 
-Most brand logos:
-- Are **protected by trademark or copyright**.
-- Have **strict rules** for how they can be used (colors, spacing, proportions, etc.).
-- **Don't allow modification** — but we'd have to change them to fit Lucide's style.
+大多数品牌 Logo：
+- 受**商标或版权**保护。
+- 对其使用方式有**严格规定**（颜色、间距、比例等）。
+- **不允许修改**——但为了适配 Lucide 的风格，我们必须对它们进行调整。
 
-This means adding them could:
-1. Break copyright or trademark law.
-2. Make both you and the Lucide project legally responsible.
-3. Force us to review every new request one by one for legal issues — something we simply can't do.
+这意味着添加它们可能会：
+1. 违反版权或商标法。
+2. 让你和 Lucide 项目都承担法律责任。
+3. 迫使我们逐一审查每一个新请求是否存在法律问题——而这正是我们做不到的。
 
-> **Note:** Simple Icons avoids this by keeping logos exactly as the brand provides them — though even they sometimes face [legal challenges](https://github.com/simple-icons/simple-icons/issues/11236).
+> **注意：** Simple Icons 通过保持 Logo 与品牌提供的原样完全一致来避免这一问题——不过即便如此，他们有时也会面临 [法律挑战](https://github.com/simple-icons/simple-icons/issues/11236)。
 
-## 3. Design & Consistency
+## 3. 设计与一致性
 
-Lucide is all about **visual consistency**.
+Lucide 的核心是**视觉一致性**。
 
-Adding brand logos would:
-- Break [our own design rules](https://lucide.dev/contribute/icon-design-guide#icon-design-principles) for shapes, proportions, and stroke.
-- Mix two fundamentally different categories of graphics (pictograms vs. corporate logos).
-- Create a library where a subset of icons will always look "out of place".
+添加品牌 Logo 会：
+- 破坏 [我们自己的设计规则](https://lucide.dev/contribute/icon-design-guide#icon-design-principles)，包括形状、比例和描边。
+- 混合两类本质上不同的图形（象形图 vs. 企业 Logo）。
+- 让这个库中的一部分图标始终看起来“格格不入”。
 
-If the logos are not in Lucide's style, why include them in Lucide at all? Better to use them from a dedicated brand icon source.
+如果这些 Logo 不是 Lucide 风格，那为什么还要把它们放进 Lucide 里呢？更好的做法是从专门的品牌图标来源中使用它们。
 
-## 4. Maintenance Burden
+## 4. 维护负担
 
-Even with our current **"no brand icon requests"** policy, people still request them regularly.
+即使在我们当前“**不接受品牌图标请求**”的政策下，人们仍然会定期提出这类需求。
 
-Having any brand icons in the set:
-- Makes people think we might add more in the future.
-- Leads to repeated requests and the same conversations over and over.
-- Wastes maintainer time redirecting people to the same explanation.
+只要集合中存在任何品牌图标：
+- 就会让人觉得我们将来可能会继续添加更多。
+- 会导致反复出现相同的请求和相同的讨论。
+- 会浪费维护者时间，不断把人引导到同样的解释上。
 
-Removing them entirely solves this problem.
+彻底移除它们可以解决这个问题。
 
-## 5. Recommended Alternatives
+## 5. 推荐替代方案
 
-If you need brand icons, try:
-- [Simple Icons](https://simpleicons.org/): offers a huge range of brands, in consistent SVG format, using a 24×24 viewBox, the same as ours.
-- Official brand asset pages: most major companies provide downloadable SVGs.
+如果你需要品牌图标，可以试试：
+- [Simple Icons](https://simpleicons.org/)：提供大量品牌图标，SVG 格式一致，使用 24×24 viewBox，与我们的设置相同。
+- 官方品牌素材页面：大多数大型公司都提供可下载的 SVG。
 
-You can use these alongside Lucide without bloating our core library.
+你可以将这些与 Lucide 一起使用，而不会让我们的核心库变得臃肿。
 
-## Final Words
+## 最后说明
 
-Lucide is an **icon** set, not a **logo** set.
+Lucide 是一个**图标**集，而不是一个**Logo**集。
 
-Logos belong in dedicated logo resources.
+Logo 应该放在专门的 Logo 资源中。
 
-We're focusing on what Lucide does best: providing a clean, cohesive, and legally safe collection of open-source icons.
+我们专注于 Lucide 最擅长的事情：提供一套简洁、协调、且在法律上更安全的开源图标集合。

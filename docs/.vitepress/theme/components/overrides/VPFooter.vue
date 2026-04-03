@@ -20,10 +20,10 @@ const links = computed(() => [
     text: '贡献',
     href: '/contribute/',
   },
-  {
-    text: '更新日志',
-    href: `${githubLink.value}/releases`,
-  },
+  // {
+  //   text: '更新日志',
+  //   href: `${githubLink.value}/releases`,
+  // },
   {
     text: 'GitHub',
     href: `${githubLink.value}`,

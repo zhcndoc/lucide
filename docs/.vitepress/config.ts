@@ -22,7 +22,7 @@ const description = '由社区打造的精美且一致的图标工具包。';
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title,
-  titleTemplate: ':title \u2013 Lucide 中文文档',
+  titleTemplate: ':title - Lucide 中文文档',
   description,
   cleanUrls: true,
   outDir: '.vercel/output/static',
@@ -64,16 +64,16 @@ export default defineConfig({
     },
     plugins: [
       groupIconVitePlugin(),
-      llmstxt({
-        ignoreFiles: [
-          'code-of-conduct.md',
-          'index.md',
-          'packages.md',
-          'showcase.md',
-          'brand-logo-statement.md',
-          'icons/**', // Not working, need investigation
-        ],
-      }),
+      // llmstxt({
+      //   ignoreFiles: [
+      //     'code-of-conduct.md',
+      //     'index.md',
+      //     'packages.md',
+      //     'showcase.md',
+      //     'brand-logo-statement.md',
+      //     'icons/**', // Not working, need investigation
+      //   ],
+      // }),
     ],
   },
   head: [
@@ -117,14 +117,14 @@ export default defineConfig({
       'meta',
       {
         property: 'og:url',
-        content: 'https://lucide.dev',
+        content: 'https://lucide.zhcndoc.com',
       },
     ],
     [
       'meta',
       {
         property: 'og:image',
-        content: 'https://lucide.dev/og.png',
+        content: 'https://lucide.zhcndoc.com/og.png',
       },
     ],
     [
@@ -173,7 +173,7 @@ export default defineConfig({
       'meta',
       {
         property: 'twitter:image',
-        content: 'https://lucide.dev/og.png',
+        content: 'https://lucide.zhcndoc.com/og.png',
       },
     ],
   ],
@@ -269,6 +269,11 @@ export default defineConfig({
       },
       { text: '软件包', link: '/packages' },
       { text: '展示', link: '/showcase' },
+      {
+        text: '简中文档',
+        link: 'https://www.zhcndoc.com',
+        target: '_blank',
+      }
     ],
     sidebar,
     socialLinks: [
@@ -277,7 +282,7 @@ export default defineConfig({
     ],
     footer: {
       message: `<a style="text-decoration: none;" target="_blank" href="https://www.zhcndoc.com">简中文档</a> | <a style="text-decoration: none;" rel="nofollow" target="_blank" href="https://beian.miit.gov.cn">沪ICP备2024070610号-3</a>`,
-      copyright: `Copyright © ${new Date().getFullYear()} Lucide Contributors. Released under the ISC License.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Lucide Contributors.`,
     },
     editLink: {
       pattern: 'https://github.com/zhcndoc/lucide/edit/main/docs/:path',

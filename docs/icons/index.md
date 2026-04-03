@@ -8,7 +8,7 @@ sidebar: true
 head:
   - - link
     - rel: canonical
-      content: https://lucide.dev/icons/
+      content: https://lucide.zhcndoc.com/icons/
 ---
 
 <script setup>

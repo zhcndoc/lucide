@@ -1,7 +1,7 @@
 import { PageData } from 'vitepress';
 
 export default async function getStructuredData(iconName: string, pageData: PageData) {
-  const url = `https://lucide.dev/icons/${iconName}`;
+  const url = `https://lucide.zhcndoc.com/icons/${iconName}`;
 
   return {
     '@context': 'https://schema.org',
@@ -14,12 +14,12 @@ export default async function getStructuredData(iconName: string, pageData: Page
     isPartOf: {
       '@type': 'WebSite',
       name: 'Lucide Icons',
-      url: 'https://lucide.dev',
+      url: 'https://lucide.zhcndoc.com',
     },
     breadcrumb: {
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Icons', item: 'https://lucide.dev/icons' },
+        { '@type': 'ListItem', position: 1, name: 'Icons', item: 'https://lucide.zhcndoc.com/icons' },
         { '@type': 'ListItem', position: 2, name: iconName, item: url },
       ],
     },

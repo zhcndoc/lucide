@@ -31,4 +31,4 @@ document.getElementById("app").innerHTML = Smile;
 ```
 :::
 
-> 注意：每个图标名称均为 PascalCase。您可以在 [Lucide 图标页面](https://lucide.dev/icons) 中找到图标名称。
+> 注意：每个图标名称均为 PascalCase。您可以在 [Lucide 图标页面](https://lucide.zhcndoc.com/icons) 中找到图标名称。

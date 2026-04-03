@@ -1,12 +1,12 @@
 ---
-title: 什么是 Lucide？
+title: 介绍
 description: Lucide 简介，这是一个开源图标库，为数字和非数字项目提供 1600+ 矢量 (svg) 文件用于显示图标和符号。
 nextPage:
   - comparison
   - installation
 ---
 
-# 什么是 Lucide？
+# 介绍
 
 Lucide 是一个开源图标库，为数字和非数字项目提供 1600+ 矢量 (svg) 文件，用于显示图标和符号。该库旨在通过提供几个 [官方包](/packages) 使设计师和开发人员更容易将图标纳入他们的项目中。
 
@@ -30,7 +30,7 @@ Lucide 包含具有不同变体和状态的图标，允许用户选择最适合�
 
 ## 官方包
 
-Lucide 的官方包旨在适用于不同平台，使用户更容易将图标集成到他们的项目中。这些包适用于各种技术，包括 [Web (Vanilla)](https://lucide.dev/guide/packages/lucide)、[React](https://lucide.dev/guide/packages/lucide-react)、[React Native](https://lucide.dev/guide/packages/lucide-react-native)、[Vue](https://lucide.dev/guide/packages/lucide-vue)、[Vue 3](https://lucide.dev/guide/packages/lucide-vue-next)、[Svelte](https://lucide.dev/guide/packages/lucide-svelte)、[Preact](https://lucide.dev/guide/packages/lucide-preact)、[Solid](https://lucide.dev/guide/packages/lucide-solid)、[Angular](https://lucide.dev/guide/packages/angular)、[Astro](https://lucide.dev/guide/packages/lucide-astro) 和 [NodeJS](https://lucide.dev/guide/packages/lucide-static#nodejs)。
+Lucide 的官方包旨在适用于不同平台，使用户更容易将图标集成到他们的项目中。这些包适用于各种技术，包括 [Web (Vanilla)](https://lucide.zhcndoc.com/guide/packages/lucide)、[React](https://lucide.zhcndoc.com/guide/packages/lucide-react)、[React Native](https://lucide.zhcndoc.com/guide/packages/lucide-react-native)、[Vue](https://lucide.zhcndoc.com/guide/packages/lucide-vue)、[Vue 3](https://lucide.zhcndoc.com/guide/packages/lucide-vue-next)、[Svelte](https://lucide.zhcndoc.com/guide/packages/lucide-svelte)、[Preact](https://lucide.zhcndoc.com/guide/packages/lucide-preact)、[Solid](https://lucide.zhcndoc.com/guide/packages/lucide-solid)、[Angular](https://lucide.zhcndoc.com/guide/packages/angular)、[Astro](https://lucide.zhcndoc.com/guide/packages/lucide-astro) 和 [NodeJS](https://lucide.zhcndoc.com/guide/packages/lucide-static#nodejs)。
 
 ## 社区
 

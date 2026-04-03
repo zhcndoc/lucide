@@ -1,170 +1,170 @@
 [
   {
     "name": "accessibility",
-    "title": "可访问性"
+    "title": "Accessibility"
   },
   {
     "name": "account",
-    "title": "账户与访问"
+    "title": "Accounts & access"
   },
   {
     "name": "animals",
-    "title": "动物"
+    "title": "Animals"
   },
   {
     "name": "arrows",
-    "title": "箭头"
+    "title": "Arrows"
   },
   {
     "name": "buildings",
-    "title": "建筑"
+    "title": "Buildings"
   },
   {
     "name": "charts",
-    "title": "图表"
+    "title": "Charts"
   },
   {
     "name": "communication",
-    "title": "通信"
+    "title": "Communication"
   },
   {
     "name": "connectivity",
-    "title": "连接性"
+    "title": "Connectivity"
   },
   {
     "name": "cursors",
-    "title": "光标"
+    "title": "Cursors"
   },
   {
     "name": "design",
-    "title": "设计"
+    "title": "Design"
   },
   {
     "name": "development",
-    "title": "编码与开发"
+    "title": "Coding & development"
   },
   {
     "name": "devices",
-    "title": "设备"
+    "title": "Devices"
   },
   {
     "name": "emoji",
-    "title": "表情"
+    "title": "Emoji"
   },
   {
     "name": "files",
-    "title": "文件图标"
+    "title": "File icons"
   },
   {
     "name": "finance",
-    "title": "财务"
+    "title": "Finance"
   },
   {
     "name": "food-beverage",
-    "title": "食品与饮料"
+    "title": "Food & beverage"
   },
   {
     "name": "gaming",
-    "title": "游戏"
+    "title": "Gaming"
   },
   {
     "name": "home",
-    "title": "家居"
+    "title": "Home"
   },
   {
     "name": "layout",
-    "title": "布局"
+    "title": "Layout"
   },
   {
     "name": "mail",
-    "title": "邮件"
+    "title": "Mail"
   },
   {
     "name": "math",
-    "title": "数学"
+    "title": "Mathematics"
   },
   {
     "name": "medical",
-    "title": "医疗"
+    "title": "Medical"
   },
   {
     "name": "multimedia",
-    "title": "多媒体"
+    "title": "Multimedia"
   },
   {
     "name": "nature",
-    "title": "自然"
+    "title": "Nature"
   },
   {
     "name": "navigation",
-    "title": "导航、地图与兴趣点"
+    "title": "Navigation, Maps, and POIs"
   },
   {
     "name": "notifications",
-    "title": "通知"
+    "title": "Notification"
   },
   {
     "name": "people",
-    "title": "人物"
+    "title": "People"
   },
   {
     "name": "photography",
-    "title": "摄影"
+    "title": "Photography"
   },
   {
     "name": "science",
-    "title": "科学"
+    "title": "Science"
   },
   {
     "name": "seasons",
-    "title": "四季"
+    "title": "Seasons"
   },
   {
     "name": "security",
-    "title": "安全"
+    "title": "Security"
   },
   {
     "name": "shapes",
-    "title": "形状"
+    "title": "Shapes"
   },
   {
     "name": "shopping",
-    "title": "购物"
+    "title": "Shopping"
   },
   {
     "name": "social",
-    "title": "社交"
+    "title": "Social"
   },
   {
     "name": "sports",
-    "title": "运动"
+    "title": "Sports"
   },
   {
     "name": "sustainability",
-    "title": "可持续发展"
+    "title": "Sustainability"
   },
   {
     "name": "text",
-    "title": "文本格式"
+    "title": "Text formatting"
   },
   {
     "name": "time",
-    "title": "时间与日历"
+    "title": "Time & calendar"
   },
   {
     "name": "tools",
-    "title": "工具"
+    "title": "Tools"
   },
   {
     "name": "transportation",
-    "title": "交通运输"
+    "title": "Transportation"
   },
   {
     "name": "travel",
-    "title": "旅行"
+    "title": "Travel"
   },
   {
     "name": "weather",
-    "title": "天气"
+    "title": "Weather"
   }
 ]
