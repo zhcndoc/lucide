@@ -1,31 +1,31 @@
 ---
-description: Learn how to use SVG sprites with Lucide icons in your project, including basic usage and inline options.
+description: 了解如何在项目中使用 Lucide 图标的 SVG 精灵，包括基本用法和内联选项。
 ---
 <script setup>
 import Sandpack from '~/.vitepress/theme/components/editors/Sandpack.vue'
 </script>
-# Using the SVG sprite
+# 使用 SVG 精灵
 
-Learn how to use SVG sprites with Lucide icons in your project, including basic usage and inline options.
+了解如何在项目中使用 Lucide 图标的 SVG 精灵，包括基本用法和内联选项。
 
-:::warning Not recommended for high traffic production use
-The SVG sprite includes all icons, which can significantly increase your app's bundle size and load time. For production environments, we recommend using a bundler with tree-shaking support to include only the icons you actually use. Consider using one of the framework-specific [packages](../../packages.md).
+:::warning 不建议用于高流量的生产环境
+SVG 精灵包含所有图标，这可能会显著增加您的应用包大小和加载时间。对于生产环境，我们建议使用支持 tree-shaking 的打包器，仅包含您实际使用的图标。考虑使用其中一个特定框架的 [包](../../packages.md)。
 :::
 
-SVG sprites can be loaded as individual image, or used inline with the `<use>` element.
-You may also need an additional SVG loader to handle node_modules imports in your project. Check out our [codesandbox example](https://codesandbox.io/s/using-the-svg-sprite-lz1kk) for a working example.
+SVG 精灵可以作为单独的图片加载，也可以与 `<use>` 元素一起内联使用。
+您可能还需要一个额外的 SVG 加载器来处理项目中的 node_modules 导入。查看我们的 [codesandbox 示例](https://codesandbox.io/s/using-the-svg-sprite-lz1kk) 以获取工作示例。
 
-## Basic sprite usage
+## 基本精灵用法
 
-SVG sprites can be imported directory in img tags, and select the icon with <br>the `#{icon-name}` syntax:
+SVG 精灵可以直接在 img 标签中导入，并使用 <br>`#{icon-name}` 语法选择图标：
 
 ```html
 <img src="lucide-static/sprite.svg#house" />
 ```
 
-## Inline usage
+## 内联用法
 
-You can also use the sprite inline with the `<use>` element. This allows you to apply CSS styles directly to the SVG elements.
+您也可以使用 `<use>` 元素内联使用精灵。这允许您直接将 CSS 样式应用于 SVG 元素。
 
 ::: sandpack {template=vanilla showTabs=false editorHeight=480 editorWidthPercentage=60 dependencies="lucide-static"}
 
@@ -61,9 +61,9 @@ document.getElementById('sprite').innerHTML = sprite;
 
 :::
 
-## Inline with CSS helper class
+## 使用 CSS 辅助类内联
 
-If you'd prefer, you can use CSS to hold your base SVG properties:
+如果您愿意，可以使用 CSS 来保存您的基础 SVG 属性：
 
 ::: sandpack {template=vanilla editorHeight=320 editorWidthPercentage=60 dependencies="lucide-static"}
 

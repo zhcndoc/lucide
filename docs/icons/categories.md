@@ -1,9 +1,9 @@
 ---
-title: Categories
-description: Explore Lucide icons organized into various categories for easier browsing.
+title: 分类
+description: 探索按各种分类组织的 Lucide 图标，以便更轻松地浏览。
 layout: page
 outline: 2
-outlineTitle: Categories
+outlineTitle: 分类
 sidebar: true
 ---
 

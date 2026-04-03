@@ -1,18 +1,18 @@
 ---
-title: Lucide Lab - Angular
-description: Learn how to use icons from Lucide Lab in your Angular application.
+title: 适用于 Angular 的 Lucide Lab
+description: 学习如何在您的 Angular 应用程序中使用 Lucide Lab 的图标。
 ---
 <script setup>
 import Sandpack from '~/.vitepress/theme/components/editors/SandpackAngular.vue'
 </script>
 
-# With Lucide Lab or custom icons
+# 使用 Lucide Lab 或自定义图标
 
-[Lucide Lab](https://github.com/lucide-icons/lucide-lab) is a collection of icons that are not part of the Lucide main library.
+[Lucide Lab](https://github.com/lucide-icons/lucide-lab) 是不属于 Lucide 主库的图标集合。
 
-While they aren't provided as standalone components, they can be still be passed to the `LucideIcon` component the same way as official icons:
+虽然它们不作为独立组件提供，但仍可以像官方图标一样传递给 `LucideIcon` 组件：
 
-### Directly as LucideIconData
+### 直接作为 LucideIconData
 
 ::: sandpack {template=angular showTabs=false editorHeight=400 editorWidthPercentage=60 dependencies="@lucide/angular,@lucide/lab"}
 
@@ -38,7 +38,7 @@ export class App {
 :::
 
 
-### As a provided icon by name
+### 作为按名称提供的图标
 
 ::: sandpack {template=angular editorHeight=400 editorWidthPercentage=60 dependencies="@lucide/angular,@lucide/lab"}
 
@@ -75,11 +75,11 @@ export const appConfig: ApplicationConfig = {
 
 :::
 
-### Creating custom icon components
+### 创建自定义图标组件
 
-You can also create your own standalone icon components using `LucideIconBase`.
+您也可以使用 `LucideIconBase` 创建自己的独立图标组件。
 
-Be sure to use an SVG element selector, e.g. `svg[lucide{IconName}]`
+确保使用 SVG 元素选择器，例如 `svg[lucide{IconName}]`
 
 ::: sandpack {template=angular editorHeight=400 editorWidthPercentage=60 dependencies="@lucide/angular,@lucide/lab"}
 

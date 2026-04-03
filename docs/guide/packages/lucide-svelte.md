@@ -1,15 +1,15 @@
-# Lucide Svelte
+# 适用于 Svelte 的 Lucide
 
-Svelte components for Lucide icons that work seamlessly with both Svelte 4 and Svelte 5. Each icon is a reactive Svelte component that renders as an inline SVG, providing excellent performance and integration with Svelte's reactive system and modern features.
+适用于 Lucide 图标的 Svelte 组件，与 Svelte 4 和 Svelte 5 无缝协作。每个图标都是一个响应式 Svelte 组件，渲染为内联 SVG，提供卓越的性能以及与 Svelte 响应式系统和现代功能的集成。
 
-**What you can accomplish:**
-- Use icons as Svelte components with full reactivity and TypeScript support
-- Bind icon properties to reactive variables and stores
-- Create dynamic icon systems that respond to application state
-- Build type-safe interfaces with comprehensive TypeScript definitions
-- Optimize bundle sizes with direct icon imports and tree-shaking
+**你可以实现的功能：**
+- 将图标作为具有完整响应式和 TypeScript 支持的 Svelte 组件使用
+- 将图标属性绑定到响应式变量和 stores
+- 创建响应应用状态的动态图标系统
+- 利用全面的 TypeScript 定义构建类型安全的界面
+- 通过直接导入图标和树摇优化包大小
 
-## Installation
+## 安装
 
 ::: code-group
 
@@ -29,17 +29,17 @@ npm install @lucide/svelte
 bun add @lucide/svelte
 ```
 :::
-> `@lucide/svelte` is only for Svelte 5, for Svelte 4 use the `lucide-svelte` package.
+> `@lucide/svelte` 仅适用于 Svelte 5，对于 Svelte 4 请使用 `lucide-svelte` 包。
 
-## How to use
+## 如何使用
 
-Lucide is built with ES Modules, so it's completely tree-shakable.
+Lucide 基于 ES Modules 构建，因此完全支持树摇（tree-shakable）。
 
-Each icon can be imported as a Svelte component, which renders an inline SVG element. This way, only the icons that are imported into your project are included in the final bundle. The rest of the icons are tree-shaken away.
+每个图标都可以作为 Svelte 组件导入，该组件渲染一个内联 SVG 元素。这样，只有导入到项目中的图标才会包含在最终 bundle 中。其余图标会被树摇移除。
 
-### Example
+### 示例
 
-Default usage:
+默认用法：
 
 ```svelte
 <script>
@@ -49,7 +49,7 @@ Default usage:
 <Skull />
 ```
 
-Additional props can be passed to adjust the icon:
+可以传递额外的 props 来调整图标：
 
 ```svelte
 <script>
@@ -59,7 +59,7 @@ Additional props can be passed to adjust the icon:
 <Camera color="#ff3e98" />
 ```
 
-For faster builds and load times, you can import icons directly from the `@lucide/svelte/icons` directory:
+为了更快的构建和加载时间，你可以直接从 `@lucide/svelte/icons` 目录导入图标：
 
 ```svelte
 <script>
@@ -69,18 +69,18 @@ For faster builds and load times, you can import icons directly from the `@lucid
 <CircleAlert color="#ff3e98" />
 ```
 
-## Props
+## 属性
 
-| name                  | type      | default      |
+| 名称                  | 类型      | 默认值       |
 | --------------------- | --------- | ------------ |
 | `size`                | _number_  | 24           |
 | `color`               | _string_  | currentColor |
 | `strokeWidth`         | _number_  | 2            |
 | `absoluteStrokeWidth` | _boolean_ | false        |
 
-### Applying props
+### 应用属性
 
-To customize the appearance of an icon, you can pass custom properties as props directly to the component. The component accepts all SVG attributes as props, which allows flexible styling of the SVG elements. See the list of SVG Presentation Attributes on [MDN](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/Presentation).
+要自定义图标的外观，你可以直接将自定义属性作为 props 传递给组件。组件接受所有 SVG 属性作为 props，这允许灵活地样式化 SVG 元素。请参阅 [MDN](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/Presentation) 上的 SVG 呈现属性列表。
 
 ```svelte
 <script>
@@ -90,13 +90,13 @@ To customize the appearance of an icon, you can pass custom properties as props 
 <Phone fill="#333" />
 ```
 
-This results a filled phone icon.
+这将生成一个填充的电话图标。
 
-## Types
+## 类型
 
-The package includes type definitions for all icons. This is useful if you want to dynamically load icons with the `svelte:component` directive whether you are using TypeScript or JSDoc.
+该包包含所有图标的类型定义。如果你想使用 `svelte:component` 指令动态加载图标，无论你是否使用 TypeScript 或 JSDoc，这都很有用。
 
-### TypeScript Example
+### TypeScript 示例
 
 ::: code-group
 
@@ -179,7 +179,7 @@ The package includes type definitions for all icons. This is useful if you want 
 ```
 :::
 
-### JSDoc Example
+### JSDoc 示例
 
 ::: code-group
 
@@ -265,18 +265,18 @@ The package includes type definitions for all icons. This is useful if you want 
 
 :::
 
-For more details about typing the `svelte:component` directive, see the [Svelte documentation](https://svelte.dev/docs/typescript#types-componenttype).
+有关为 `svelte:component` 指令添加类型的更多详情，请参阅 [Svelte 文档](https://svelte.dev/docs/typescript#types-componenttype)。
 
-## With Lucide Lab or custom icons
+## 使用 Lucide Lab 或自定义图标
 
-[Lucide Lab](https://github.com/lucide-icons/lucide-lab) is a collection of icons that are not part of the Lucide main library.
+[Lucide Lab](https://github.com/lucide-icons/lucide-lab) 是不属于 Lucide 主库的图标集合。
 
-They can be used by using the `Icon` component.
-All props like the regular Lucide icons can be passed to adjust the icon appearance.
+可以通过使用 `Icon` 组件来使用它们。
+所有像常规 Lucide 图标一样的 props 都可以传递以调整图标外观。
 
-### Using the `Icon` component
+### 使用 `Icon` 组件
 
-This creates a single icon based on the iconNode passed and renders a Lucide icon component.
+这基于传入的 iconNode 创建单个图标并渲染一个 Lucide 图标组件。
 
 ```svelte
 <script>
@@ -288,15 +288,15 @@ import { pear, sausage } from '@lucide/lab';
 <Icon iconNode={sausage} color="red"/>
 ```
 
-## One generic icon component
+## 一个通用图标组件
 
-It is possible to create one generic icon component to load icons, but it is not recommended.
+可以创建一个通用图标组件来加载图标，但不推荐这样做。
 
 ::: danger
-The example below imports all ES Modules, so exercise caution when using it. Importing all icons will significantly increase the build size of the application, negatively affecting its performance. This is especially important when using bundlers like `Webpack`, `Rollup`, or `Vite`.
+下面的示例导入了所有 ES 模块，因此使用时请谨慎。导入所有图标将显著增加应用程序的构建大小，对其性能产生负面影响。当使用 `Webpack`、`Rollup` 或 `Vite` 等 bundlers 时，这一点尤其重要。
 :::
 
-### Icon Component Example
+### 图标组件示例
 
 ::: code-group
 
@@ -322,7 +322,7 @@ The example below imports all ES Modules, so exercise caution when using it. Imp
 
 :::
 
-#### Using the Icon Component
+#### 使用图标组件
 
 ```svelte
 <script>
@@ -332,18 +332,18 @@ The example below imports all ES Modules, so exercise caution when using it. Imp
 <LucideIcon name="Menu" />
 ```
 
-## Accessibility
+## 无障碍性
 
-By default, we hide icons from screen readers using `aria-hidden="true"`.
+默认情况下，我们使用 `aria-hidden="true"` 向屏幕阅读器隐藏图标。
 
-You can add accessibility attributes using aria-labels.
+你可以使用 aria-label 添加无障碍属性。
 
 ```svelte
 <script>
   import { Check } from '@lucide/svelte';
 </script>
 
-<Check aria-label="Task completed" />
+<Check aria-label="任务已完成" />
 ```
 
-For best practices on accessibility, please see our [accessibility guide](../accessibility.md).
+关于无障碍的最佳实践，请参阅我们的 [无障碍指南](../accessibility.md)。

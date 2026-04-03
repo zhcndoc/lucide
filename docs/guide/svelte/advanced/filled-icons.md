@@ -1,18 +1,18 @@
 ---
-title: Filled Icons - Svelte
-description: Learn how to use fills with Lucide icons in your Svelte application, and the limitations of using fills with Lucide icons.
+title: 填充图标 - Svelte
+description: 了解如何在 Svelte 应用程序中使用 Lucide 图标的填充效果，以及使用 Lucide 图标填充效果的限制。
 ---
 <script setup>
 import Sandpack from '~/.vitepress/theme/components/editors/SandpackSvelte.vue';
 </script>
 
-# Filled Icons
+# 填充图标
 
-Fills are officially not supported.
-However, all SVG properties are available on all icons.
-Fill can still be used and will work fine on certain icons.
+官方不支持填充效果。
+但是，所有图标上都可用所有 SVG 属性。
+填充仍然可以使用，并且在某些图标上效果良好。
 
-Example with stars:
+星星示例：
 
 ::: sandpack {template=vite-svelte showTabs=false editorHeight=480 editorWidthPercentage=60}
 

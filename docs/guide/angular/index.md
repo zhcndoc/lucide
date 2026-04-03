@@ -1,6 +1,6 @@
 ---
-title: Lucide for Angular
-description: A standalone, signal-based, zoneless implementation that makes it easy to integrate icons into your Angular projects.
+title: 适用于 Angular 的 Lucide
+description: 一个独立的、基于 Signal 且无 Zone 的实现，让您轻松将图标集成到 Angular 项目中。
 nextPage:
   - getting-started
 ---
@@ -13,31 +13,31 @@ import { angularSidebar } from '../../.vitepress/sidebar/angular'
 
 <!--@include: ../../../docs/images/package-logos/lucide-angular.svg -->
 
-# Lucide for Angular
+# 适用于 Angular 的 Lucide
 
-A standalone, signal-based, zoneless implementation that makes it easy to integrate icons into your Angular projects.
+一个独立的、基于 Signal 且无 Zone 的实现，让您轻松将图标集成到 Angular 项目中。
 
-List of features:
+功能列表：
 
-- **Easy to Use**: Use icons as standalone Angular components with full dependency injection support.
-- **Customizable**: Adjust size, color, and other properties via inputs or globally with an Angular provider.
-- **Tree-shakable**: Only the icons you use are included in your final bundle
-- **TypeScript Support**: Fully typed components for better developer experience.
+- **易于使用**：将图标作为独立的 Angular 组件使用，并提供完整的依赖注入支持。
+- **可定制**：通过 input 属性或全局 Angular provider 调整大小、颜色和其他属性。
+- **支持 Tree-shaking**：只有您使用的图标才会包含在最终的 bundle 中。
+- **TypeScript 支持**：完全类型化的组件，提供更佳的开发者体验。
 
-## Overview
+## 概述
 
 <OverviewLinkGrid>
   <OverviewLink v-for="item in angularSidebar[0].items.slice(1)" :key="item.link" :href="item.link" :title="item.text" :desc="item.desc"/>
 </OverviewLinkGrid>
 
-### Basics
+### 基础
 {{''}}
 
 <OverviewLinkGrid>
   <OverviewLink v-for="item in angularSidebar[1].items" :key="item.link" :href="item.link" :title="item.text" :desc="item.desc"/>
 </OverviewLinkGrid>
 
-### Advanced
+### 高级
 {{''}}
 
 <OverviewLinkGrid>

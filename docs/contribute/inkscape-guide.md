@@ -1,41 +1,40 @@
 ---
-title: Icon Design Guide
+title: 图标设计指南
 ---
 
-# Inkscape Setup Guide
+# Inkscape 设置指南
 
-This guide shows the steps to setup Inkscape for creating icons that conform to the Lucide design
-guidelines.
+本指南展示了设置 Inkscape 的步骤，以创建符合 Lucide 设计指南的图标。
 
-## Setting up The Canvas
+## 设置画布
 
-When opening a new document, Inkscape will create a canvas of a default size.  To change the size to 24x24:
+打开新文档时，Inkscape 会创建一个默认大小的画布。要将大小更改为 24x24：
 
-1. Open the Document Properties dialog (File -> Document Properties).
-2. On the “Page Size” tab, under “Custom Size” set the Units to `px` and set both Height and Width to 24.
-![Setting Page Size](../images/page-size.png?raw=true "Setting Page Size")
-3. On the “Grid” tab, select `Rectangular Grid` and click “New Grid”.
-![Setting Grid Properties](../images/grid-1.png?raw=true "Setting Grid Properties")
-4. Set the Grid Units to `px` and set Spacing X and Spacing Y both to 1.
-![Setting Grid Properties](../images/grid-2.png?raw=true "Setting Grid Properties")
-5. Close the Document Properties dialog.
-6. To center the canvas in the viewport, select View -> Zoom -> Drawing.
+1. 打开文档属性对话框（文件 -> 文档属性）。
+2. 在“页面大小”选项卡上，在“自定义大小”下将单位设置为 `px`，并将高度和宽度都设置为 24。
+![设置页面大小](../images/page-size.png?raw=true "设置页面大小")
+3. 在“网格”选项卡上，选择 `矩形网格` 并点击“新建网格”。
+![设置网格属性](../images/grid-1.png?raw=true "设置网格属性")
+4. 将网格单位设置为 `px`，并将 X 间距和 Y 间距都设置为 1。
+![设置网格属性](../images/grid-2.png?raw=true "设置网格属性")
+5. 关闭文档属性对话框。
+6. 要将画布居中于视口中，选择 视图 -> 缩放 -> 绘图。
 
-## Setting up The Paths
+## 设置路径
 
-1. Create a path or shape.
-2. With the path selected, open the Stroke and Fill panel by pressing `Ctrl+Shift+F` on your keyboard.
-![Stroke Style Properties](../images/strokes.png?raw=true "Setting Grid Properties")
-3. On the “Stroke Style” tab:
-   * Set Stroke Width to `2px`.
-   * Select the rounded join type.
-   * Select the rounded cap type.
-4. If the shape is a rectangle, select the rectangle and in the top of the screen below the menu bar, set `Rx` and `Ry` to `2px`.
-![Rectangle Radius Properties](../images/corner-radius.png?raw=true "Rectangle Radius Properties")
+1. 创建一条路径或形状。
+2. 选中路径后，按键盘上的 `Ctrl+Shift+F` 打开描边和填充面板。
+![描边样式属性](../images/strokes.png?raw=true "设置网格属性")
+3. 在“描边样式”选项卡上：
+   * 将描边宽度设置为 `2px`。
+   * 选择圆角连接类型。
+   * 选择圆角端点类型。
+4. 如果形状是矩形，选中矩形并在屏幕顶部菜单栏下方，将 `Rx` 和 `Ry` 设置为 `2px`。
+![矩形半径属性](../images/corner-radius.png?raw=true "矩形半径属性")
 
-## Saving A File
+## 保存文件
 
-1. When ready to save the file, click Save As and select “Optimized SVG” as the file type.
-![Save As](../images/save-as.png?raw=true "Save as")
-2. After clicking Save, to conform with the other icons in the package, set Pretty Printing to use spaces and set the indentation depth to 2.
-![Optimize](../images/optimize-settings.png?raw=true "Optimize")
+1. 准备保存文件时，点击另存为并选择“优化的 SVG"作为文件类型。
+![另存为](../images/save-as.png?raw=true "另存为")
+2. 点击保存后，为了符合包中其他图标的规范，将美化打印设置为使用空格，并将缩进深度设置为 2。
+![优化](../images/optimize-settings.png?raw=true "优化")

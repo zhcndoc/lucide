@@ -1,16 +1,16 @@
 ---
-title: Dynamic Icon Component - React
-description: Learn how to use the DynamicIcon component to load icons dynamically by name in your React application, and understand the caveats of using this approach.
+title: 动态图标组件 - React
+description: 学习如何在 React 应用程序中使用 DynamicIcon 组件按名称动态加载图标，并了解使用此方法的注意事项。
 ---
-# Dynamic Icon Component
+# 动态图标组件
 
-It is possible to use one generic icon component to load icons. But it is not recommended, since it is importing all icons during the build. See [Caveats](#caveats).
+可以使用一个通用图标组件来加载图标。但不推荐这样做，因为它会在构建期间导入所有图标。请参阅 [注意事项](#caveats)。
 
-`DynamicIcon` is useful for applications that want to show icons dynamically by icon name. For example, when using a content management system where icon names are stored in a database.
+`DynamicIcon` 对于想要按图标名称动态显示图标的应用程序很有用。例如，当使用图标名称存储在数据库中的内容管理系统时。
 
-For static use cases, it is recommended to import the icons directly.
+对于静态用例，建议直接导入图标。
 
-The same props can be passed to adjust the icon appearance. The `name` prop is required to load the correct icon.
+可以传递相同的 props 来调整图标外观。`name` prop 是加载正确图标所必需的。
 
 ```jsx
 import { DynamicIcon } from 'lucide-react/dynamic';
@@ -22,10 +22,10 @@ const App = () => (
 
 <hr>
 
-::: info Caveats
+::: info 注意事项
 
-- All icons are imported during build time, which increases build time.
-- The bundler will create a separate module for each icon, which can increase the number of network requests.
-- You can encounter flashing when loading the icon, since the icon is loaded dynamically.
-- When using server-side rendering, you need to make sure that the icon is available during the initial render.
+- 所有图标都会在构建时导入，这会增加构建时间。
+- 打包工具将为每个图标创建一个单独的模块，这可能会增加网络请求的数量。
+- 加载图标时可能会遇到闪烁，因为图标是动态加载的。
+- 使用服务器端渲染时，需要确保图标在初始渲染期间可用。
 :::

@@ -3,29 +3,29 @@ import OverviewLink from '../../.vitepress/theme/components/base/OverviewLink.vu
 import OverviewLinkGrid from '../../.vitepress/theme/components/base/OverviewLinkGrid.vue'
 </script>
 
-# Getting started
+# 入门指南
 
-This guide will help you get started with Lucide Static in your project.
-Make sure you have a your environment set up. If you don't have one yet, you can create a new project using Vite, Parcel or any other boilerplate of your choice.
+本指南将帮助你在项目中开始使用 Lucide Static。
+确保你已经设置好了环境。如果还没有，你可以使用 Vite、Parcel 或任何其他你选择的样板文件创建一个新项目。
 
-## For what use cases is `lucide-static` suitable?
+## `lucide-static` 适用于哪些用例？
 
-`lucide-static` is suitable for _very specific use cases_ where you want to use Lucide icons without relying on a JavaScript framework or component system. It's ideal for:
+`lucide-static` 适用于_非常特定的用例_，即你想在不依赖 JavaScript 框架或组件系统的情况下使用 Lucide 图标。它非常适合：
 
-- Projects that use icon fonts with plain CSS or utility-first frameworks
-- Embedding raw SVG files or sprites directly in HTML
-- Using SVGs as CSS background images
-- Importing SVG strings into Node.js environments
+- 使用纯 CSS 或实用优先框架配合图标字体的项目
+- 直接在 HTML 中嵌入原始 SVG 文件或雪碧图
+- 将 SVG 用作 CSS 背景图像
+- 将 SVG 字符串导入 Node.js 环境
 
-::: danger Not recommended for production high performance needs {#production-warning}
-SVG sprites and icon fonts include **all icons**, which can significantly increase your app's bundle size and load time.
+::: danger 不推荐用于生产环境的高性能需求 {#production-warning}
+SVG 雪碧图和图标字体包含**所有图标**，这会显著增加你的应用包大小和加载时间。
 
-For production environments, we recommend using a bundler with tree-shaking support to include only the icons you actually use. Consider using one of the framework-specific [packages](../../packages.md).
+对于生产环境，我们建议使用支持 tree-shaking 的打包工具，仅包含你实际使用的图标。可以考虑使用特定框架的 [包](../../packages.md)。
 :::
 
-## Installation
+## 安装
 
-### Package Managers
+### 包管理器
 
 ::: code-group
 

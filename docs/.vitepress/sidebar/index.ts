@@ -15,11 +15,11 @@ type Sidebar = UserConfig<DefaultTheme.Config>['themeConfig']['sidebar'];
 
 export const guideSidebarTop: DefaultTheme.SidebarItem[] = [
   {
-    text: 'Introduction',
+    text: '简介',
     items: [
-      { text: 'What is Lucide?', link: '/guide/' },
-      { text: 'Version 1', link: '/guide/version-1' },
-      { text: 'Installation', link: '/guide/installation' },
+      { text: '什么是 Lucide？', link: '/guide/' },
+      { text: 'Lucide V1', link: '/guide/version-1' },
+      { text: '安装', link: '/guide/installation' },
     ],
   },
 ];

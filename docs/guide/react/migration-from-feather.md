@@ -1,31 +1,31 @@
-# Migration Guide: react-feather → lucide-react
+# 迁移指南：react-feather → lucide-react
 
-`react-feather` is similar to `lucide-react`, the package is inspired by `react-feather`. The API is nearly identical, so migration is straightforward.
+`react-feather` 与 `lucide-react` 相似，该包灵感来源于 `react-feather`。API 几乎相同，因此迁移很简单。
 
-## 1. Install the new package
+## 1. 安装新包
 
 ```sh
 npm install lucide-react
 npm uninstall react-feather
 ```
 
-## 2. Update imports
+## 2. 更新导入
 
-Replace all `react-feather` imports with `lucide-react`:
+将所有 `react-feather` 导入替换为 `lucide-react`：
 
 ```diff
 - import { Home, User } from 'react-feather'
 + import { Home, User } from 'lucide-react'
 ```
 
-You can do this across your entire codebase with a find-and-replace:
+你可以在整个代码库中使用查找和替换来完成此操作：
 
-- Find: `from 'react-feather'`
-- Replace: `from 'lucide-react'`
+- 查找：`from 'react-feather'`
+- 替换：`from 'lucide-react'`
 
-## 3. Renamed icons
+## 3. 重命名的图标
 
-Four icons have been renamed. Update any usages of these:
+四个图标已被重命名。更新这些图标的任何用法：
 
 | react-feather | lucide-react |
 | ------------- | ------------ |
@@ -34,7 +34,7 @@ Four icons have been renamed. Update any usages of these:
 | `Table`       | `Table2`     |
 | `Tool`        | `Wrench`     |
 
-### Examples
+### 示例
 
 ```diff
 - import { GitHub, Grid, Table, Tool } from 'react-feather'
@@ -53,6 +53,6 @@ Four icons have been renamed. Update any usages of these:
 + <Wrench />
 ```
 
-## 4. All other icons
+## 4. 所有其他图标
 
-All remaining icons keep the same name and work as drop-in replacements. No other changes to props or usage are required.
+所有剩余图标保持相同的名称，并可作为直接替代品使用。无需对 props 或用法进行其他更改。

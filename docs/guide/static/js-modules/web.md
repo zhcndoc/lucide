@@ -2,13 +2,13 @@
 import Sandpack from '~/.vitepress/theme/components/editors/Sandpack.vue'
 </script>
 
-# Use Lucide in Web
+# 在 Web 中使用 Lucide
 
-:::warning Not recommended for high traffic production use
-This library exports each svg as basic strings. We have a more optimized library for web. Which is smaller in size and supports color, size and strokeWidth. See [Lucide](../../lucide/index.md).
+:::warning 不建议用于高流量的生产环境
+此库将每个 SVG 导出为基本字符串。我们有一个针对 Web 优化的库。它体积更小，并支持颜色、大小和 strokeWidth。请参阅 [Lucide](../../lucide/index.md)。
 :::
 
-You can also import SVG strings in your web projects, with the lucide-static package. Each icon is exported as a string containing the SVG markup, which can be used in client-side rendering.
+您也可以使用 lucide-static 包在 Web 项目中导入 SVG 字符串。每个图标都导出为包含 SVG 标记的字符串，可用于客户端渲染。
 
 ::: sandpack {template=vanilla showTabs=false editorHeight=295 editorWidthPercentage=60 dependencies="lucide-static"}
 
@@ -31,4 +31,4 @@ document.getElementById("app").innerHTML = Smile;
 ```
 :::
 
-> Note: Each icon name is in PascalCase. You can find the icon names in the [Lucide Icons page](https://lucide.dev/icons).
+> 注意：每个图标名称均为 PascalCase。您可以在 [Lucide 图标页面](https://lucide.dev/icons) 中找到图标名称。

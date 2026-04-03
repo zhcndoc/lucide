@@ -1,46 +1,46 @@
 ---
-title: Accessibility - Angular
-description: Best practices for accessible icons in your Angular application.
+title: 无障碍 - Angular
+description: 在 Angular 应用程序中使用无障碍图标的最佳实践。
 ---
 
 <script setup>
 import OverviewLink from '~/.vitepress/theme/components/base/OverviewLink.vue'
 </script>
 
-# Accessibility
+# 无障碍
 
-Lucide icons ship with `aria-hidden="true"` by default. In almost all cases this is exactly what you want.
+Lucide 图标默认带有 `aria-hidden="true"`。在几乎所有情况下，这正是你想要的。
 
-## Should icons be accessible?
+## 图标应该具备无障碍性吗？
 
-Most of the time, icons are used purely for decoration or visual reinforcement. Exposing decorative icons to assistive technologies can create unnecessary noise for screen reader users.
+大多数时候，图标纯粹用于装饰或视觉强化。将装饰性图标暴露给辅助技术会给屏幕阅读器用户带来不必要的噪音。
 
-For a broader explanation of this, and other best practices on how to use icons accessibly in your application, please refer to our detailed guide on accessibility:
+关于这方面的更广泛解释，以及如何在应用程序中以无障碍方式使用图标的其他最佳实践，请参阅我们关于无障碍性的详细指南：
 
-<OverviewLink href="/guide/accessibility" title="Accessible Icons" desc="Best practices for accessible icons in your application."/>
+<OverviewLink href="/guide/accessibility" title="无障碍图标" desc="在应用程序中使用无障碍图标的最佳实践。"/>
 
-Only if an icon **conveys essential meaning on its own** should it be made accessible. The sections below explain how to do that in Angular.
+只有当图标**本身传达基本含义**时，才应使其具备无障碍性。下面的部分解释了如何在 Angular 中做到这一点。
 
-## Making an Icon Accessible
+## 使图标具备无障碍性
 
-To expose an icon to assistive technologies, provide an accessible name by binding the `title` input of the icon component.
+要将图标暴露给辅助技术，请通过绑定图标组件的 `title` 输入来提供一个无障碍名称。
 
-This removes the `aria-hidden` attribute and makes the icon visible to screen readers.
+这将移除 `aria-hidden` 属性并使图标对屏幕阅读器可见。
 
 ```angular-html
-<svg lucideHouse title="This is my house" />
+<svg lucideHouse title="这是我的房子" />
 ```
 
-Choose a label that clearly describes the meaning of the icon or the action it represents in the context of your application.
+选择一个能清楚描述图标含义或其在你应用程序上下文中所代表操作的标签。
 
-## Accessible Icon Buttons
+## 无障碍图标按钮
 
-When an icon is used inside a button, the accessible label should usually be applied to the button itself, and not the icon.
+当图标在按钮内部使用时，无障碍标签通常应应用于按钮本身，而不是图标。
 
 ```angular-html
-<button aria-label="Go to home">
+<button aria-label="前往首页">
   <svg lucideHouse></svg>
 </button>
 ```
 
-This ensures assistive technologies describe the interactive element, rather than the decorative graphic inside it.
+这确保了辅助技术描述的是交互元素，而不是其内部的装饰性图形。

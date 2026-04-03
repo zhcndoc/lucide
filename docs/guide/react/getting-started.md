@@ -1,6 +1,6 @@
 ---
-title: Getting started - React
-description: This guide will help you get started with Lucide in your React project.
+title: 入门指南 - React
+description: 本指南将帮助你在 React 项目中开始使用 Lucide。
 ---
 <script setup>
 import OverviewLink from '../../.vitepress/theme/components/base/OverviewLink.vue'
@@ -8,12 +8,12 @@ import OverviewLinkGrid from '../../.vitepress/theme/components/base/OverviewLin
 import { reactSidebar } from '../../.vitepress/sidebar/react'
 </script>
 
-# Getting started
+# 入门指南
 
-This guide will help you get started with Lucide in your React project.
-Make sure you have a React environment set up. If you don't have one yet, you can create a new React project using Create React App, Vite, or any other React boilerplate of your choice.
+本指南将帮助你在 React 项目中开始使用 Lucide。
+确保你已经设置好了 React 环境。如果还没有，你可以使用 Create React App、Vite 或任何其他你选择的 React 样板项目来创建一个新的 React 项目。
 
-## Installation
+## 安装
 
 ::: code-group
 
@@ -35,42 +35,42 @@ bun add lucide-react
 
 :::
 
-## Importing your first icon
+## 导入你的第一个图标
 
-Lucide is built with ES Modules, so it's completely tree-shakable.
+Lucide 是基于 ES Modules 构建的，因此它完全支持 tree-shaking。
 
-Each icon can be imported as a React component, which renders an inline SVG element. This way, only the icons that are imported into your project are included in the final bundle. The rest of the icons are tree-shaken away.
+每个图标都可以作为 React 组件导入，它会渲染一个内联 SVG 元素。这样，只有导入到你项目中的图标才会包含在最终的打包文件中。其余的图标会被 tree-shaking 移除。
 
 ```jsx
 import { Camera } from 'lucide-react';
-// Usage
+// 用法
 const App = () => {
   return <Camera />;
 };
 export default App;
 ```
 
-## Props
+## 属性
 
-To customize the appearance of an icon, you can use the following props:
+要自定义图标的外观，你可以使用以下属性：
 
-| name                  | type      | default      |
+| 名称                  | 类型      | 默认值       |
 | --------------------- | --------- | ------------ |
 | `size`                | *number*  | 24           |
 | `color`               | *string*  | currentColor |
 | `strokeWidth`         | *number*  | 2            |
 | `absoluteStrokeWidth` | *boolean* | false        |
 
-Because icons render as SVG elements, all standard SVG attributes can also be applied as props. See the list of SVG Presentation Attributes on [MDN](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/Presentation).
+因为图标渲染为 SVG 元素，所有标准的 SVG 属性也可以作为属性应用。请参阅 [MDN](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/Presentation) 上的 SVG 表现属性列表。
 
 ```jsx
-// Usage
+// 用法
 const App = () => {
   return <Camera size={48} color="red" strokeWidth={1} />;
 };
 ```
 
-More examples and details how to use props, continue the guide:
+更多关于如何使用属性的示例和细节，请继续阅读指南：
 
 <OverviewLinkGrid>
   <OverviewLink v-for="item in reactSidebar[1].items" :key="item.link" :href="item.link" :title="item.text" :desc="item.desc"/>

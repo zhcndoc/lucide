@@ -1,17 +1,17 @@
 ---
-title: Icon provider - Angular
-description: Learn how to register icons globally using provideLucideIcons, including custom and legacy icons.
+title: 图标提供者 - Angular
+description: 了解如何使用 provideLucideIcons 全局注册图标，包括自定义图标和遗留图标。
 ---
 
-# Icon provider
+# 图标提供者
 
-You can use the `LucideDynamicIcon` component to render icons by name. To use an icon by name, you must first register it with `provideLucideIcons`.
+你可以使用 `LucideDynamicIcon` 组件通过名称渲染图标。要通过名称使用图标，你必须先使用 `provideLucideIcons` 注册它。
 
-Make sure you are well acquainted with [how dependency injection in Angular works](https://angular.dev/guide/di).
+确保你熟悉 [Angular 中依赖注入的工作原理](https://angular.dev/guide/di)。
 
-## Registering icons
+## 注册图标
 
-Use `provideLucideIcons` in your application providers to register icons.
+在你的应用提供者中使用 `provideLucideIcons` 来注册图标。
 
 ```ts [app.config.ts]
 import { ApplicationConfig } from '@angular/core';
@@ -27,28 +27,28 @@ export const appConfig: ApplicationConfig = {
 };
 ```
 
-You can then reference the registered icons by name:
+然后你可以通过名称引用已注册的图标：
 
 ```html [app.html]
 <svg lucideIcon="square-check"></svg>
 <svg lucideIcon="circle-alert"></svg>
 ```
 
-## How names are resolved
+## 名称如何解析
 
-Each registered icon is stored by its icon name. For built-in Lucide icons, this is typically the kebab-case icon name.
+每个注册的图标都以其图标名称存储。对于内置的 Lucide 图标，这通常是 kebab-case 格式的图标名称。
 
-For example, registering `LucideSquareCheck` makes it available as:
+例如，注册 `LucideSquareCheck` 使其可用为：
 
 ```html
 <svg lucideIcon="square-check"></svg>
 ```
 
-If an icon defines aliases, those aliases are also registered automatically.
+如果图标定义了别名，这些别名也会自动注册。
 
-## Registering custom icons
+## 注册自定义图标
 
-`provideLucideIcons` can also register custom icon data objects.
+`provideLucideIcons` 也可以注册自定义图标数据对象。
 
 ```ts [custom-icon.ts]
 import { LucideIconData } from '@lucide/angular';
@@ -77,9 +77,9 @@ export const appConfig: ApplicationConfig = {
 <svg lucideIcon="my-custom-icon"></svg>
 ```
 
-## Using legacy icon nodes
+## 使用遗留图标节点
 
-If you have icons in the legacy node format, such as custom icons matching `lucide-angular` or `@lucide/lab`, you can convert them using `lucideLegacyIcon`.
+如果你拥有遗留节点格式的图标，例如匹配 `lucide-angular` 或 `@lucide/lab` 的自定义图标，你可以使用 `lucideLegacyIcon` 转换它们。
 
 ```ts [app.config.ts]
 import { ApplicationConfig } from '@angular/core';
@@ -97,7 +97,7 @@ export const appConfig: ApplicationConfig = {
 };
 ```
 
-You can then use both the primary name and any aliases:
+然后你可以使用主名称和任何别名：
 
 ```html [app.html]
 <svg lucideIcon="circle-play"></svg>
@@ -106,9 +106,9 @@ You can then use both the primary name and any aliases:
 <svg lucideIcon="hamburger"></svg>
 ```
 
-## Converting a map of legacy icons
+## 转换遗留图标映射
 
-If you already have a map of legacy icon nodes, use `lucideLegacyIconMap` to convert them into icon data objects.
+如果你已经拥有遗留图标节点的映射，使用 `lucideLegacyIconMap` 将它们转换为图标数据对象。
 
 ```ts [app.config.ts]
 import { ApplicationConfig } from '@angular/core';
@@ -126,12 +126,12 @@ export const appConfig: ApplicationConfig = {
 };
 ```
 
-This converts the object keys to kebab-case icon names:
+这会将对象键转换为 kebab-case 格式的图标名称：
 
 - `UserRoundX` → `user-round-x`
 - `burger` → `burger`
 
-The original object key is also added as an alias, so both of these will work:
+原始对象键也会作为别名添加，因此以下两者都有效：
 
 ```html
 <svg lucideIcon="UserRoundX"></svg>

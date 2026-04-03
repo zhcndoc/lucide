@@ -1,15 +1,15 @@
 ---
-title: Typescript - Preact
-description: Learn about the different types exported by the `lucide-preact` package and how to use them in your Preact application.
+title: TypeScript 支持 - Preact
+description: 了解 `lucide-preact` 包导出的不同类型以及如何在你的 Preact 应用程序中使用它们。
 ---
-# TypeScript
+# TypeScript 支持
 
-List of exported types from the `lucide-preact` package.
-These can be used to type your components when using Lucide icons in a TypeScript React project
+`lucide-preact` 包导出的类型列表。
+当在 TypeScript Preact 项目中使用 Lucide 图标时，这些类型可用于为组件添加类型定义。
 
 ## `LucideProps`
 
-Exports all props that can be passed to an icon component and any other SVG attributes, see: [SVG Presentation Attributes on MDN](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/Presentation).
+导出所有可以传递给图标组件的 props 以及任何其他 SVG 属性，参见：[MDN 上的 SVG 展示属性](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/Presentation)。
 
 ```ts
 interface LucideProps {
@@ -17,12 +17,12 @@ interface LucideProps {
   color?: string;
   strokeWidth?: number;
   absoluteStrokeWidth?: boolean;
-  [key: string]: any; // Any other SVG attributes
+  [key: string]: any; // 任何其他 SVG 属性
 }
 ```
 
-### Using `LucideProps`
-You can use the `LucideProps` interface to type your custom icon components or when you need to work with icon props.
+### 使用 `LucideProps`
+你可以使用 `LucideProps` 接口为你的自定义图标组件添加类型，或者在需要处理图标 props 时使用。
 
 ```tsx
 import { type LucideProps } from 'lucide-preact';
@@ -37,15 +37,15 @@ export default WrapIcon;
 
 ## `LucideIcon`
 
-Type for individual icon components.
+单个图标组件的类型。
 
 ```ts
 type LucideIcon = React.FC<LucideProps>;
 ```
 
-### Using `LucideIcon`
+### 使用 `LucideIcon`
 
-You can use the `LucideIcon` type when you need to work with icon components directly.
+当你需要直接使用图标组件时，可以使用 `LucideIcon` 类型。
 
 ```tsx
 import { type LucideIcon } from 'lucide-preact';
@@ -68,15 +68,15 @@ export default IconButton;
 
 ## `IconNode`
 
-Type for the raw SVG structure of an icon. This is an array of SVG elements and their attributes to render the icon.
-Not commonly used directly in application code. But can be useful for advanced use cases, such as using custom icons or with Lucide Lab.
+图标原始 SVG 结构的类型。这是一个包含 SVG 元素及其属性的数组，用于渲染图标。
+通常不在应用代码中直接使用。但对于高级用例可能很有用，例如使用自定义图标或与 Lucide Lab 一起使用。
 
 ```ts
 type IconNode = [elementName: string, attrs: Record<string, string | number>][];
 ```
 
-### Using `IconNode`
-You can use the `IconNode` type when you need to work with the raw SVG structure of an icon.
+### 使用 `IconNode`
+当你需要处理图标的原始 SVG 结构时，可以使用 `IconNode` 类型。
 
 ```tsx
 import { type IconNode, Icon } from 'lucide-preact';

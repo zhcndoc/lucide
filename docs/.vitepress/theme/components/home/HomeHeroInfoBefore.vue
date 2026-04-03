@@ -34,7 +34,7 @@ const rocketDuoTone = [
       href="/guide/version-1"
     >
       <Icon :iconNode="rocketDuoTone" />
-      Version 1
+      Lucide V1
       <Icon
         :iconNode="moveRight"
         class=""

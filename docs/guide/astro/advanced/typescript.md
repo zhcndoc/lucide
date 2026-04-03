@@ -1,16 +1,16 @@
 ---
-title: TypeScript Support - Astro
-description: Learn about the TypeScript types exported by the @lucide/astro package.
+title: TypeScript 支持 - Astro
+description: 了解 @lucide/astro 包导出的 TypeScript 类型。
 ---
 
-# TypeScript Support
+# TypeScript 支持
 
-List of exported types from the `@lucide/astro` package.
-These can be used to type your components when using Lucide icons in a TypeScript Astro project.
+来自 `@lucide/astro` 包的导出类型列表。
+当在 TypeScript Astro 项目中使用 Lucide 图标时，这些类型可用于为你的组件指定类型。
 
 ## `LucideProps`
 
-Exports all props that can be passed to an icon component and any other SVG attributes, see: [SVG Presentation Attributes on MDN](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/Presentation).
+导出所有可以传递给图标组件的 props 以及任何其他 SVG 属性，参见：[MDN 上的 SVG 展示属性](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/Presentation)。
 
 ```ts
 interface LucideProps extends SVGAttributes<SVGSVGElement> {
@@ -19,13 +19,13 @@ interface LucideProps extends SVGAttributes<SVGSVGElement> {
   size?: number | string;
   'stroke-width'?: number | string;
   absoluteStrokeWidth?: boolean;
-  [key: string]: any; // Any other SVG attributes
+  [key: string]: any; // 任何其他 SVG 属性
 }
 ```
 
-### Using `IconProps`
-<!-- Rename this to LucideProps -->
-You can use the `IconProps` interface to type props for your custom icon components.
+### 使用 `IconProps`
+<!-- 将此重命名为 LucideProps -->
+你可以使用 `IconProps` 接口为你的自定义图标组件的 props 指定类型。
 
 ```astro
 ---
@@ -44,7 +44,7 @@ const Icon = icons[name];
 
 ## `LucideIcon`
 
-Type for individual icon components, this is use full when you want to type a variable or prop that holds an icon component.
+单个图标组件的类型，当你想要为持有图标组件的变量或 prop 指定类型时，这非常有用。
 
 ```ts
 import type { Component } from 'astro/types';
@@ -53,9 +53,9 @@ import type { IconProps } from '@lucide/astro';
 type LucideIcon = Component<IconProps>
 ```
 
-### Using `LucideIcon`
+### 使用 `LucideIcon`
 
-You can use the `LucideIcon` type when you need to work with icon components directly.
+当你需要直接使用图标组件时，可以使用 `LucideIcon` 类型。
 
 ```astro
 ---
@@ -98,8 +98,8 @@ const menuItems: MenuItem[] = [
 
 ## `IconNode`
 
-Type for the raw SVG structure of an icon. This is an array of SVG elements and their attributes to render the icon.
-Not commonly used directly in application code. But can be useful for advanced use cases, such as using custom icons or with Lucide Lab.
+图标原始 SVG 结构的类型。这是一个用于渲染图标的 SVG 元素及其属性的数组。
+不常在应用代码中直接使用。但对于高级用例可能很有用，例如使用自定义图标或与 Lucide Lab 一起使用。
 
 ```ts
 type IconNode = [
@@ -108,8 +108,8 @@ type IconNode = [
 ][];
 ```
 
-### Using `IconNode`
-You can use the `IconNode` type when you need to work with the raw SVG structure of an icon.
+### 使用 `IconNode`
+当你需要处理图标的原始 SVG 结构时，可以使用 `IconNode` 类型。
 
 ```astro [CustomIcon.astro]
 ---

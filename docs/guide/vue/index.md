@@ -1,6 +1,6 @@
 ---
-title: Lucide for Vue
-description: Lucide provides a Vue icon component library that makes it easy to integrate icons into your Vue applications. Each icon is available as a standalone Vue component, allowing for seamless integration and customization.
+title: 适用于 Vue 的 Lucide
+description: Lucide 提供了一个 Vue 图标组件库，使得将图标集成到您的 Vue 应用程序中变得简单易行。每个图标都作为独立的 Vue 组件提供，支持无缝集成和定制。
 nextPage:
   - getting-started
 ---
@@ -13,31 +13,31 @@ import { vueSidebar } from '../../.vitepress/sidebar/vue'
 
 <!--@include: ../../../docs/images/package-logos/lucide-vue.svg -->
 
-# Lucide for Vue
+# 适用于 Vue 的 Lucide
 
-Lucide provides a Vue icon component library that makes it easy to integrate icons into your Vue applications.
-Each icon is available as a standalone Vue component, allowing for seamless integration and customization.
+Lucide 提供了一个 Vue 图标组件库，使得将图标集成到您的 Vue 应用程序中变得简单易行。
+每个图标都作为独立的 Vue 组件提供，支持无缝集成和定制。
 
-List of features:
-- **Easy to Use**: Import icons as Vue components and use them directly in your Vue components with JSX.
-- **Customizable**: Adjust size, color, and other properties via props.
-- **Tree-shakable**: Only the icons you use are included in your final bundle
-- **TypeScript Support**: Fully typed components for better developer experience.
+功能列表：
+- **易于使用**：将图标作为 Vue 组件导入，并在您的 Vue 组件中结合 JSX 直接使用它们。
+- **可定制**：通过 props 调整大小、颜色和其他属性。
+- **支持 Tree-shaking**：只有您使用的图标才会包含在最终打包文件中
+- **TypeScript 支持**：完全类型化的组件，提供更好的开发者体验。
 
-## Overview
+## 概览
 
 <OverviewLinkGrid>
   <OverviewLink v-for="item in vueSidebar[0].items.slice(1)" :key="item.link" :href="item.link" :title="item.text" :desc="item.desc"/>
 </OverviewLinkGrid>
 
-### Basics
+### 基础
 {{''}}
 
 <OverviewLinkGrid>
   <OverviewLink v-for="item in vueSidebar[1].items" :key="item.link" :href="item.link" :title="item.text" :desc="item.desc"/>
 </OverviewLinkGrid>
 
-### Advanced
+### 进阶
 {{''}}
 
 <OverviewLinkGrid>

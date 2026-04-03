@@ -14,7 +14,7 @@ const { theme } = useData()
 <template>
    <HomeContainer>
     <GridSection
-      title="Meet the team"
+      title="认识团队"
       :headingLevel="2"
       class="team-members"
     >

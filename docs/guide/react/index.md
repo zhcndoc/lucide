@@ -1,6 +1,6 @@
 ---
-title: Lucide for React
-description: Lucide provides a React icon component library that makes it easy to integrate icons into your React applications. Each icon is available as a standalone React component, allowing for seamless integration and customization.
+title: 适用于 React 的 Lucide
+description: Lucide 提供了一个 React 图标组件库，可轻松将图标集成到您的 React 应用程序中。每个图标都可作为独立的 React 组件使用，从而实现无缝集成和自定义。
 nextPage:
   - getting-started
 ---
@@ -13,38 +13,38 @@ import { reactSidebar } from '../../.vitepress/sidebar/react'
 
 <!--@include: ../../../docs/images/package-logos/lucide-react.svg -->
 
-# Lucide for React
+# 适用于 React 的 Lucide
 
-Lucide provides a React component library for using icons in your applications. Each icon is available as a standalone component that renders an optimized inline SVG.
+Lucide 提供了一个 React 组件库，用于在应用程序中使用图标。每个图标都可作为独立组件使用，渲染优化后的内联 SVG。
 
-List of features:
+功能列表：
 
-- **Easy to use** – Import icons and use them directly in JSX.
-- **Customizable** – Adjust size, color, stroke width, and other properties via props.
-- **Tree-shakable** – Only the icons you import are included in your final bundle.
-- **TypeScript support** – Fully typed components for a better developer experience.
+- **易于使用** – 导入图标并直接在 JSX 中使用。
+- **可自定义** – 通过 props 调整大小、颜色、描边宽度和其他属性。
+- **支持 Tree-shaking** – 只有您导入的图标才会包含在最终打包文件中。
+- **TypeScript 支持** – 完全类型化的组件，提供更好的开发者体验。
 
-## Overview
+## 概述
 
 <OverviewLinkGrid>
   <OverviewLink v-for="item in reactSidebar[0].items.slice(1)" :key="item.link" :href="item.link" :title="item.text" :desc="item.desc"/>
 </OverviewLinkGrid>
 
-### Basics
+### 基础
 {{''}}
 
 <OverviewLinkGrid>
   <OverviewLink v-for="item in reactSidebar[1].items" :key="item.link" :href="item.link" :title="item.text" :desc="item.desc"/>
 </OverviewLinkGrid>
 
-### Advanced
+### 高级
 {{''}}
 
 <OverviewLinkGrid>
   <OverviewLink v-for="item in reactSidebar[2].items" :key="item.link" :href="item.link" :title="item.text" :desc="item.desc"/>
 </OverviewLinkGrid>
 
-### Resources
+### 资源
 {{''}}
 
 <OverviewLinkGrid>

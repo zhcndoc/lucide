@@ -10,33 +10,33 @@ const { go } = useRouter()
 
 <template>
   <HomeContainer>
-    <HomeSectionTitle>Available For:</HomeSectionTitle>
+    <HomeSectionTitle>适用于：</HomeSectionTitle>
     <div class="packages-list">
       <a
         v-for="{ name, logo, logoDark } in data.packages"
         :href="`/guide/packages/${name}`"
         class="package-logo"
-        :aria-label="`Read more about: ${name} package`"
+        :aria-label="`了解有关 ${name} 包的更多信息`"
         @click.prevent="go(`/guide/packages/${name}`)"
       >
         <img
           :src="logo"
           :class="{ light: logoDark, 'image-logo': true }"
-          :alt="`${name} logo`"
+          :alt="`${name} 标志`"
           loading="lazy"
         />
 
         <img
           v-if="logoDark"
           :src="logoDark"
-          :alt="`${name} logo`"
+          :alt="`${name} 标志`"
           class="image-logo dark"
           loading="lazy"
         />
       </a>
     </div>
     <div class="more-button-wrapper">
-      <VPButton text="And more" href="/packages" theme="alt" class="more-button"/>
+      <VPButton text="还有更多" href="/packages" theme="alt" class="more-button"/>
     </div>
   </HomeContainer>
 </template>

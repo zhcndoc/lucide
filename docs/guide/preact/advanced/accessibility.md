@@ -1,47 +1,47 @@
 ---
-title: Accessibility - Preact
-description: Best practices for accessible icons in your Preact application.
+title: 无障碍性 - Preact
+description: 在 Preact 应用中实现无障碍图标的最佳实践。
 ---
 
 <script setup>
 import OverviewLink from '~/.vitepress/theme/components/base/OverviewLink.vue'
 </script>
 
-# Accessibility
+# 无障碍性
 
-Lucide icons ship with `aria-hidden="true"` by default. In almost all cases this is exactly what you want.
+Lucide 图标默认带有 `aria-hidden="true"`。在几乎所有情况下，这正是你想要的。
 
-## Should icons be accessible?
+## 图标应该具有无障碍性吗？
 
-Most of the time, icons are used purely for decoration or visual reinforcement. Exposing decorative icons to assistive technologies can create unnecessary noise for screen reader users.
+大多数时候，图标纯粹用于装饰或视觉强化。将装饰性图标暴露给辅助技术可能会为屏幕阅读器用户制造不必要的噪音。
 
-For a broader explanation of this, and other best practices on how to use icons accessibly in your application, please refer to our detailed guide on accessibility:
+关于这方面的更广泛解释，以及如何在应用中无障碍地使用图标的其他最佳实践，请参阅我们关于无障碍性的详细指南：
 
-<OverviewLink href="/guide/accessibility" title="Accessible Icons" desc="Best practices for accessible icons in your application."/>
+<OverviewLink href="/guide/accessibility" title="无障碍图标" desc="在应用中实现无障碍图标的最佳实践。"/>
 
-Only if an icon **conveys essential meaning on its own** should it be made accessible. The sections below explain how to do that in Preact.
+只有当图标**本身传达基本含义**时，才应使其具有无障碍性。下面的部分解释了如何在 Preact 中做到这一点。
 
-## Making an icon accessible
+## 使图标具有无障碍性
 
-To expose an icon to assistive technologies, provide an accessible name by passing a `title` element as a child or passing the `aria-label` prop to the icon component.
+要将图标暴露给辅助技术，请通过传递 `title` 元素作为子元素或将 `aria-label` 属性传递给图标组件来提供无障碍名称。
 
-This removes the `aria-hidden` attribute and makes the icon visible to screen readers.
+这会移除 `aria-hidden` 属性并使图标对屏幕阅读器可见。
 
 ```tsx
 <House>
   <title>This is my house</title>
 </House>
 
-// or
+// 或
 
 <House aria-label="This is my house" />
 ```
 
-Choose a label that clearly describes the meaning of the icon or the action it represents in the context of your application.
+选择一个能清晰描述图标含义或其在你应用上下文中所代表操作的标签。
 
-## Accessible icon buttons
+## 无障碍图标按钮
 
-When an icon is used inside a button, the accessible label should usually be applied to the button itself, and not the icon.
+当图标在按钮内部使用时，无障碍标签通常应应用于按钮本身，而不是图标。
 
 ```tsx
 <button aria-label="Go to home">
@@ -49,4 +49,4 @@ When an icon is used inside a button, the accessible label should usually be app
 </button>
 ```
 
-This ensures assistive technologies describe the interactive element, rather than the decorative graphic inside it.
+这确保了辅助技术描述的是交互元素，而不是其内部的装饰性图形。

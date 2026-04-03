@@ -4,83 +4,83 @@ export const reactNativeSidebar = [
   {
     items: [
       {
-        text: 'Overview',
+        text: '概览',
         link: '/guide/react-native/',
       },
       {
-        text: 'Getting started',
+        text: '开始使用',
         link: '/guide/react-native/getting-started',
-        desc: 'Learn how to get started with Lucide React Native',
+        desc: '了解如何开始使用 React Native 版 Lucide。',
       },
       {
-        text: 'Migration from v0',
+        text: '从 v0 迁移',
         link: '/guide/react-native/migration',
-        desc: 'Learn how to migrate from v0 to v1 of Lucide.',
+        desc: '了解如何将 Lucide 从 v0 迁移到 v1。',
       },
     ],
   },
   {
-    text: 'Basics',
+    text: '基础',
     items: [
       {
-        text: 'Color',
-        desc: 'Adjust the color of your icons',
+        text: '颜色',
+        desc: '调整图标颜色',
         link: '/guide/react-native/basics/color',
       },
       {
-        text: 'Sizing',
-        desc: 'Adjust the size of your icons',
+        text: '尺寸',
+        desc: '调整图标尺寸',
         link: '/guide/react-native/basics/sizing',
       },
       {
-        text: 'Stroke width',
-        desc: 'Adjust the stroke width of your icons',
+        text: '描边宽度',
+        desc: '调整图标的描边宽度',
         link: '/guide/react-native/basics/stroke-width',
       },
     ],
   },
   {
-    text: 'Advanced',
+    text: '进阶',
     items: [
       {
-        text: 'Typescript',
+        text: 'TypeScript',
         link: '/guide/react-native/advanced/typescript',
-        desc: 'All exported types and how to use them',
+        desc: '所有导出类型及其用法',
       },
       {
-        text: 'Global styling',
+        text: '全局样式',
         link: '/guide/react-native/advanced/global-styling',
-        desc: 'Apply global styles to all icons',
+        desc: '为所有图标应用全局样式',
       },
       {
-        text: 'With Lucide Lab',
+        text: '使用 Lucide Lab',
         link: '/guide/react-native/advanced/with-lucide-lab',
-        desc: 'Using lucide-lab with lucide-react-native',
+        desc: '将 lucide-lab 与 lucide-react-native 一起使用',
       },
       {
-        text: 'Filled icons',
+        text: '填充图标',
         link: '/guide/react-native/advanced/filled-icons',
-        desc: 'Using filled icons in lucide-react-native',
+        desc: '在 lucide-react-native 中使用填充图标',
       },
       {
-        text: 'Aliased Names',
+        text: '别名名称',
         link: '/guide/react-native/advanced/aliased-names',
-        desc: 'Using aliased icon names',
+        desc: '使用别名图标名称',
       },
       {
-        text: 'Combining icons',
+        text: '组合图标',
         link: '/guide/react-native/advanced/combining-icons',
-        desc: 'Combine multiple icons into one',
+        desc: '将多个图标组合成一个',
       },
     ],
   },
   {
-    text: 'Resources',
+    text: '资源',
     items: [
       {
-        text: 'VSCode',
+        text: 'VS Code',
         link: '/guide/vscode',
-        desc: 'VSCode and Lucide',
+        desc: 'VS Code 与 Lucide',
       },
     ],
   },

@@ -1,22 +1,22 @@
 ---
-title: Global Styling - Preact
-description: Learn how to style all Lucide icons globally in your Preact application using CSS or the Lucide context provider.
+title: 全局样式 - Preact
+description: 学习如何使用 CSS 或 Lucide 上下文提供者在你的 Preact 应用中全局样式化所有 Lucide 图标。
 ---
 <script setup>
 import Sandpack from '~/.vitepress/theme/components/editors/SandpackPreact.vue'
 </script>
 
-# Global Styling
+# 全局样式
 
-Adjusting icons can be done by using [color](../basics/color.md), [size](../basics/sizing.md) and [stroke width](../basics/stroke-width.md).
-To style all icons globally, you can either use CSS, or use a context provider.
+调整图标可以通过使用 [颜色](../basics/color.md)、[大小](../basics/sizing.md) 和 [描边宽度](../basics/stroke-width.md) 来完成。
+要全局样式化所有图标，你可以使用 CSS，或者使用上下文提供者。
 
-We recommend using CSS for global styling, as it is the most straightforward way to achieve this.
-But using CSS prevents you from using props like `size`, `color` and `strokeWidth` on individual icons, since CSS specificity will override these props, to be able to use the props on individual ones you need to use the Lucide context provider.
+我们推荐使用 CSS 进行全局样式化，因为这是实现此目的最直接的方式。
+但是使用 CSS 会阻止你在单个图标上使用像 `size`、`color` 和 `strokeWidth` 这样的 props，因为 CSS 特异性会覆盖这些 props，若要在单个图标上使用这些 props，你需要使用 Lucide 上下文提供者。
 
-## Context Provider
+## 上下文提供者
 
-For global styling using a context provider, you can use the `LucideProvider` component that is provided by the `lucide-preact` package.
+对于使用上下文提供者进行全局样式化，你可以使用由 `lucide-preact` 包提供的 `LucideProvider` 组件。
 
 ```tsx
 import { LucideProvider, Home } from 'lucide-preact';
@@ -32,23 +32,23 @@ const App = () => (
 );
 ```
 
-This will apply the `color`, `size` and `strokeWidth` props to all icons that are children of the `LucideProvider`.
+这会将 `color`、`size` 和 `strokeWidth` props 应用于作为 `LucideProvider` 子元素的所有图标。
 
 
-## Style by using CSS
-Styling icons is easy to accomplish using CSS.
+## 使用 CSS 进行样式化
+使用 CSS 可以轻松完成图标样式化。
 
-Every icon has a class attribute applied called `lucide`. This class name can be used in the CSS file to target all icons that are being used within the app.
+每个图标都应用了一个名为 `lucide` 的类属性。这个类名可以在 CSS 文件中用于定位应用中所有正在使用的图标。
 
-- The **color** of the icons can be changed using the [`color`](https://developer.mozilla.org/en-US/docs/Web/CSS/color) CSS property.
-- The **size** of the icons can be changed using [`width`](https://developer.mozilla.org/en-US/docs/Web/CSS/width) and [`height`](https://developer.mozilla.org/en-US/docs/Web/CSS/height) CSS properties.
-- The **stroke width** of the icons can be changed using the [`stroke-width`](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-width) CSS property.
+- 图标的 **颜色** 可以使用 [`color`](https://developer.mozilla.org/en-US/docs/Web/CSS/color) CSS 属性来更改。
+- 图标的 **大小** 可以使用 [`width`](https://developer.mozilla.org/en-US/docs/Web/CSS/width) 和 [`height`](https://developer.mozilla.org/en-US/docs/Web/CSS/height) CSS 属性来更改。
+- 图标的 **描边宽度** 可以使用 [`stroke-width`](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-width) CSS 属性来更改。
 
 ::: sandpack {editorHeight=400 editorWidthPercentage=60 dependencies="lucide-preact"}
 
 ```css icon.css [active]
 .lucide {
-  /* Change this! */
+  /* 修改这里！ */
   color: #ffadff;
   width: 48px;
   height: 48px;
@@ -100,9 +100,9 @@ export default App;
 :::
 
 
-### Absolute stroke width
+### 绝对描边宽度
 
-For global absolute stroke width styling the `vector-effect: non-scaling-stroke` CSS property can be applied to the children. This will keep the stroke-width the same size no matter the size of the icon. See [absolute-stroke-width](../basics/stroke-width.md#absolute-stroke-width) for more info.
+对于全局绝对描边宽度样式化，`vector-effect: non-scaling-stroke` CSS 属性可以应用于子元素。这将保持描边宽度大小不变，无论图标大小如何。参见 [absolute-stroke-width](../basics/stroke-width.md#absolute-stroke-width) 获取更多信息。
 
 ::: sandpack {editorHeight=480 editorWidthPercentage=60 dependencies="lucide-preact"}
 

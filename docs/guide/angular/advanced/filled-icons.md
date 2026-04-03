@@ -1,18 +1,18 @@
 ---
-title: Filled Icons - Angular
-description: Fills are not officially supported, but can still be applied using standard SVG attributes. This may in some cases produce acceptable results.
+title: 填充图标 - Angular
+description: 填充效果并非官方支持，但仍可使用标准 SVG 属性应用。在某些情况下，这可能会产生可接受的结果。
 ---
 <script setup>
 import Sandpack from '~/.vitepress/theme/components/editors/SandpackAngular.vue'
 </script>
 
-# Filled Icons
+# 填充图标
 
-Fills are not officially supported by Lucide.
+Lucide 官方不支持填充效果。
 
-However, since the icons are standard SVG elements, SVG attributes such as `fill` can still be applied. Depending on the icon, this may produce acceptable results.
+然而，由于图标是标准的 SVG 元素，仍然可以应用诸如 `fill` 之类的 SVG 属性。根据图标的不同，这可能会产生可接受的结果。
 
-## Example with stars:
+## 星星示例：
 
 ::: sandpack {template=angular editorHeight=580 editorWidthPercentage=60 dependencies="@lucide/angular"}
 

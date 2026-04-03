@@ -1,6 +1,6 @@
 ---
-title: Getting started - Lucide
-description: This guide will help you get started with Lucide in your Vanilla JavaScript project.
+title: 开始使用 - Lucide
+description: 本指南将帮助你在原生 JavaScript 项目中开始使用 Lucide。
 ---
 <script setup>
 import OverviewLink from '../../.vitepress/theme/components/base/OverviewLink.vue'
@@ -8,14 +8,14 @@ import OverviewLinkGrid from '../../.vitepress/theme/components/base/OverviewLin
 import { reactSidebar } from '../../.vitepress/sidebar/react'
 </script>
 
-# Getting started
+# 开始使用
 
-This guide will help you get started with Lucide in your Vanilla JavaScript project.
-Make sure you have a your environment set up. If you don't have one yet, you can create a new project using Vite, Parcel or any other boilerplate of your choice.
+本指南将帮助你在原生 JavaScript 项目中开始使用 Lucide。
+确保你已经设置好了环境。如果还没有，你可以使用 Vite、Parcel 或任何你选择的其他样板项目创建一个新项目。
 
-## Installation
+## 安装
 
-### Package Managers
+### 包管理器
 
 ::: code-group
 
@@ -40,35 +40,35 @@ bun add lucide
 ### CDN
 
 ```html
-<!-- Development version -->
+<!-- 开发版本 -->
 <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
 
-<!-- Production version -->
+<!-- 生产版本 -->
 <script src="https://unpkg.com/lucide@latest"></script>
 ```
 
-We strongly suggest you anchor to a specific version, such as `https://unpkg.com/lucide@x.xxx.x/dist/umd/lucide.min.js`, rather than using `@latest`. This is because the latest version may introduce breaking changes that could potentially break your application. By anchoring to a specific version, you can ensure that your application remains stable and functional, even if there are updates to the library in the future.
+我们强烈建议你锁定到一个特定版本，例如 `https://unpkg.com/lucide@x.xxx.x/dist/umd/lucide.min.js`，而不是使用 `@latest`。这是因为最新版本可能会引入破坏性变更，从而潜在地破坏你的应用程序。通过锁定到特定版本，你可以确保你的应用程序保持稳定和功能正常，即使将来库有更新。
 
-## Importing your first icon
+## 导入你的第一个图标
 
-Lucide is built with ES Modules, so it's completely tree-shakable.
+Lucide 是使用 ES Modules 构建的，所以它完全支持 Tree-shaking。
 
-The `createIcons` function will search for HTMLElements with the attribute `data-lucide` and replace it with the svg from the given icon name.
+`createIcons` 函数将搜索具有 `data-lucide` 属性的 HTML 元素，并将其替换为给定图标名称的 SVG。
 
-### Example
+### 示例
 
 ```html
-<!-- Your HTML file -->
+<!-- 你的 HTML 文件 -->
 <i data-lucide="menu"></i>
 ```
 
 ```js
 import { createIcons, icons } from 'lucide';
 
-// Caution, this will import all the icons and bundle them.
+// 注意，这将导入所有图标并将它们打包。
 createIcons({ icons });
 
-// Recommended way, to include only the icons you need.
+// 推荐的方式，仅包含你需要的图标。
 import { createIcons, Menu, ArrowRight, Globe } from 'lucide';
 
 createIcons({
@@ -80,18 +80,18 @@ createIcons({
 });
 ```
 
-## Advanced Usage
+## 高级用法
 
-### Additional Options
+### 额外选项
 
-In the `createIcons` function you can pass some extra parameters:
+在 `createIcons` 函数中，你可以传递一些额外的参数：
 
-- you can pass `nameAttr` to adjust the attribute name to replace icons (default is `data-lucide`).
-- you can pass `attrs` to pass additional custom attributes, for instance CSS classes or stroke options.
-- you can pass `root` to provide a custom DOM element the icons should be replaced in (useful when manipulating small sections of a large DOM or elements in the shadow DOM)
-- you can pass `inTemplates: true` to also replace icons inside `<template>` tags.
+- 你可以传递 `nameAttr` 来调整用于替换图标的属性名（默认是 `data-lucide`）。
+- 你可以传递 `attrs` 来传递额外的自定义属性，例如 CSS 类或描边选项。
+- 你可以传递 `root` 来提供一个自定义的 DOM 元素，图标将在其中被替换（当操作大型 DOM 的小部分或 Shadow DOM 中的元素时很有用）
+- 你可以传递 `inTemplates: true` 来同时替换 `<template>` 标签内的图标。
 
-Here is a full example:
+这是一个完整的示例：
 
 ```js
 import { createIcons } from 'lucide';
@@ -102,13 +102,13 @@ createIcons({
     'stroke-width': 1,
     stroke: '#333'
   },
-  nameAttr: 'data-lucide', // attribute for the icon name.
-  root: element, // DOM element to replace icons in.
-  inTemplates: true // Also replace icons inside <template> tags.
+  nameAttr: 'data-lucide', // 图标名称的属性。
+  root: element, // 用于替换图标的 DOM 元素。
+  inTemplates: true // 同时替换 <template> 标签内的图标。
 });
 ```
 
-### Example using a CDN
+### 使用 CDN 的示例
 
 ```html
 <!DOCTYPE html>

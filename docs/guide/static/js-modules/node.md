@@ -2,10 +2,10 @@
 import Sandpack from '~/.vitepress/theme/components/editors/Sandpack.vue'
 </script>
 
-# Use Lucide in Node.js
+# 在 Node.js 中使用 Lucide
 
-You can also import Lucide icons in Node.js projects, with the lucide-static package.
-Each icon is exported as a string containing the SVG markup, which can be used in server-side rendering or static site generation.
+你也可以通过 lucide-static 包在 Node.js 项目中导入 Lucide 图标。
+每个图标都导出为包含 SVG 标记的字符串，可用于服务器端渲染或静态站点生成。
 
 ::: code-group
 
@@ -19,10 +19,10 @@ const {MessageSquare} = require('lucide-static');
 
 :::
 
-> Note: Each icon name is in PascalCase. You can find the icon names in the [Lucide Icons page](https://lucide.dev/icons).
+> 注意：每个图标名称均采用帕斯卡命名法（PascalCase）。你可以在 [Lucide 图标页面](https://lucide.dev/icons) 找到图标名称。
 
 
-## Example with Node.js
+## Node.js 示例
 
 ::: sandpack {template=node showTabs=false editorHeight=480 editorWidthPercentage=60 dependencies="lucide-static"}
 

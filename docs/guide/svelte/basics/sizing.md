@@ -1,16 +1,16 @@
 ---
-title: Sizing - Svelte
-description: Learn how to adjust the size of icons in your Svelte application using the `size` prop or by using CSS.
+title: 尺寸调整 - Svelte
+description: 学习如何使用 `size` prop 或通过 CSS 调整 Svelte 应用程序中图标的大小。
 ---
 <script setup>
 import Sandpack from '~/.vitepress/theme/components/editors/SandpackSvelte.vue'
 </script>
 
-# Sizing
+# 尺寸调整
 
-By default, the size of all icons is `24px` by `24px`. The size is adjustable using the `size` prop and CSS.
+默认情况下，所有图标的大小为 `24px` 乘 `24px`。可以使用 `size` prop 和 CSS 调整大小。
 
-## Adjusting the icon size using the `size` prop
+## 使用 `size` prop 调整图标大小
 
 ::: sandpack {template=vite-svelte showTabs=false editorHeight=240 editorWidthPercentage=60}
 
@@ -23,15 +23,15 @@ import Landmark from '@lucide/svelte/icons/landmark';
 ```
 :::
 
-## Adjusting the icon size via CSS
+## 通过 CSS 调整图标大小
 
-The CSS properties `width` and `height` can be used to adjust the icon size.
+可以使用 CSS 属性 `width` 和 `height` 来调整图标大小。
 
 ::: sandpack {template=vite-svelte editorHeight=240 editorWidthPercentage=60}
 
 ```css src/icon.css [active]
 .my-beer-icon {
-  /* Change this! */
+  /* 修改这里！ */
   width: 64px;
   height: 64px;
 }
@@ -48,24 +48,24 @@ import './icon.css'
 
 :::
 
-### Dynamically change the icon size based on the font size
+### 根据字体大小动态更改图标大小
 
-It is possible to resize icons based on font size. This can be achieved using the `em` unit. See this [MDN article](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size#ems) for more information on the `em` unit.
+可以根据字体大小调整图标大小。这可以通过使用 `em` 单位来实现。有关 `em` 单位的更多信息，请参阅这篇 [MDN 文章](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size#ems)。
 
 ::: sandpack {template=vite-svelte editorHeight=300}
 
 ```css src/icon.css [active]
 .my-icon {
-  /* Icon size will relative to font-size of .text-wrapper */
+  /* 图标大小将相对于 .text-wrapper 的 font-size */
   width: 1em;
   height: 1em;
 }
 
 .text-wrapper {
-  /* Change this! */
+  /* 修改这里！ */
   font-size: 96px;
 
-  /* layout stuff */
+  /* 布局内容 */
   display: flex;
   gap: 0.25em;
   align-items: center;
@@ -85,9 +85,9 @@ import "./icon.css";
 ```
 :::
 
-### Resizing with Tailwind
+### 使用 Tailwind 调整大小
 
-`size-*` utilities can be used to adjust the size of the icon. See the [Tailwind documentation](https://tailwindcss.com/docs/width#setting-both-width-and-height) for more information on the `size-*` utilities.
+可以使用 `size-*` 工具类来调整图标的大小。有关 `size-*` 工具类的更多信息，请参阅 [Tailwind 文档](https://tailwindcss.com/docs/width#setting-both-width-and-height)。
 
 ::: sandpack {template=vite-svelte showTabs=false editorHeight=240 editorWidthPercentage=60}
 

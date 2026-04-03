@@ -1,22 +1,22 @@
 ---
-title: Global Styling - Astro
-description: Learn how to apply global styling to Lucide icons in your Astro applications using CSS.
+title: 全局样式 - Astro
+description: 学习如何使用 CSS 在 Astro 应用程序中为 Lucide 图标应用全局样式。
 ---
 
-# Global Styling
+# 全局样式
 
-Adjusting icons can be done by using [color](../basics/color.md), [size](../basics/sizing.md) and [stroke width](../basics/stroke-width.md).
-To style all icons globally you can use CSS.
+调整图标可以通过使用 [颜色](../basics/color.md)、[大小](../basics/sizing.md) 和 [描边宽度](../basics/stroke-width.md) 来完成。
+要全局样式化所有图标，你可以使用 CSS。
 
-## Style by using CSS
+## 使用 CSS 进行样式化
 
-Styling icons is easy to accomplish using CSS.
+使用 CSS 可以轻松实现图标样式化。
 
-Every icon has a class attribute applied called `lucide`. This class name can be used in the CSS file to target all icons that are being used within the app.
+每个图标都应用了一个名为 `lucide` 的 class 属性。这个类名可以在 CSS 文件中用于定位应用中所有正在使用的图标。
 
-- The **color** of the icons can be changed using the [`color`](https://developer.mozilla.org/en-US/docs/Web/CSS/color) CSS property.
-- The **size** of the icons can be changed using [`width`](https://developer.mozilla.org/en-US/docs/Web/CSS/width) and [`height`](https://developer.mozilla.org/en-US/docs/Web/CSS/height) CSS properties.
-- The **stroke width** of the icons can be changed using the [`stroke-width`](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-width) CSS property.
+- 图标的 **颜色** 可以使用 [`color`](https://developer.mozilla.org/en-US/docs/Web/CSS/color) CSS 属性来更改。
+- 图标的 **大小** 可以使用 [`width`](https://developer.mozilla.org/en-US/docs/Web/CSS/width) 和 [`height`](https://developer.mozilla.org/en-US/docs/Web/CSS/height) CSS 属性来更改。
+- 图标的 **描边宽度** 可以使用 [`stroke-width`](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-width) CSS 属性来更改。
 
 ```css
 .lucide {
@@ -27,9 +27,9 @@ Every icon has a class attribute applied called `lucide`. This class name can be
 }
 ```
 
-### Absolute stroke width
+### 绝对描边宽度
 
-For global absolute stroke width styling the `vector-effect: non-scaling-stroke` CSS property can be applied to the children. This will keep the stroke-width the same size no matter the size of the icon. See [absolute-stroke-width](../basics/stroke-width.md#absolute-stroke-width) for more info.
+对于全局绝对描边宽度样式，可以将 `vector-effect: non-scaling-stroke` CSS 属性应用于子元素。无论图标大小如何，这将保持描边宽度不变。请参阅 [absolute-stroke-width](../basics/stroke-width.md#absolute-stroke-width) 获取更多信息。
 
 ```css
 .lucide {

@@ -8,13 +8,13 @@ import VPLink from 'vitepress/dist/client/theme-default/components/VPLink.vue';
       <VPLink
         class="notification-link"
         href="/guide/version-1"
-        >Lucide v1 is out!</VPLink
+        >Lucide V1 发布了！</VPLink
       >🚀<br />
-      You're looking at the site for v1, for v0 go to
+      你现在浏览的是 v1 站点，如需查看 v0，请前往
       <VPLink
         class="notification-link"
         href="https://v0.lucide.dev"
-        >v0 site</VPLink
+        >v0 站点</VPLink
       >
     </p>
   </div>

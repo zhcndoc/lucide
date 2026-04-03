@@ -4,88 +4,88 @@ export const svelteSidebar = [
   {
     items: [
       {
-        text: 'Overview',
+        text: '概览',
         link: '/guide/svelte/',
       },
       {
-        text: 'Getting started',
+        text: '开始使用',
         link: '/guide/svelte/getting-started',
-        desc: 'Learn how to get started with Lucide for Svelte.',
+        desc: '了解如何开始使用 Svelte 版 Lucide。',
       },
       {
-        text: 'Migration from v0',
+        text: '从 v0 迁移',
         link: '/guide/svelte/migration',
-        desc: 'Learn how to migrate from v0 to v1 of Lucide.',
+        desc: '了解如何将 Lucide 从 v0 迁移到 v1。',
       },
     ],
   },
   {
-    text: 'Basics',
+    text: '基础',
     items: [
       {
-        text: 'Color',
-        desc: 'Adjust the color of your icons',
+        text: '颜色',
+        desc: '调整图标颜色',
         link: '/guide/svelte/basics/color',
       },
       {
-        text: 'Sizing',
-        desc: 'Adjust the size of your icons',
+        text: '尺寸',
+        desc: '调整图标尺寸',
         link: '/guide/svelte/basics/sizing',
       },
       {
-        text: 'Stroke width',
-        desc: 'Adjust the stroke width of your icons',
+        text: '描边宽度',
+        desc: '调整图标的描边宽度',
         link: '/guide/svelte/basics/stroke-width',
       },
     ],
   },
   {
-    text: 'Advanced',
+    text: '进阶',
     items: [
       {
-        text: 'Typescript',
+        text: 'TypeScript',
         link: '/guide/svelte/advanced/typescript',
-        desc: 'All exported types and how to use them',
+        desc: '所有导出类型及其用法',
       },
       {
-        text: 'Accessibility',
+        text: '无障碍',
         link: '/guide/svelte/advanced/accessibility',
-        desc: 'Making your icons accessible',
+        desc: '让你的图标更易访问',
       },
       {
-        text: 'Global styling',
+        text: '全局样式',
         link: '/guide/svelte/advanced/global-styling',
-        desc: 'Apply global styles to all icons',
+        desc: '为所有图标应用全局样式',
       },
       {
-        text: 'With Lucide Lab',
+        text: '使用 Lucide Lab',
         link: '/guide/svelte/advanced/with-lucide-lab',
-        desc: 'Using lucide-lab with @lucide/svelte',
+        desc: '将 lucide-lab 与 @lucide/svelte 一起使用',
       },
       {
-        text: 'Filled icons',
+        text: '填充图标',
         link: '/guide/svelte/advanced/filled-icons',
-        desc: 'Using filled icons in @lucide/svelte',
+        desc: '在 @lucide/svelte 中使用填充图标',
       },
       {
-        text: 'Combining icons',
+        text: '组合图标',
         link: '/guide/svelte/advanced/combining-icons',
-        desc: 'Combine multiple icons into one',
+        desc: '将多个图标组合成一个',
       },
     ],
   },
   {
-    text: 'Resources',
+    text: '资源',
     items: [
       {
-        text: 'Accessibility in depth',
+        text: '深入了解无障碍',
         link: '/guide/accessibility',
-        desc: 'Accessibility best practices',
+        desc: '无障碍最佳实践',
       },
       {
-        text: 'VSCode',
+        text: 'VS Code',
         link: '/guide/vscode',
-        desc: 'VSCode and Lucide',
+        desc: 'VS Code 与 Lucide',
       },
     ],
   },

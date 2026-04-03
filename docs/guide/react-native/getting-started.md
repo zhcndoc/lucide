@@ -1,6 +1,6 @@
 ---
-title: Getting started - React Native
-description: This guide will help you get started with Lucide in your React Native project.
+title: 开始使用 - React Native
+description: 本指南将帮助你在 React Native 项目中开始使用 Lucide。
 ---
 <script setup>
 import OverviewLink from '../../.vitepress/theme/components/base/OverviewLink.vue'
@@ -8,14 +8,14 @@ import OverviewLinkGrid from '../../.vitepress/theme/components/base/OverviewLin
 import { reactNativeSidebar } from '../../.vitepress/sidebar/react-native'
 </script>
 
-# Getting started
+# 开始使用
 
-This guide will help you get started with Lucide in your React Native project.
-Make sure you have a React Native environment set up. If you don't have one yet, you can create a new React Native project using React Native CLI, Expo, or any other React Native boilerplate of your choice.
+本指南将帮助你在 React Native 项目中开始使用 Lucide。
+确保你已经设置好了 React Native 环境。如果你还没有，可以使用 React Native CLI、Expo 或任何其他你选择的 React Native 样板项目来创建一个新的 React Native 项目。
 
-## Installation
+## 安装
 
-First, ensure that you have `react-native-svg` (version between 12 and 15) installed. Then, install the package:
+首先，确保你已经安装了 `react-native-svg`（版本在 12 到 15 之间）。然后，安装该包：
 
 ::: code-group
 
@@ -37,16 +37,16 @@ bun add lucide-react-native
 
 :::
 
-## Importing your first icon
+## 导入你的第一个图标
 
-Lucide is built with ES Modules.
+Lucide 是使用 ES 模块构建的。
 
-Each icon can be imported as a React component, which renders an `react-native-svg` element.
+每个图标都可以作为 React 组件导入，它会渲染一个 `react-native-svg` 元素。
 
 ```jsx
 import { Camera } from 'lucide-react-native';
 
-// Usage
+// 用法
 const App = () => {
   return <Camera />;
 };
@@ -54,27 +54,27 @@ const App = () => {
 export default App;
 ```
 
-## Props
+## 属性
 
-To customize the appearance of an icon, you can use the following props:
+要自定义图标的外观，你可以使用以下属性：
 
-| name                  | type      | default      |
+| 名称                  | 类型      | 默认值       |
 | --------------------- | --------- | ------------ |
 | `size`                | *number*  | 24           |
 | `color`               | *string*  | currentColor |
 | `strokeWidth`         | *number*  | 2            |
 | `absoluteStrokeWidth` | *boolean* | false        |
 
-Because icons render as SVG elements, all standard SVG attributes can also be applied as props. See the list of SVG Presentation Attributes on [MDN](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/Presentation).
+因为图标渲染为 SVG 元素，所有标准的 SVG 属性也可以作为属性应用。请参阅 [MDN](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/Presentation) 上的 SVG 表现属性列表。
 
 ```jsx
-// Usage
+// 用法
 const App = () => {
   return <Camera size={48} color="red" strokeWidth={1} />;
 };
 ```
 
-More examples and details how to use props, continue the guide:
+更多关于如何使用属性的示例和详情，请继续阅读指南：
 
 <OverviewLinkGrid>
   <OverviewLink v-for="item in reactNativeSidebar[1].items" :key="item.link" :href="item.link" :title="item.text" :desc="item.desc"/>

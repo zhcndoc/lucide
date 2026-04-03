@@ -1,50 +1,50 @@
 export const resourcesSidebar = [
   {
-    text: 'About',
+    text: '关于',
     items: [
       {
-        text: 'License',
+        text: '许可证',
         link: '/license',
       },
       {
-        text: 'Community',
+        text: '社区',
         link: '/community',
       },
       {
-        text: 'Code of Conduct',
+        text: '行为准则',
         link: '/code-of-conduct',
       },
       {
-        text: 'Brand logo statement',
+        text: '品牌标志声明',
         link: '/brand-logo-statement',
       },
       {
-        text: 'Contributing',
+        text: '贡献指南',
         link: '/contribute',
       },
     ],
   },
   {
-    text: 'Designing icons',
+    text: '图标设计',
     items: [
       {
-        text: 'Icon Design Principles',
+        text: '图标设计原则',
         link: '/contribute/icon-design-guide',
       },
       {
-        text: 'Designing in Illustrator',
+        text: '使用 Illustrator 设计',
         link: '/contribute/illustrator-guide',
       },
       {
-        text: 'Designing in Inkscape',
+        text: '使用 Inkscape 设计',
         link: '/contribute/inkscape-guide',
       },
       {
-        text: 'Designing in Figma',
+        text: '使用 Figma 设计',
         link: '/contribute/figma-guide',
       },
       {
-        text: 'Designing in Affinity Designer',
+        text: '使用 Affinity Designer 设计',
         link: '/contribute/affinity-designer-guide',
       },
     ],

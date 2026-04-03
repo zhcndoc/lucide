@@ -24,7 +24,7 @@ const opacity = computed(() => {
     <template #home-hero-image></template>
     <template #home-hero-actions-after>
       <FakeInput @click="go('/icons/?focus')" class="search-box">
-        Search {{ data.iconsCount }} icons...
+        搜索 {{ data.iconsCount }} 个图标...
       </FakeInput>
     </template>
 

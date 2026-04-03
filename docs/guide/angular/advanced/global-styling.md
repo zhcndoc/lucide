@@ -1,26 +1,26 @@
 ---
-title: Global Styling - Angular
-description: Learn how to style all icons globally in your Angular application using CSS or the provideLucideConfig provider.
+title: 全局样式 - Angular
+description: 学习如何使用 CSS 或 provideLucideConfig 提供者在 Angular 应用中全局样式化所有图标。
 ---
 <script setup>
 import Sandpack from '~/.vitepress/theme/components/editors/SandpackAngular.vue'
 </script>
 
-# Global Styling
+# 全局样式
 
-Lucide icons can be customized using the inputs for [color](../basics/color.md), [size](../basics/sizing.md) and [stroke width](../basics/stroke-width.md).
+Lucide 图标可以使用 [颜色](../basics/color.md)、[大小](../basics/sizing.md) 和 [描边宽度](../basics/stroke-width.md) 输入进行自定义。
 
-To style all icons globally, you can either use CSS or configure global defaults using `provideLucideConfig`.
+要全局样式化所有图标，您可以使用 CSS 或使用 `provideLucideConfig` 配置全局默认值。
 
-We recommend using CSS for global styling, as it is the most straightforward approach. However, CSS rules may override the `size`, `color`, and `strokeWidth` inputs on individual icons. If you need to keep those inputs configurable per icon, use `provideLucideConfig` instead.
+我们建议使用 CSS 进行全局样式化，因为它是最直接的方法。但是，CSS 规则可能会覆盖单个图标上的 `size`、`color` 和 `strokeWidth` 输入。如果您需要保持这些输入在每个图标上可配置，请改用 `provideLucideConfig`。
 
-## Configuring global defaults
+## 配置全局默认值
 
-Lucide Angular provides the `provideLucideConfig` provider to set default properties for all icons.
+Lucide Angular 提供了 `provideLucideConfig` 提供者来为所有图标设置默认属性。
 
-You can define global defaults (such as `size`, `color`, or `strokeWidth`) while still allowing individual icons to override them through inputs.
+您可以定义全局默认值（例如 `size`、`color` 或 `strokeWidth`），同时仍然允许单个图标通过输入覆盖它们。
 
-Register the provider in your application configuration or in a top-level component:
+在您的应用程序配置或顶层组件中注册提供者：
 
 ```ts
 import { ApplicationConfig } from '@angular/core';
@@ -35,21 +35,21 @@ export const appConfig: ApplicationConfig = {
 };
 ```
 
-## Style by using CSS
+## 使用 CSS 进行样式化
 
-Styling icons globally can be done using CSS.
+可以使用 CSS 完成图标的全局样式化。
 
-All Lucide icons include the `lucide` class. You can use this class in your styles to target every icon in your application.
+所有 Lucide 图标都包含 `lucide` 类。您可以在样式中使用此类来定位应用中的每个图标。
 
-- The **color** of the icons can be changed using the [`color`](https://developer.mozilla.org/en-US/docs/Web/CSS/color) property.
-- The **size** of the icons can be changed using [`width`](https://developer.mozilla.org/en-US/docs/Web/CSS/width) and [`height`](https://developer.mozilla.org/en-US/docs/Web/CSS/height).
-- The **stroke width** of the icons can be changed using [`stroke-width`](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-width).
+- 图标的 **颜色** 可以使用 [`color`](https://developer.mozilla.org/en-US/docs/Web/CSS/color) 属性更改。
+- 图标的 **大小** 可以使用 [`width`](https://developer.mozilla.org/en-US/docs/Web/CSS/width) 和 [`height`](https://developer.mozilla.org/en-US/docs/Web/CSS/height) 更改。
+- 图标的 **描边宽度** 可以使用 [`stroke-width`](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-width) 更改。
 
 ::: sandpack {template=angular editorHeight=300 dependencies="@lucide/angular"}
 
 ```css /src/app/icon.css [active]
 .lucide {
-  /* Change this! */
+  /* 修改这里！ */
   color: #ffadff;
   width: 56px;
   height: 56px;
@@ -111,9 +111,9 @@ export class App {
 
 :::
 
-### Absolute stroke width
+### 绝对描边宽度
 
-To keep the stroke width constant regardless of icon size, apply `vector-effect: non-scaling-stroke` to the icon's children. See [absolute-stroke-width](../basics/stroke-width.md#absolute-stroke-width) for more details.
+为了保持描边宽度恒定而不受图标大小影响，请将 `vector-effect: non-scaling-stroke` 应用于图标的子元素。请参阅 [absolute-stroke-width](../basics/stroke-width.md#absolute-stroke-width) 了解更多详情。
 
 ::: sandpack {template=angular editorHeight=300 dependencies="@lucide/angular"}
 

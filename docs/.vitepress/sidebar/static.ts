@@ -4,84 +4,84 @@ export const lucideStaticSidebar = [
   {
     items: [
       {
-        text: 'Overview',
-        desc: 'Overview of using Lucide icons as static assets in your projects',
+        text: '概览',
+        desc: '在项目中将 Lucide 图标作为静态资源使用的概览',
         link: '/guide/static/',
       },
       {
-        text: 'Getting started',
+        text: '开始使用',
         link: '/guide/static/getting-started',
-        desc: 'Learn how to get started with Lucide static.',
+        desc: '了解如何开始使用 Lucide 静态资源。',
       },
       {
-        text: 'Migration from v0',
+        text: '从 v0 迁移',
         link: '/guide/static/migration',
-        desc: 'Learn how to migrate from v0 to v1 of Lucide static.',
+        desc: '了解如何将 Lucide 静态资源从 v0 迁移到 v1。',
       },
     ],
   },
   {
-    text: 'SVG Files & Sprite',
+    text: 'SVG 文件与精灵图',
     items: [
       {
-        text: 'Import SVG files as images',
-        desc: 'Use icons as images in your project',
+        text: '将 SVG 文件作为图片导入',
+        desc: '在项目中将图标作为图片使用',
         link: '/guide/static/link-as-image',
       },
       {
-        text: 'SVG Sprite',
-        desc: 'Use SVG sprites in your project',
+        text: 'SVG 精灵图',
+        desc: '在项目中使用 SVG 精灵图',
         link: '/guide/static/svg-sprite',
       },
     ],
   },
   {
-    text: 'Icon Font',
+    text: '图标字体',
     items: [
       {
-        text: 'Import as font',
-        desc: 'Use icons as a web font in your project',
+        text: '作为字体导入',
+        desc: '在项目中将图标作为 Web 字体使用',
         link: '/guide/static/font/',
       },
       {
-        text: 'Color',
-        desc: 'Adjust the color of your icons',
+        text: '颜色',
+        desc: '调整图标颜色',
         link: '/guide/static/font/color',
       },
       {
-        text: 'Sizing',
-        desc: 'Adjust the size of your icons',
+        text: '尺寸',
+        desc: '调整图标尺寸',
         link: '/guide/static/font/sizing',
       },
     ],
   },
   {
-    text: 'SVG String JS modules',
+    text: 'SVG 字符串 JS 模块',
     items: [
       {
-        text: 'Use in Node.js',
-        desc: 'Use Lucide in your Node.js projects',
+        text: '在 Node.js 中使用',
+        desc: '在 Node.js 项目中使用 Lucide',
         link: '/guide/static/js-modules/node',
       },
       {
-        text: 'Use in JS projects',
-        desc: 'Use Lucide in your JavaScript projects',
+        text: '在 JS 项目中使用',
+        desc: '在 JavaScript 项目中使用 Lucide',
         link: '/guide/static/js-modules/web',
       },
     ],
   },
   {
-    text: 'Resources',
+    text: '资源',
     items: [
       {
-        text: 'Accessibility in depth',
+        text: '深入了解无障碍',
         link: '/guide/accessibility',
-        desc: 'Accessibility best practices',
+        desc: '无障碍最佳实践',
       },
       {
-        text: 'VSCode',
+        text: 'VS Code',
         link: '/guide/vscode',
-        desc: 'VSCode and Lucide',
+        desc: 'VS Code 与 Lucide',
       },
     ],
   },

@@ -4,68 +4,68 @@ export const reactSidebar = [
   {
     items: [
       {
-        text: 'Overview',
+        text: '概览',
         link: '/guide/react/',
       },
       {
-        text: 'Getting started',
+        text: '开始使用',
         link: '/guide/react/getting-started',
-        desc: 'Learn how to get started with Lucide for React.',
+        desc: '了解如何开始使用 React 版 Lucide。',
       },
       {
-        text: 'Migration from v0',
+        text: '从 v0 迁移',
         link: '/guide/react/migration',
-        desc: 'Learn how to migrate from v0 to v1 of Lucide.',
+        desc: '了解如何将 Lucide 从 v0 迁移到 v1。',
       },
       {
-        text: 'Migration from React Feather',
+        text: '从 React Feather 迁移',
         link: '/guide/react/migration-from-feather',
-        desc: 'Learn how to migrate from `react-feather` to `lucide-react`',
+        desc: '了解如何从 `react-feather` 迁移到 `lucide-react`。',
       },
     ],
   },
   {
-    text: 'Basics',
+    text: '基础',
     items: [
       {
-        text: 'Color',
-        desc: 'Adjust the color of your icons',
+        text: '颜色',
+        desc: '调整图标颜色',
         link: '/guide/react/basics/color',
       },
       {
-        text: 'Sizing',
-        desc: 'Adjust the size of your icons',
+        text: '尺寸',
+        desc: '调整图标尺寸',
         link: '/guide/react/basics/sizing',
       },
       {
-        text: 'Stroke width',
-        desc: 'Adjust the stroke width of your icons',
+        text: '描边宽度',
+        desc: '调整图标的描边宽度',
         link: '/guide/react/basics/stroke-width',
       },
     ],
   },
   {
-    text: 'Advanced',
+    text: '进阶',
     items: [
       {
-        text: 'Typescript',
+        text: 'TypeScript',
         link: '/guide/react/advanced/typescript',
-        desc: 'All exported types and how to use them',
+        desc: '所有导出类型及其用法',
       },
       {
-        text: 'Accessibility',
+        text: '无障碍',
         link: '/guide/react/advanced/accessibility',
-        desc: 'Making your icons accessible',
+        desc: '让你的图标更易访问',
       },
       {
-        text: 'Global styling',
+        text: '全局样式',
         link: '/guide/react/advanced/global-styling',
-        desc: 'Apply global styles to all icons',
+        desc: '为所有图标应用全局样式',
       },
       {
-        text: 'With Lucide Lab',
+        text: '使用 Lucide Lab',
         link: '/guide/react/advanced/with-lucide-lab',
-        desc: 'Using lucide-lab with lucide-react',
+        desc: '将 lucide-lab 与 lucide-react 一起使用',
       },
       // {
       //   text: 'Animations',
@@ -73,40 +73,40 @@ export const reactSidebar = [
       //   desc: 'Add animations to your icons',
       // },
       {
-        text: 'Filled icons',
+        text: '填充图标',
         link: '/guide/react/advanced/filled-icons',
-        desc: 'Using filled icons in lucide-react',
+        desc: '在 lucide-react 中使用填充图标',
       },
       {
-        text: 'Aliased Names',
+        text: '别名名称',
         link: '/guide/react/advanced/aliased-names',
-        desc: 'Using aliased icon names',
+        desc: '使用别名图标名称',
       },
 
       {
-        text: 'Combining icons',
+        text: '组合图标',
         link: '/guide/react/advanced/combining-icons',
-        desc: 'Combine multiple icons into one',
+        desc: '将多个图标组合成一个',
       },
       {
-        text: 'Dynamic icon component',
+        text: '动态图标组件',
         link: '/guide/react/advanced/dynamic-icon-component.md',
-        desc: 'Dynamically import icons as needed',
+        desc: '按需动态导入图标',
       },
     ],
   },
   {
-    text: 'Resources',
+    text: '资源',
     items: [
       {
-        text: 'Accessibility in depth',
+        text: '深入了解无障碍',
         link: '/guide/accessibility',
-        desc: 'Accessibility best practices',
+        desc: '无障碍最佳实践',
       },
       {
-        text: 'VSCode',
+        text: 'VS Code',
         link: '/guide/vscode',
-        desc: 'VSCode and Lucide',
+        desc: 'VS Code 与 Lucide',
       },
     ],
   },

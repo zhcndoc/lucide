@@ -1,17 +1,17 @@
-# Lucide React Native
+# 适用于 React Native 的 Lucide
 
-React Native components for Lucide icons that work seamlessly across iOS and Android platforms. Built on top of react-native-svg, each icon renders as a native SVG component, providing consistent visual appearance and performance across mobile devices.
+适用于 Lucide 图标的 React Native 组件，可在 iOS 和 Android 平台上无缝工作。基于 react-native-svg 构建，每个图标都渲染为原生 SVG 组件，在移动设备上提供一致的视觉外观和性能。
 
-**What you can accomplish:**
-- Use icons as React Native components with platform-consistent rendering
-- Build cross-platform mobile apps with scalable vector icons
-- Create responsive interfaces that adapt to different screen densities
-- Integrate with React Native's styling system and animation libraries
-- Maintain consistent icon appearance across iOS and Android platforms
+**您可以实现的功能：**
+- 将图标用作具有平台一致渲染效果的 React Native 组件
+- 使用可缩放矢量图标构建跨平台移动应用
+- 创建适应不同屏幕密度的响应式界面
+- 与 React Native 的样式系统和动画库集成
+- 在 iOS 和 Android 平台上保持一致的图标外观
 
-## Installation
+## 安装
 
-First, ensure that you have `react-native-svg` (version between 12 and 15) installed. Then, install the package:
+首先，确保您已安装 `react-native-svg`（版本介于 12 到 15 之间）。然后，安装该包：
 
 ::: code-group
 
@@ -33,18 +33,18 @@ bun add lucide-react-native
 
 :::
 
-## How to use
+## 如何使用
 
-Each icon can be imported as a React component.
+每个图标都可以作为 React 组件导入。
 
-### Example
+### 示例
 
-Additional props can be passed to adjust the icon:
+可以传递额外的 props 来调整图标：
 
 ```jsx
 import { Camera } from 'lucide-react-native';
 
-// Usage
+// 用法
 const App = () => {
   return <Camera color="red" size={48} />;
 };
@@ -52,36 +52,36 @@ const App = () => {
 export default App;
 ```
 
-## Props
+## 属性
 
-| name                  | type      | default      |
+| 名称                  | 类型      | 默认值       |
 | --------------------- | --------- | ------------ |
 | `size`                | *number*  | 24           |
 | `color`               | *string*  | currentColor |
 | `strokeWidth`         | *number*  | 2            |
 | `absoluteStrokeWidth` | *boolean* | false        |
 
-### Applying props
+### 应用属性
 
-To customize the appearance of an icon, you can pass custom properties as props directly to the component. The component accepts all SVG attributes as props, which allows flexible styling of the SVG elements.
+要自定义图标的外观，您可以直接将自定义属性作为 props 传递给组件。该组件接受所有 SVG 属性作为 props，从而允许灵活地设置 SVG 元素的样式。
 
 ```jsx
-// Usage
+// 用法
 const App = () => {
   return <Camera fill="red" />;
 };
 ```
 
-## With Lucide Lab or custom icons
+## 使用 Lucide Lab 或自定义图标
 
-[Lucide Lab](https://github.com/lucide-icons/lucide-lab) is a collection of icons that are not part of the Lucide main library.
+[Lucide Lab](https://github.com/lucide-icons/lucide-lab) 是不属于 Lucide 主库的图标集合。
 
-They can be used by using the `Icon` component.
-All props like regular Lucide icons can be passed to adjust the icon appearance.
+可以通过使用 `Icon` 组件来使用它们。
+所有类似于常规 Lucide 图标的 props 都可以传递以调整图标外观。
 
-### Using the `Icon` component
+### 使用 `Icon` 组件
 
-This creates a single icon based on the iconNode passed and renders a Lucide icon component.
+这将基于传递的 iconNode 创建单个图标并渲染一个 Lucide 图标组件。
 
 ```jsx
 import { Icon } from 'lucide-react-native';
@@ -92,15 +92,15 @@ const App = () => (
 );
 ```
 
-## One generic icon component
+## 一个通用图标组件
 
-It is possible to create one generic icon component to load icons, but it is not recommended.
+可以创建一个通用图标组件来加载图标，但不推荐这样做。
 
 ::: warning
-The example below imports all ES Modules, so exercise caution when using it. Importing all icons will significantly increase the build size of the application, negatively affecting its performance. This is especially important  to keep in mind when using bundlers like `Webpack`, `Rollup`, or `Vite`.
+下面的示例导入了所有 ES 模块，因此使用时要小心。导入所有图标将显著增加应用程序的构建大小，对其性能产生负面影响。在使用 `Webpack`、`Rollup` 或 `Vite` 等打包器时，尤其要牢记这一点。
 :::
 
-### Icon Component Example
+### 图标组件示例
 
 ```tsx
 import * as icons from 'lucide-react-native/icons';
@@ -120,7 +120,7 @@ const Icon = ({ name, color, size }: IconProps) => {
 export default Icon;
 ```
 
-#### Using the Icon Component
+#### 使用图标组件
 
 ```tsx
 import Icon from './Icon';

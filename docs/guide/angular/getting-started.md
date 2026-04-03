@@ -1,6 +1,6 @@
 ---
-title: Getting started - Angular
-description: This guide will help you get started with Lucide in your Angular project.
+title: 入门指南 - Angular
+description: 本指南将帮助您在 Angular 项目中开始使用 Lucide。
 ---
 <script setup>
 import OverviewLink from '../../.vitepress/theme/components/base/OverviewLink.vue'
@@ -8,16 +8,16 @@ import OverviewLinkGrid from '../../.vitepress/theme/components/base/OverviewLin
 import { angularSidebar } from '../../.vitepress/sidebar/angular'
 </script>
 
-# Getting started
+# 入门指南
 
-This guide will help you get started with Lucide in your Angular project.
-Make sure you have an Angular environment set up. If you don't have one yet, you can [create a new Angular project](https://angular.dev/installation#create-a-new-project) using `@angular/cli`.
+本指南将帮助您在 Angular 项目中开始使用 Lucide。
+确保您已设置好 Angular 环境。如果您还没有，可以使用 `@angular/cli` [创建一个新的 Angular 项目](https://angular.dev/installation#create-a-new-project)。
 
-## Prerequisites
+## 前置条件
 
-This package requires Angular 17+ and uses standalone components, signals, and zoneless change detection.
+此包需要 Angular 17+ 版本，并使用独立组件、信号和无 Zone 变更检测。
 
-## Installation
+## 安装
 
 ::: code-group
 
@@ -39,13 +39,13 @@ bun add @lucide/angular
 
 :::
 
-## Importing your first icon
+## 导入您的第一个图标
 
-This library is built with standalone components, so it's completely tree-shakable.
+此库使用独立组件构建，因此完全支持树摇（tree-shakable）。
 
-Every icon can be imported as a ready-to-use standalone component, which renders an inline SVG element. This way, only the icons that are imported into your project are included in the final bundle. The rest of the icons are tree-shaken away.
+每个图标都可以作为即开即用的独立组件导入，它会渲染一个内联 SVG 元素。这样，只有导入到项目中的图标才会包含在最终打包文件中。其余图标会被树摇移除。
 
-### Standalone icons
+### 独立图标
 
 ```ts
 import { Component } from '@angular/core';
@@ -59,9 +59,9 @@ import { LucideFileText } from '@lucide/angular';
 export class App { }
 ```
 
-### Dynamic icon component
+### 动态图标组件
 
-When you need to render icons dynamically (for example in a list of menu items or based on a boolean signal), you can use the `LucideDynamicIcon` component:
+当您需要动态渲染图标时（例如在菜单项列表中或基于布尔信号），您可以使用 `LucideDynamicIcon` 组件：
 
 ```ts
 import { Component, computed, signal } from '@angular/core';
@@ -78,11 +78,11 @@ export class App {
 }
 ```
 
-## Component inputs
+## 组件输入
 
-To customize the appearance of an icon, you can use the following inputs:
+要自定义图标的外观，您可以使用以下输入属性：
 
-|  name                   |   type    |  default     |
+|  名称                   |   类型    |  默认值     |
 | ----------------------- | --------- | ------------ |
 | `size`                  | *number*  | 24           |
 | `color`                 | *string*  | currentColor |
@@ -90,13 +90,13 @@ To customize the appearance of an icon, you can use the following inputs:
 | `absoluteStrokeWidth`   | *boolean* | false        |
 | `title`                 | *string*  | null         |
 
-Because icons render as SVG elements, all standard SVG attributes can also be applied. See the list of SVG Presentation Attributes on [MDN](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/Presentation).
+由于图标渲染为 SVG 元素，所有标准 SVG 属性也可以应用。请参阅 [MDN](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/Presentation) 上的 SVG 表现属性列表。
 
 ```html
 <svg lucideHouse [size]="48" color="red" [strokeWidth]="1" title="Home"></svg>
 ```
 
-For more examples and details on how to use these inputs, continue the guide:
+有关如何使用这些输入属性的更多示例和详细信息，请继续阅读指南：
 
 <OverviewLinkGrid>
   <OverviewLink v-for="item in angularSidebar[1].items" :key="item.link" :href="item.link" :title="item.text" :desc="item.desc"/>

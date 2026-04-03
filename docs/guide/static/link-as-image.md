@@ -1,18 +1,18 @@
 ---
-description: Learn how to use Lucide icons as images in your project.
+description: 了解如何在项目中将 Lucide 图标作为图片使用。
 ---
 
 <script setup>
 import Sandpack from '~/.vitepress/theme/components/editors/Sandpack.vue'
 </script>
 
-# Link as Image
+# 作为图片链接
 
-In some cases, you might want to use Lucide icons as images instead of inline SVGs. This can be useful for performance reasons or when you want to use the icons in contexts where inline SVGs are not supported.
+在某些情况下，你可能希望将 Lucide 图标作为图片使用，而不是内联 SVG。这对于性能原因很有用，或者当你想在不支持内联 SVG 的上下文中使用图标时。
 
-## In HTML
+## 在 HTML 中
 
-You can link to the SVG files directly in your HTML using the `<img>` tag. The path to the SVG files will depend on how you have set up your project.
+你可以使用 `<img>` 标签在 HTML 中直接链接到 SVG 文件。SVG 文件的路径将取决于你如何设置项目。
 
 ::: code-group
 
@@ -42,14 +42,14 @@ You can link to the SVG files directly in your HTML using the `<img>` tag. The p
 
 :::
 
-::: warning For CDN users
-Names of icons can change in future releases. Make sure you set an explicit version in the URL to avoid breaking changes.\
+::: warning 致 CDN 用户
+图标名称可能会在未来的版本中更改。确保你在 URL 中设置明确的版本以避免破坏性变更。\
 `https://cdn.jsdelivr.net/npm/lucide-static@{version}/icons/smile.svg`
 :::
 
-## In CSS
+## 在 CSS 中
 
-You can also use the icons as background images in your CSS. This is useful for adding icons to buttons, links, or other elements.
+你也可以在 CSS 中将图标用作背景图片。这对于向按钮、链接或其他元素添加图标很有用。
 
 ::: code-group
 
@@ -73,8 +73,8 @@ You can also use the icons as background images in your CSS. This is useful for 
 
 :::
 
-::: warning For CDN users
-Names of icons can change in future releases. Make sure you set an explicit version in the URL to avoid breaking changes.\
+::: warning 致 CDN 用户
+图标名称可能会在未来的版本中更改。确保你在 URL 中设置明确的版本以避免破坏性变更。\
 `https://cdn.jsdelivr.net/npm/lucide-static@{version}/icons/smile.svg`
 :::
 
@@ -82,7 +82,7 @@ Names of icons can change in future releases. Make sure you set an explicit vers
 .vp-code-group + .warning{
   display: none;
 }
-/* TODO: Find a better way to select this input selector */
+/* TODO: 寻找一种更好的方法来选择此输入选择器 */
 .vp-code-group:has(.tabs input:nth-child(5):checked) + .warning {
   display: block;
 }

@@ -1,15 +1,15 @@
 ---
-title: Typescript - React Native
-description: Learn about the different types exported by the `lucide-react-native` package and how to use them in your React Native application.
+title: TypeScript 支持 - React Native
+description: 了解 `lucide-react-native` 包导出的不同类型以及如何在你的 React Native 应用程序中使用它们。
 ---
-# TypeScript Support
+# TypeScript 支持
 
-List of exported types from the `lucide-react-native` package.
-These can be used to type your components when using Lucide icons in a TypeScript React project
+`lucide-react-native` 包导出的类型列表。
+当在 TypeScript React 项目中使用 Lucide 图标时，这些类型可用于为你的组件添加类型。
 
 ## `LucideProps`
 
-Exports all props that can be passed to an icon component and SVG props supported by [react-native-svg](https://github.com/software-mansion/react-native-svg).
+导出所有可以传递给图标组件的 props 以及 [react-native-svg](https://github.com/software-mansion/react-native-svg) 支持的 SVG props。
 
 ```ts
 interface LucideProps {
@@ -17,12 +17,12 @@ interface LucideProps {
   color?: string;
   strokeWidth?: number;
   absoluteStrokeWidth?: boolean;
-  [key: string]: any; // Any other SVG props, supported by react-native-svg
+  [key: string]: any; // 任何其他 SVG props，由 react-native-svg 支持
 }
 ```
 
-### Using `LucideProps`
-You can use the `LucideProps` interface to type your custom icon components or when you need to work with icon props.
+### 使用 `LucideProps`
+你可以使用 `LucideProps` 接口为你的自定义图标组件添加类型，或者当你需要处理图标 props 时。
 
 ```tsx
 import { Camera, type LucideProps } from 'lucide-react-native';
@@ -36,15 +36,15 @@ export default WrapIcon;
 
 ## `LucideIcon`
 
-Type for individual icon components.
+单个图标组件的类型。
 
 ```ts
 type LucideIcon = React.FC<LucideProps>;
 ```
 
-### Using `LucideIcon`
+### 使用 `LucideIcon`
 
-You can use the `LucideIcon` type when you need to work with icon components directly.
+当你需要直接使用图标组件时，可以使用 `LucideIcon` 类型。
 
 ```tsx
 import { type LucideIcon } from 'lucide-react-native';
@@ -67,15 +67,15 @@ export default IconButton;
 
 ## `IconNode`
 
-Type for the raw SVG structure of an icon. This is an array of SVG elements and their attributes to render the icon.
-Not commonly used directly in application code. But can be useful for advanced use cases, such as using custom icons or with Lucide Lab.
+图标原始 SVG 结构的类型。这是一个包含 SVG 元素及其属性的数组，用于渲染图标。
+通常不直接在应用程序代码中使用。但对于高级用例可能很有用，例如使用自定义图标或与 Lucide Lab 一起使用。
 
 ```ts
 type IconNode = [elementName: string, attrs: Record<string, string | number>][];
 ```
 
-### Using `IconNode`
-You can use the `IconNode` type when you need to work with the raw SVG structure of an icon.
+### 使用 `IconNode`
+当你需要处理图标的原始 SVG 结构时，可以使用 `IconNode` 类型。
 
 ```tsx
 import { type IconNode, Icon } from 'lucide-react-native';

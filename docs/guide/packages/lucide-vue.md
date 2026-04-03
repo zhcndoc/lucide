@@ -1,15 +1,15 @@
-# Lucide Vue
+# 适用于 Vue 的 Lucide
 
-Vue 2 components for Lucide icons that integrate with Vue's Options API and template system. Each icon is a Vue component that renders as an inline SVG, providing familiar Vue development patterns for legacy applications still using Vue 2.
+用于 Lucide 图标的 Vue 2 组件，可与 Vue 的 Options API 和模板系统集成。每个图标都是一个 Vue 组件，渲染为内联 SVG，为仍在使用 Vue 2 的遗留应用提供熟悉的 Vue 开发模式。
 
-**What you can accomplish:**
-- Use icons as Vue 2 components with Options API integration
-- Maintain legacy Vue 2 applications with modern icon components
-- Integrate with Vue 2's template system and component lifecycle
-- Build applications using Vue 2's familiar syntax and patterns
-- Bridge the gap while planning migration to Vue 3
+**你可以实现：**
+- 将图标用作带有 Options API 集成的 Vue 2 组件
+- 使用现代图标组件维护遗留的 Vue 2 应用
+- 与 Vue 2 的模板系统和组件生命周期集成
+- 使用 Vue 2 熟悉的语法和模式构建应用
+- 在计划迁移到 Vue 3 时弥合差距
 
-## Installation
+## 安装
 
 ::: code-group
 
@@ -31,15 +31,15 @@ bun add @lucide/vue
 
 :::
 
-## How to use
+## 使用方法
 
-Lucide is built with ES Modules, so it's completely tree-shakable.
+Lucide 基于 ES Modules 构建，因此完全支持树摇（tree-shakable）。
 
-Each icon can be imported as a Vue component, which renders an inline SVG Element. This way only the icons that are imported into your project are included in the final bundle. The rest of the icons are tree-shaken away.
+每个图标都可以作为 Vue 组件导入，它会渲染为一个内联 SVG 元素。这样只有导入到项目中的图标才会包含在最终打包文件中。其余图标会被树摇移除。
 
-### Example
+### 示例
 
-You can pass additional props to adjust the icon.
+你可以传递额外的 props 来调整图标。
 
 ```vue
 <script setup>
@@ -54,19 +54,19 @@ import { Camera } from '@lucide/vue';
 </template>
 ```
 
-## Props
+## 属性
 
-|  name                   |   type    |  default     |
-| ----------------------- | --------- | ------------ |
-| `size`                  | *number*  | 24           |
-| `color`                 | *string*  | currentColor |
-| `stroke-width`          | *number*  | 2            |
-| `absoluteStrokeWidth`   | *boolean* | false        |
-| `default-class`         | *string*  | lucide-icon  |
+| 名称                    | 类型        | 默认值        |
+| ----------------------- | ----------- | ------------- |
+| `size`                  | *number*    | 24            |
+| `color`                 | *string*    | currentColor  |
+| `stroke-width`          | *number*    | 2             |
+| `absoluteStrokeWidth`   | *boolean*   | false         |
+| `default-class`         | *string*    | lucide-icon   |
 
-### Applying props
+### 应用属性
 
-To customize the appearance of an icon, you can pass custom properties as props directly to the component. The component accepts all SVG attributes as props, which allows flexible styling of the SVG elements. See the list of SVG Presentation Attributes on [MDN](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/Presentation).
+要自定义图标的外观，你可以直接将自定义属性作为 props 传递给组件。组件接受所有 SVG 属性作为 props，这允许灵活地样式化 SVG 元素。请参阅 [MDN](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/Presentation) 上的 SVG 展示属性列表。
 
 ```vue
 <template>
@@ -74,16 +74,16 @@ To customize the appearance of an icon, you can pass custom properties as props 
 </template>
 ```
 
-## With Lucide Lab or custom icons
+## 使用 Lucide Lab 或自定义图标
 
-[Lucide Lab](https://github.com/lucide-icons/lucide-lab) is a collection of icons that are not part of the Lucide main library.
+[Lucide Lab](https://github.com/lucide-icons/lucide-lab) 是不属于 Lucide 主库的图标集合。
 
-They can be used by using the `Icon` component.
-All props like regular Lucide icons can be passed to adjust the icon appearance.
+可以通过使用 `Icon` 组件来使用它们。
+所有像常规 Lucide 图标一样的 props 都可以传递以调整图标外观。
 
-### Using the `Icon` component
+### 使用 `Icon` 组件
 
-This creates a single icon based on the iconNode passed and renders a Lucide icon component.
+这基于传入的 iconNode 创建单个图标并渲染为 Lucide 图标组件。
 
 ```vue
 <script setup>
@@ -96,15 +96,15 @@ import { baseball } from '@lucide/lab';
 </template>
 ```
 
-## One generic icon component
+## 一个通用图标组件
 
-It is possible to create one generic icon component to load icons, but it is not recommended.
+可以创建一个通用图标组件来加载图标，但不推荐这样做。
 
 ::: danger
-The example below imports all ES Modules, so exercise caution when using it. Importing all icons will significantly increase the build size of the application, negatively affecting its performance. This is especially important when using bundlers like `Webpack`, `Rollup`, or `Vite`.
+下面的示例导入了所有 ES Modules，因此使用时请谨慎。导入所有图标将显著增加应用的构建大小，负面影响其性能。当使用 `Webpack`、`Rollup` 或 `Vite` 等打包工具时，这一点尤其重要。
 :::
 
-### Icon Component Example
+### 图标组件示例
 
 ```vue
 <script setup>
@@ -135,9 +135,9 @@ const icon = computed(() => icons[props.name]);
 </template>
 ```
 
-### Using the Icon Component
+### 使用图标组件
 
-All other props listed above also work on the `Icon` Component.
+上面列出的所有其他 props 也适用于 `Icon` 组件。
 
 ```vue
 <template>
@@ -147,11 +147,11 @@ All other props listed above also work on the `Icon` Component.
 </template>
 ```
 
-## Accessibility
+## 无障碍访问
 
-By default, we hide icons from screen readers using `aria-hidden="true"`.
+默认情况下，我们使用 `aria-hidden="true"` 对屏幕阅读器隐藏图标。
 
-You can add accessibility attributes using aria-labels.
+你可以使用 aria-labels 添加无障碍属性。
 
 ```vue
 <script setup>
@@ -162,9 +162,9 @@ import { Check } from 'lucide-vue-next';
   <Check
     color="red"
     :size="32"
-    aria-label="Task completed"
+    aria-label="任务已完成"
   />
 </template>
 ```
 
-For best practices on accessibility, please see our [accessibility guide](../accessibility.md).
+关于无障碍的最佳实践，请参阅我们的 [无障碍指南](../accessibility.md)。

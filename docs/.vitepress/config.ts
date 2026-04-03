@@ -15,14 +15,14 @@ const defaultSandpackCSS = await readFile(
   'utf-8',
 );
 
-const title = 'Lucide';
-const socialTitle = 'Lucide Icons';
-const description = 'Beautiful & consistent icon toolkit made by the community.';
+const title = 'Lucide 中文文档';
+const socialTitle = 'Lucide 图标';
+const description = '由社区打造的精美且一致的图标工具包。';
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title,
-  titleTemplate: ':title \u2013 Lucide',
+  titleTemplate: ':title \u2013 Lucide 中文文档',
   description,
   cleanUrls: true,
   outDir: '.vercel/output/static',
@@ -77,26 +77,12 @@ export default defineConfig({
     ],
   },
   head: [
-    [
-      'link',
-      {
-        rel: 'preconnect',
-        href: 'https://analytics.lucide.dev',
-      },
-    ],
-    [
-      'script',
-      {
-        src: 'https://analytics.lucide.dev/js/script.js',
-        'data-domain': 'lucide.dev',
-        defer: '',
-      },
-    ],
+    ['script', { async: '', src: 'https://www.zhcndoc.com/js/common.js' }],
     [
       'meta',
       {
         property: 'og:locale',
-        content: 'en_US',
+        content: 'zh_CN',
       },
     ],
     [
@@ -199,17 +185,17 @@ export default defineConfig({
       pageData.params?.name
     ) {
       const iconName = pageData.params.name;
-      pageData.title = `${iconName} icon details`;
+      pageData.title = `${iconName} 图标详情`;
 
       const taggedAs = pageData.params?.tags?.length
-        ? `Tagged as: ${pageData.params.tags.join(', ')}.`
+        ? `标签：${pageData.params.tags.join(', ')}。`
         : '';
       const categorizedIn = pageData.params?.category?.length
-        ? `Categorized in: ${pageData.params.category.join(', ')}.`
+        ? `分类：${pageData.params.category.join(', ')}。`
         : '';
 
       pageData.description =
-        `Details and related icons for ${iconName} icon. ${taggedAs} ${categorizedIn}`.trim();
+        `${iconName} 图标的详细信息和相关图标。${taggedAs} ${categorizedIn}`.trim();
 
       const structuredData = await getStructuredData(iconName, pageData);
 
@@ -272,17 +258,17 @@ export default defineConfig({
       dark: '/logo.dark.svg',
     },
     nav: [
-      { text: 'Icons', link: '/icons/' },
-      { text: 'Guide', link: '/guide/' },
+      { text: '图标', link: '/icons/' },
+      { text: '指南', link: '/guide/' },
       {
-        text: 'Resources',
+        text: '资源',
         items: [
           ...resourcesSidebar[0].items,
-          { text: 'Design icons', link: '/contribute/icon-design-guide' },
+          { text: '图标设计指南', link: '/contribute/icon-design-guide' },
         ],
       },
-      { text: 'Packages', link: '/packages' },
-      { text: 'Showcase', link: '/showcase' },
+      { text: '软件包', link: '/packages' },
+      { text: '展示', link: '/showcase' },
     ],
     sidebar,
     socialLinks: [
@@ -290,18 +276,18 @@ export default defineConfig({
       { icon: 'discord', link: 'https://discord.gg/EH6nSts' },
     ],
     footer: {
-      message: 'Released under the ISC License.',
-      copyright: `Copyright © ${new Date().getFullYear()} Lucide Contributors`,
+      message: `<a style="text-decoration: none;" target="_blank" href="https://www.zhcndoc.com">简中文档</a> | <a style="text-decoration: none;" rel="nofollow" target="_blank" href="https://beian.miit.gov.cn">沪ICP备2024070610号-3</a>`,
+      copyright: `Copyright © ${new Date().getFullYear()} Lucide Contributors. Released under the ISC License.`,
     },
     editLink: {
-      pattern: 'https://github.com/lucide-icons/lucide/edit/main/docs/:path',
+      pattern: 'https://github.com/zhcndoc/lucide/edit/main/docs/:path',
     },
-    carbonAds: {
-      code: 'CWYIC53U',
-      placement: 'lucidedev',
-    },
+    // carbonAds: {
+    //   code: 'CWYIC53U',
+    //   placement: 'lucidedev',
+    // },
   },
   sitemap: {
-    hostname: 'https://lucide.dev/',
+    hostname: 'https://lucide.zhcndoc.com',
   },
 });

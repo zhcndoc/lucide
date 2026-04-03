@@ -4,83 +4,83 @@ export const lucideSidebar = [
   {
     items: [
       {
-        text: 'Overview',
+        text: '概览',
         link: '/guide/lucide/',
       },
       {
-        text: 'Getting started',
+        text: '开始使用',
         link: '/guide/lucide/getting-started',
-        desc: 'Learn how to get started with Lucide.',
+        desc: '了解如何开始使用 Lucide。',
       },
       {
-        text: 'Migration from v0',
+        text: '从 v0 迁移',
         link: '/guide/lucide/migration',
-        desc: 'Learn how to migrate from v0 to v1 of Lucide.',
+        desc: '了解如何将 Lucide 从 v0 迁移到 v1。',
       },
     ],
   },
   {
-    text: 'Basics',
+    text: '基础',
     items: [
       {
-        text: 'Color',
-        desc: 'Adjust the color of your icons',
+        text: '颜色',
+        desc: '调整图标颜色',
         link: '/guide/lucide/basics/color',
       },
       {
-        text: 'Sizing',
-        desc: 'Adjust the size of your icons',
+        text: '尺寸',
+        desc: '调整图标尺寸',
         link: '/guide/lucide/basics/sizing',
       },
       {
-        text: 'Stroke width',
-        desc: 'Adjust the stroke width of your icons',
+        text: '描边宽度',
+        desc: '调整图标的描边宽度',
         link: '/guide/lucide/basics/stroke-width',
       },
     ],
   },
   {
-    text: 'Advanced',
+    text: '进阶',
     items: [
       {
-        text: 'Global styling',
+        text: '全局样式',
         link: '/guide/lucide/advanced/global-styling',
-        desc: 'Apply options and styles globally',
+        desc: '全局应用选项和样式',
       },
       {
         text: 'Shadow DOM',
         link: '/guide/lucide/advanced/shadow-dom',
-        desc: 'All exported types and how to use them',
+        desc: '所有导出类型及其用法',
       },
       {
-        text: 'Template element',
+        text: '模板元素',
         link: '/guide/lucide/advanced/content-template-element',
-        desc: 'Using content template element with lucide',
+        desc: '在 lucide 中使用内容模板元素',
       },
       {
-        text: 'Accessibility',
+        text: '无障碍',
         link: '/guide/lucide/advanced/accessibility',
-        desc: 'Making your icons accessible',
+        desc: '让你的图标更易访问',
       },
       {
-        text: 'With Lucide Lab',
+        text: '使用 Lucide Lab',
         link: '/guide/lucide/advanced/with-lucide-lab',
-        desc: 'Using lucide-lab with lucide',
+        desc: '将 lucide-lab 与 lucide 一起使用',
       },
       {
-        text: 'Filled icons',
+        text: '填充图标',
         link: '/guide/lucide/advanced/filled-icons',
-        desc: 'Using filled icons in lucide',
+        desc: '在 lucide 中使用填充图标',
       },
     ],
   },
   {
-    text: 'Resources',
+    text: '资源',
     items: [
       {
-        text: 'Accessibility in depth',
+        text: '深入了解无障碍',
         link: '/guide/accessibility',
-        desc: 'Accessibility best practices',
+        desc: '无障碍最佳实践',
       },
     ],
   },

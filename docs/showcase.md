@@ -1,8 +1,8 @@
 ---
-title: Showcase
+title: 展示
 layout: page
 outline: 2
-outlineTitle: Showcase
+outlineTitle: 展示
 ---
 <script setup>
 import PageContainer from '.vitepress/theme/components/PageContainer.vue'

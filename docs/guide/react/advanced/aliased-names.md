@@ -1,15 +1,15 @@
 ---
-title: Aliased Names - React
-description: Learn about the different import name styles available for Lucide icons in your React project and how to choose the one that best fits your needs.
+title: 别名 - React
+description: 了解 React 项目中 Lucide 图标可用的不同导入名称样式，以及如何选择最适合你需求的样式。
 ---
-# Aliased Names
+# 别名
 
-Some icons have multiple names. This is because we sometimes choose to rename them to make them more consistent with the rest of the icon set, or the name was not generic. For example, the `edit-2` icon is renamed to `pen` to make the name more generic, since it is just a pen icon.
+有些图标有多个名称。这是因为我们有时会选择重命名它们，使其与图标集的其余部分保持一致，或者原来的名称不够通用。例如，`edit-2` 图标被重命名为 `pen`，以使名称更通用，因为它只是一个钢笔图标。
 
-Beside these aliases, Lucide also includes prefixed and suffixed names to use within your project. This is to prevent import name collisions with other libraries or your own code.
+除了这些别名之外，Lucide 还包含前缀和后缀名称，以便在你的项目中使用。这是为了防止与其他库或你自己的代码发生导入名称冲突。
 
 ```tsx
-// These are all the same icon
+// 这些都是同一个图标
 import {
   House,
   HouseIcon,
@@ -17,13 +17,13 @@ import {
 } from "lucide-react";
 ```
 
-## Choosing import name style
+## 选择导入名称样式
 
-If you want consistent imports across your project, or if you want to change the autocompletion of Lucide icons in your IDE, there an option to choose the import name style you prefer.
+如果你希望整个项目中的导入保持一致，或者想要更改 IDE 中 Lucide 图标的自动完成功能，有一个选项可以选择你偏好的导入名称样式。
 
-This can be done by creating a custom module declaration file to override Lucide imports and turning off the autocomplete in your IDE.
+这可以通过创建自定义模块声明文件来覆盖 Lucide 导入，并在 IDE 中关闭自动完成来实现。
 
-### Turn off autocomplete in your IDE
+### 在 IDE 中关闭自动完成
 
 ```json [.vscode/settings.json]
 {
@@ -33,27 +33,27 @@ This can be done by creating a custom module declaration file to override Lucide
 }
 ```
 
-### Create a custom module declaration file
+### 创建自定义模块声明文件
 
-Create a custom TypeScript declaration file that re-exports the preferred naming style:
+创建一个自定义 TypeScript 声明文件，重新导出首选的命名样式：
 
 ```ts [lucide-react.d.ts]
 declare module "lucide-react" {
-  // Prefixed import names
+  // 前缀导入名称
   export * from "lucide-react/dist/lucide-react.prefixed";
-  // or
-  // Suffixed import names
+  // 或
+  // 后缀导入名称
   export * from "lucide-react/dist/lucide-react.suffixed";
 }
 ```
 
-Place this file in your project root or in a directory included in your TypeScript configuration.
-A common approach is to create a `@types` folder and name the file `lucide-react.d.ts`.
+将此文件放在项目根目录或 TypeScript 配置中包含的目录中。
+一种常见的方法是创建一个 `@types` 文件夹，并将文件命名为 `lucide-react.d.ts`。
 
-### Import name styles
+### 导入名称样式
 
-| Import Style  | Available imports           | Declaration file import |
+| 导入样式 | 可用导入 | 声明文件导入 |
 | ------------- | --------------------------- | ----------------------- |
-| Default       | Home, HomeIcon, LucideHome  |                         |
-| Prefixed      | LucideHome                  | lucide-react.prefixed   |
-| Suffixed      | HomeIcon                    | lucide-react.suffixed   |
+| 默认 | Home, HomeIcon, LucideHome  |                         |
+| 前缀 | LucideHome                  | lucide-react.prefixed   |
+| 后缀 | HomeIcon                    | lucide-react.suffixed   |

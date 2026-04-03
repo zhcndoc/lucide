@@ -1,19 +1,19 @@
 ---
-title: Filled Icons - Lucide
-description: Fills are not officially supported in Lucide, but you can still use the fill attribute on certain icons to create filled versions.
+title: 填充图标 - Lucide
+description: Lucide 官方不支持填充，但你仍然可以在某些图标上使用 fill 属性来创建填充版本。
 ---
 
 <script setup>
 import Sandpack from '~/.vitepress/theme/components/editors/Sandpack.vue'
 </script>
 
-# Filled Icons
+# 填充图标
 
-Fills are officially not supported.
-However, all SVG properties are available on all icons.
-Fill can still be used and will work fine on certain icons.
+官方不支持填充。
+但是，所有 SVG 属性都可用于所有图标。
+fill 仍然可以使用，并且在某些图标上效果良好。
 
-Example with stars:
+星星示例：
 
 ::: sandpack {template=vanilla editorHeight=480 editorWidthPercentage=60 dependencies="lucide"}
 

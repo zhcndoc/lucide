@@ -41,91 +41,91 @@ interface Placeholder {
 
 const brandPlaceholders: Placeholder[] = shallowReadonly([
   {
-    title: 'Boooo! What a scary brand logo!',
+    title: '哇哦！这是一个吓人的品牌标志！',
     message:
-      '[name] and its friends often haunt this search box, but you won’t ever find them here.',
+      '[name] 和它的伙伴经常出没在这个搜索框里，但你永远找不到它们。',
     icon: markRaw(ghost),
   },
   {
-    title: 'Thank You Mario!',
-    message: 'But [name] is in another castle!',
+    title: '谢谢你，马里奥！',
+    message: '但是 [name] 在另一座城堡里！',
     icon: markRaw(castle),
   },
   {
-    title: '[name] did audition for our icon set',
-    message: '...but didn’t make the callback.',
+    title: '[name] 其实试镜过我们的图标集',
+    message: '……但没有收到回电。',
     icon: markRaw(drama),
   },
   {
-    title: 'Such Search. Very [name].',
-    message: 'Much not here. So Wow.',
+    title: '如此搜索。非常 [name]。',
+    message: '非常不在这里。太棒了。',
     icon: markRaw(dog),
   },
   {
-    title: 'I Can Has [name]?',
-    message: 'No [name] for you in here.',
+    title: '我能有 [name] 吗？',
+    message: '这里没有 [name] 给你。',
     icon: markRaw(cat),
   },
   {
-    title: 'Loading [name]...',
-    message: 'Fatal error: our cartridge contains only open-source pixels.',
+    title: '正在加载 [name]...',
+    message: '致命错误：我们的卡带里只有开源像素。',
     icon: markRaw(save),
   },
   {
-    title: '[name] Shall Not Pass',
-    message: 'Do not look to its coming at first light of any day.',
+    title: '[name] 不能通行',
+    message: '不要在任何一天的黎明等待它的到来。',
     icon: markRaw(wandSparkles),
   },
   {
-    title: 'Winter is coming',
-    message: 'But [name] sure isn’t.',
+    title: '凛冬将至',
+    message: '但 [name] 肯定不会。',
     icon: markRaw(snowflake),
   },
   {
-    title: 'The cake is a lie',
-    message: 'And so is the promise of an icon for [name] at Lucide.',
+    title: '蛋糕是个谎言',
+    message: 'Lucide 里为 [name] 提供图标的承诺也是如此。',
     icon: markRaw(cake),
   },
   {
-    title: 'It’s not a bug',
-    message: 'Having no [name] icon around is a feature.',
+    title: '这不是 bug',
+    message: '没有 [name] 图标本身就是一种特性。',
     icon: markRaw(worm),
   },
   {
-    title: 'The lab exploded',
-    message: 'We tried mixing [name] with open-source icons.',
+    title: '实验室炸了',
+    message: '我们试过把 [name] 和开源图标混在一起。',
     icon: markRaw(testTubeDiagonal),
   },
   {
-    title: 'It’s Dangerous to Go Alone',
-    message: 'Take this icon instead — it’s not [name], but it might help.',
+    title: '独自上路很危险',
+    message: '不如拿这个图标试试 - 它不是 [name]，但可能有帮助。',
     icon: markRaw(sword),
   },
 ]);
 
 const notFoundPlaceholders: Omit<Placeholder, 'title'>[] = shallowReadonly([
   {
-    message: 'We’ve looked for this icon for a bird’s eye view, but could not find it.',
+    message: '我们已经全局搜索过这个图标，但还是没找到。',
     icon: markRaw(bird),
   },
   {
-    message: 'We checked every tree. Only acorns, no results.',
+    message: '我们检查了每一棵树。只有橡果，没有结果。',
     icon: markRaw(squirrel),
   },
   {
-    message: 'You’ve gone too deep into the rabbit hole — this icon doesn’t exist.',
+    message: '你已经钻得太深了 - 这个图标并不存在。',
     icon: markRaw(rabbit),
   },
   {
-    message: 'This icon seems to have slipped through the net.',
+    message: '这个图标似乎从网里溜走了。',
     icon: markRaw(fish),
   },
   {
-    message: 'This icon might exist in the future… but it hasn’t arrived yet.',
+    message: '这个图标也许未来会存在……但现在还没到。',
     icon: markRaw(turtle),
   },
   {
-    message: 'Rats! This icon seems to have slipped through the cracks.',
+    message: '糟了！这个图标似乎从缝隙里溜走了。',
     icon: markRaw(rat),
   },
 ]);
@@ -144,12 +144,12 @@ watch(
       ? {
           ...randomItem(brandPlaceholders),
           finePrint:
-            'Lucide does not accept brand logos, and we do not plan to add them in the future. This is due to a combination of legal restrictions, design consistency concerns, and practical maintenance reasons.',
+            'Lucide 不接受品牌标志，我们也不打算在未来添加它们。这是出于法律限制、设计一致性和维护成本等多方面考虑。',
         }
       : {
-          title: `No results for “[name]”`,
+          title: `没有找到 “[name]” 的结果`,
           finePrint:
-            'This icon doesn’t seem to exist… yet. Try searching similar terms, browsing existing requests, or opening a new one.',
+            '这个图标似乎还不存在……也许未来会有。你可以试试搜索相近词、浏览已有请求，或者创建一个新的请求。',
           ...randomItem(notFoundPlaceholders),
         };
   },
@@ -191,28 +191,28 @@ onMounted(() => {
     </p>
     <VPButton
       v-if="isBrandSearch"
-      text="Head over to Simple Icons"
+      text="前往 Simple Icons"
       theme="brand"
       :href="`https://simpleicons.org/?q=${searchQuery}`"
       target="_blank"
     />
     <VPButton
       v-else
-      text="Clear search & try again"
+      text="清除搜索并重试"
       theme="brand"
       @click="$emit('clear')"
     />
     <span class="text-divider">or</span>
     <VPButton
       v-if="isBrandSearch"
-      text="Read our statement on brand logos"
+      text="阅读我们的品牌标志声明"
       theme="alt"
       href="https://github.com/lucide-icons/lucide/blob/main/BRAND_LOGOS_STATEMENT.md"
       target="_blank"
     />
     <VPButton
       v-else
-      text="Search GitHub issues"
+      text="搜索 GitHub 问题"
       theme="alt"
       :href="`https://github.com/lucide-icons/lucide/issues?q=is%3Aopen+${searchQuery}`"
       target="_blank"

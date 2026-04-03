@@ -1,14 +1,14 @@
 ---
-title: Size the Lucide icon font
-description: Learn how to customize the color of Lucide icons in your static projects using CSS. This guide covers how to change icon colors with CSS classes and inline styles for web font implementations.
+title: 调整 Lucide 图标字体的大小
+description: 了解如何使用 CSS 自定义静态项目中 Lucide 图标的大小。本指南介绍了如何在 Web 字体实现中使用 CSS 类和内联样式更改图标大小。
 ---
-# Size the font
+# 调整字体大小
 
-Styling the Lucide icon font with CSS is straightforward. You can change the color of the icons using the `font-size` property in your CSS. This allows you to easily customize the appearance of the icons to match your design.
+使用 CSS 设置 Lucide 图标字体的样式很简单。您可以使用 CSS 中的 `font-size` 属性更改图标的大小。这使您可以轻松自定义图标的外观以匹配您的设计。
 
-## Changing the size
+## 更改大小
 
-To change the size of the icons, simply apply the `font-size` property to the element that contains the icon. For example, if you want to change the size of an icon to 24px, you can use the following CSS:
+要更改图标的大小，只需将 `font-size` 属性应用于包含图标的元素。例如，如果要将图标的大小更改为 24px，可以使用以下 CSS：
 
 ```css
 .icon-house {
@@ -16,4 +16,4 @@ To change the size of the icons, simply apply the `font-size` property to the el
 }
 ```
 
-This will change the size of the icon with the class `icon-house` to 24px. You can use any valid CSS size value, such as em, rem, or percentage.
+这将把类为 `icon-house` 的图标大小更改为 24px。您可以使用任何有效的 CSS 大小值，例如 em、rem 或百分比。

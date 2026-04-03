@@ -76,7 +76,7 @@ function onSelectFramework(item: { name: string; icon: string; iconDark?: string
     class="framework-select"
     v-if="page?.relativePath?.startsWith?.('guide')"
   >
-    <label for="framework-select">Framework</label>
+    <label for="framework-select">框架</label>
     <Select
       id="framework-select"
       :items="frameworks"

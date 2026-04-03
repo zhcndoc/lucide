@@ -1,11 +1,10 @@
 # @lucide/icons
 
-`@lucide/icons` is a helper library that exports Lucide **icon data** in a tree-shakable format, also providing utilities for dynamic importing icons.
+`@lucide/icons` 是一个辅助库，它以可树摇的格式导出 Lucide **图标数据**，并提供动态导入图标的工具函数。
 
-It intentionally ships **no real rendering logic or components** — other packages (for example [`@lucide/angular`](http://npmjs.com/package/@lucide/angular)) can consume this data to render icons in their respective
- frameworks. You can also use this package to build third-party integrations for frameworks we don't (yet) support.
+它特意**不包含真实的渲染逻辑或组件** —— 其他包（例如 [`@lucide/angular`](http://npmjs.com/package/@lucide/angular)）可以使用这些数据在各自的框架中渲染图标。你也可以使用此包为我们尚未支持的框架构建第三方集成。
 
-## Installation
+## 安装
 
 ::: code-group
 
@@ -27,9 +26,9 @@ bun add @lucide/icons
 
 :::
 
-## Icon data format
+## 图标数据格式
 
-Each icon is described by the following interface:
+每个图标都由以下接口描述：
 
 ```typescript
 export type LucideIconData = {
@@ -41,48 +40,48 @@ export type LucideIconData = {
 );
 ```
 
-| name                         | type               | description                                                        |
+| 名称                         | 类型               | 描述                                                        |
 |------------------------------|--------------------|--------------------------------------------------------------------|
-| `name`                       | `string`           | The name of the icon.                                              |
-| `node`                       | `LucideIconNode[]` | SVG child nodes as `[tagName, attributes]` tuples.                 |
-| `size` or `width` & `height` | `number`           | The dimensions of the icon (`size` is shorthand for square icons). |
+| `name`                       | `string`           | 图标的名称。                                              |
+| `node`                       | `LucideIconNode[]` | SVG 子节点，格式为 `[tagName, attributes]` 元组。                 |
+| `size` 或 `width` & `height` | `number`           | 图标的尺寸（`size` 是正方形图标的简写）。 |
 
-## How to use
+## 如何使用
 
-Icons can be imported individually. Only the icons you import end up referenced by your application code — the rest will be eliminated by tree-shaking.
+图标可以单独导入。只有你导入的图标才会被你的应用代码引用 —— 其余的将通过树摇被消除。
 
 ```ts
 import { House } from '@lucide/icons';
-// House is icon data (not a rendered component).
+// House 是图标数据（不是渲染后的组件）。
 ```
 
-## Building icons
+## 构建图标
 
-`@lucide/icons` ships small helpers that convert Lucide icon data into different render-ready outputs.
-All builders accept the same `params` object (`LucideBuildParams`) to customize the generated SVG.
+`@lucide/icons` 提供了一些小型辅助函数，可将 Lucide 图标数据转换为不同的可渲染输出。
+所有构建器都接受相同的 `params` 对象（`LucideBuildParams`）来自定义生成的 SVG。
 
-### Build parameters
+### 构建参数
 
-The following parameters are supported (names reflect the current implementation):
+支持以下参数（名称反映当前实现）：
 
-| param                 | type                     | effect                                                                             |
+| 参数                 | 类型                     | 效果                                                                             |
 |-----------------------|--------------------------|------------------------------------------------------------------------------------|
-| `color`               | `string`                 | Sets `stroke` (defaults to `currentColor`).                                        |
-| `size`                | `number`                 | Sets both `width` and `height` (defaults to 24).                                   |
-| `width`               | `number`                 | Sets `width` only.                                                                 |
-| `height`              | `number`                 | Sets `height` only.                                                                |
-| `strokeWidth`         | `number`                 | Sets `stroke-width` (defaults to 2).                                               |
-| `absoluteStrokeWidth` | `boolean`                | Adds [`vector-effect="non-scaling-stroke"`](https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Attribute/vector-effect) to child elements.                   |
-| `className`           | `string`                 | Appended to the generated `class` attribute.                                       |
-| `attributes`          | `Record<string, string>` | Add or override any generated SVG attributes (including `class`, `viewBox`, etc.). |
+| `color`               | `string`                 | 设置 `stroke`（默认为 `currentColor`）。                                        |
+| `size`                | `number`                 | 同时设置 `width` 和 `height`（默认为 24）。                                   |
+| `width`               | `number`                 | 仅设置 `width`。                                                                 |
+| `height`              | `number`                 | 仅设置 `height`。                                                                |
+| `strokeWidth`         | `number`                 | 设置 `stroke-width`（默认为 2）。                                               |
+| `absoluteStrokeWidth` | `boolean`                | 为子元素添加 [`vector-effect="non-scaling-stroke"`](https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Attribute/vector-effect)。                   |
+| `className`           | `string`                 | 附加到生成的 `class` 属性。                                       |
+| `attributes`          | `Record<string, string>` | 添加或覆盖任何生成的 SVG 属性（包括 `class`、`viewBox` 等）。 |
 
 ::: info
-SVG attributes generated by the builders include a default Lucide setup (`xmlns`, `viewBox`, `fill="none"`, `stroke="currentColor"`, `stroke-width="2"`, `stroke-linecap="round"`, `stroke-linejoin="round"`), plus a class string of the form: `lucide lucide-{iconName}`.
+构建器生成的 SVG 属性包括默认的 Lucide 设置（`xmlns`、`viewBox`、`fill="none"`、`stroke="currentColor"`、`stroke-width="2"`、`stroke-linecap="round"`、`stroke-linejoin="round"`），以及形式为 `lucide lucide-{iconName}` 的 class 字符串。
 :::
 
 ### `buildLucideIconNode`
 
-Creates a root SVG node in an svgson-like format:
+创建类似 svgson 格式的根 SVG 节点：
 
 ```ts
 import { buildLucideIconNode } from '@lucide/icons/builders';
@@ -94,14 +93,14 @@ const node = buildLucideIconNode(House, {
   className: 'my-icon',
 });
 
-// -> ['svg', attributes, children]
+// -> ['svg', 属性，子节点]
 ```
 
-This is useful if you want to plug Lucide icons into your own renderer, templating system, or framework integration.
+如果你想将 Lucide 图标插入到自己的渲染器、模板系统或框架集成中，这很有用。
 
 ### `buildLucideSvg`
 
-Creates an SVG string:
+创建 SVG 字符串：
 
 ```ts
 import { buildLucideSvg } from '@lucide/icons/builders';
@@ -112,7 +111,7 @@ const svg = buildLucideSvg(House, { size: 24, color: '#111' });
 
 ### `buildLucideIconElement`
 
-Creates an actual DOM element (SVG) within the provided document:
+在提供的文档中创建实际的 DOM 元素（SVG）：
 
 ```ts
 import { buildLucideIconElement } from '@lucide/icons/builders';
@@ -124,11 +123,11 @@ document.body.appendChild(el);
 
 ### `buildLucideDataUri`
 
-Creates a base64-encoded SVG data URI from a Lucide icon object.
+从 Lucide 图标对象创建 base64 编码的 SVG 数据 URI。
 
-This helper works in both browsers and Node.js:
-- In browsers it uses `btoa` (with proper UTF-8 handling)
-- In Node.js it falls back to `Buffer`
+此辅助函数在浏览器和 Node.js 中均可使用：
+- 在浏览器中它使用 `btoa`（具有正确的 UTF-8 处理）
+- 在 Node.js 中它回退到 `Buffer`
 
 ```ts
 import { buildLucideDataUri } from '@lucide/icons/builders';
@@ -137,28 +136,28 @@ import { House } from '@lucide/icons';
 const uri = buildLucideDataUri(House, { size: 24 });
 ```
 
-The returned value can be used directly in places such as:
+返回值可以直接用于以下地方：
 - `<img src="...">`
 - CSS `background-image`
-- Canvas drawing
-- Inline data URLs in HTML or SVG
+- Canvas 绘图
+- HTML 或 SVG 中的内联数据 URL
 
-::: tip Environment notes
-- The SVG is encoded as UTF-8 before base64 conversion to ensure correct handling of non-ASCII characters.
-- No runtime configuration is required — the function automatically selects the appropriate encoding strategy.
-- If neither `btoa` nor `Buffer` is available, an error is thrown.
+::: tip 环境说明
+- SVG 在 base64 转换之前被编码为 UTF-8，以确保正确处理非 ASCII 字符。
+- 不需要运行时配置 —— 函数会自动选择合适的编码策略。
+- 如果 `btoa` 和 `Buffer` 都不可用，则会抛出错误。
 :::
 
-## Dynamic imports
+## 动态导入
 
-Dynamic imports are useful when you only know the icon name at runtime (for example, icon names stored in a database or a CMS). For purely static use cases, prefer direct imports for the best tree-shaking results.
+当你只在运行时才知道图标名称时，动态导入很有用（例如，存储在数据库或 CMS 中的图标名称）。对于纯静态用例，首选直接导入以获得最佳的树摇效果。
 
 ::: tip
-Validate `iconName` before indexing the map (and provide a fallback icon) to avoid runtime errors.
+在索引映射之前验证 `iconName`（并提供后备图标）以避免运行时错误。
 :::
-## Dynamic imports
+## 动态导入
 
-Dynamic imports are useful when the icon name is only known at runtime (for example, icon names stored in a CMS or database). For purely static usage, prefer direct imports for maximum tree-shaking.
+当图标名称仅在运行时已知时，动态导入很有用（例如，存储在 CMS 或数据库中的图标名称）。对于纯静态用法，首选直接导入以实现最大程度的树摇。
 
 ```ts
 import { lucideDynamicIconImports } from '@lucide/icons/dynamic';
@@ -167,6 +166,6 @@ const name = 'house';
 const icon = await lucideDynamicIconImports[name]?.();
 
 if (!icon) {
-  // handle unknown icon name (fallback)
+  // 处理未知的图标名称（后备）
 }
 ```

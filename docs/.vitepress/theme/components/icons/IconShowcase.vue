@@ -70,7 +70,7 @@ const prettyName = props.name
     class="showcase"
     v-if="iconComponent"
   >
-    <h2 class="title">See this icon in action</h2>
+    <h2 class="title">看看这个图标的实际效果</h2>
     <div class="showcase-grid">
       <div class="showcase-item column">
         <div class="placeholder"></div>
@@ -83,7 +83,7 @@ const prettyName = props.name
             <iconComponent />
             {{ prettyName }}
           </button>
-          <button class="button button-alt">Cancel</button>
+          <button class="button button-alt">取消</button>
         </div>
       </div>
       <div class="showcase-item column">
@@ -94,12 +94,12 @@ const prettyName = props.name
           <input
             type="text"
             v-if="name !== 'calendar'"
-            placeholder="Enter a date..."
+            placeholder="输入日期..."
           />
           <input
             type="text"
             v-if="name == 'calendar'"
-            placeholder="Enter a time..."
+            placeholder="输入时间..."
           />
         </div>
         <div class="spacer"></div>
@@ -108,7 +108,7 @@ const prettyName = props.name
           <iconComponent />
           <input
             type="text"
-            placeholder="Enter a value..."
+            placeholder="输入数值..."
           />
         </div>
       </div>
@@ -120,7 +120,7 @@ const prettyName = props.name
           <div class="placeholder"></div>
           <div class="badge badge-red">
             <BugIcon :size="20" />
-            Bug
+            错误
           </div>
         </div>
         <div
@@ -130,7 +130,7 @@ const prettyName = props.name
           <div class="placeholder"></div>
           <div class="badge badge-red">
             <AlertTriangleIcon :size="20" />
-            Alert
+            警告
           </div>
         </div>
         <div class="row">
@@ -144,7 +144,7 @@ const prettyName = props.name
               :size="20"
               v-else
             />
-            Feature
+            功能
           </div>
         </div>
         <div class="row">
@@ -159,13 +159,13 @@ const prettyName = props.name
         <button class="button button-alt button-square">
           <FolderIcon v-if="name !== 'folder'" />
           <FilesIcon v-else />
-          Documents
+          文档
           <PlusIcon class="ms-auto" />
         </button>
         <button class="button button-alt button-square">
           <FileIcon v-if="name !== 'file'" />
           <FileTextIcon v-else />
-          Readme
+          说明文档
         </button>
         <button class="button button-alt button-square">
           <iconComponent />

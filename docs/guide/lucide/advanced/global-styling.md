@@ -1,25 +1,25 @@
 ---
-title: Global styling - Lucide
-description: Learn how to apply global styles to Lucide icons in your Vanilla JavaScript applications using CSS or the attrs option in createIcons.
+title: 全局样式 - Lucide
+description: 学习如何在 Vanilla JavaScript 应用程序中使用 CSS 或 createIcons 中的 attrs 选项为 Lucide 图标应用全局样式。
 ---
 <script setup>
 import Sandpack from '~/.vitepress/theme/components/editors/Sandpack.vue';
 </script>
 
-## Global styling
+## 全局样式
 
-Adjusting icons can be done by using [color](../basics/color.md), [size](../basics/sizing.md) and [stroke width](../basics/stroke-width.md).
-To style all icons globally, you can either use CSS, or use the `attrs` option in `createIcons`.
+可以通过使用 [颜色](../basics/color.md)、[大小](../basics/sizing.md) 和 [描边宽度](../basics/stroke-width.md) 来调整图标。
+要为所有图标应用全局样式，你可以使用 CSS，或者使用 `createIcons` 中的 `attrs` 选项。
 
-We recommend using CSS for global styling, as it is the most straightforward way to achieve this.
-<!-- Local overwrite NOT working -->
-<!-- But using CSS prevents you from using props like `size`, `color` and `strokeWidth` on individual icons, since CSS specificity will override these props, to be able to use the props on individual ones you need to adjust the global styles using `attrs` in `createIcons`. -->
+我们建议使用 CSS 进行全局样式设置，因为这是实现此目的最直接的方式。
+<!-- 本地覆盖不起作用 -->
+<!-- 但是使用 CSS 会阻止你在单个图标上使用像 `size`、`color` 和 `strokeWidth` 这样的 props，因为 CSS 特异性会覆盖这些 props，为了能够在单个图标上使用这些 props，你需要使用 `createIcons` 中的 `attrs` 来调整全局样式。 -->
 
-This will apply the `color`, `size` and `strokeWidth` props to all icons.
+这会将 `color`、`size` 和 `strokeWidth` props 应用到所有图标。
 
-### Style by using attrs on `createIcons`
+### 通过在 `createIcons` 上使用 attrs 进行样式设置
 
-You can also apply global styles by passing attributes to the `createIcons` function.
+你也可以通过向 `createIcons` 函数传递属性来应用全局样式。
 
 ::: sandpack {template=vanilla showTabs=false editorHeight=295 editorWidthPercentage=60 dependencies="lucide"}
 
@@ -53,21 +53,21 @@ createIcons({
 
 :::
 
-### Style by using CSS
+### 通过使用 CSS 进行样式设置
 
-Styling icons is easy to accomplish using CSS.
+使用 CSS 可以轻松完成图标样式设置。
 
-Every icon has a class attribute applied called `lucide`. This class name can be used in the CSS file to target all icons that are being used within the app.
+每个图标都应用了一个名为 `lucide` 的 class 属性。这个类名可以在 CSS 文件中用于定位应用中所有正在使用的图标。
 
-- The **color** of the icons can be changed using the [`color`](https://developer.mozilla.org/en-US/docs/Web/CSS/color) CSS property.
-- The **size** of the icons can be changed using [`width`](https://developer.mozilla.org/en-US/docs/Web/CSS/width) and [`height`](https://developer.mozilla.org/en-US/docs/Web/CSS/height) CSS properties.
-- The **stroke width** of the icons can be changed using the [`stroke-width`](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-width) CSS property.
+- 图标的 **颜色** 可以使用 [`color`](https://developer.mozilla.org/en-US/docs/Web/CSS/color) CSS 属性来更改。
+- 图标的 **大小** 可以使用 [`width`](https://developer.mozilla.org/en-US/docs/Web/CSS/width) 和 [`height`](https://developer.mozilla.org/en-US/docs/Web/CSS/height) CSS 属性来更改。
+- 图标的 **描边宽度** 可以使用 [`stroke-width`](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-width) CSS 属性来更改。
 
 ::: sandpack {template=vanilla showTabs=false editorHeight=295 editorWidthPercentage=60 dependencies="lucide"}
 
 ```css icon.css [active]
 .lucide {
-  /* Change this! */
+  /* 修改这里！ */
   color: #ffadff;
   width: 48px;
   height: 48px;

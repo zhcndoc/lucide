@@ -1,16 +1,16 @@
-# Migration from v0
+# 从 v0 迁移
 
-See what is changed in v1 and how to migrate from v0 to v1 of Lucide for Vue. For all the details about v1 see [Version 1](../version-1.md)
+查看 v1 中的变更内容以及如何从适用于 Vue 的 Lucide 的 v0 迁移到 v1。有关 v1 的所有详细信息，请参阅 [Lucide V1](../version-1.md)
 
-## From `lucide-vue-next` to `@lucide/vue`
+## 从 `lucide-vue-next` 到 `@lucide/vue`
 
-Lucide package for Vue is moved to `@lucide/vue` in v1.
+Vue 的 Lucide 包在 v1 中已移至 `@lucide/vue`。
 
-Mostly a find-and-replace of `lucide-vue-next` to `@lucide/vue`. The API is the same, so no other changes are required.
+主要是将 `lucide-vue-next` 查找并替换为 `@lucide/vue`。API 相同，因此不需要其他更改。
 
-## Removed Brand Icons
+## 移除的品牌图标
 
-Brand icons are removed in v1. If you are using any of the following icons, you will need to replace them with a custom SVG or an alternative icon:
+品牌图标在 v1 中已被移除。如果您使用了以下任何图标，则需要将其替换为自定义 SVG 或替代图标：
 
 - Chromium
 - Codepen
@@ -24,7 +24,7 @@ Brand icons are removed in v1. If you are using any of the following icons, you 
 - Instagram
 - LinkedIn
 - Pocket
-- RailSymbol (based on the British Rail logo)
+- RailSymbol（基于英国铁路标志）
 - Slack
 
-We recommend to use the official SVG icons provided by the respective brands, most of them can be found on their websites or in their brand guidelines. Alternatively, you can use the icons from [Simple Icons](https://simpleicons.org/), which provides a large collection of brand icons. Also with links to the official Brand Guidelines and SVG icons.
+我们建议使用各品牌提供的官方 SVG 图标，大多数可以在其网站或品牌指南中找到。或者，您可以使用 [Simple Icons](https://simpleicons.org/) 中的图标，该网站提供了大量的品牌图标集合，同时也提供了指向官方品牌指南和 SVG 图标的链接。

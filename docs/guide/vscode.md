@@ -1,36 +1,37 @@
 ---
-title: Visual Studio Code
-description: Learn how to use Lucide icons in Visual Studio Code, including tips on turning off autocomplete, viewing JS docs and icon previews, and exploring third-party plugins for enhanced functionality.
+title: VS Code
+description: 学习如何在 VS Code 中使用 Lucide 图标，包括关闭自动补全、查看 JS 文档和图标预览的技巧，以及探索第三方插件以增强功能。
 ---
-# Visual Studio Code
+# VS Code
 
-Visual Studio Code (VS Code) is a popular code editor that provides a wide range of features and extensions to enhance your development experience.
+VS Code 是一款流行的代码编辑器，提供广泛的功能和扩展以增强您的开发体验。
 
-## Turn off autocomplete in your IDE
+## 在 IDE 中关闭自动补全
 
-All icons are exported from the main module. This can create a lot of noise in the autocomplete suggestions of your IDE.
-You can turn this off by adding the following setting to your VS Code settings.
+所有图标都是从主模块导出的。这会在您的 IDE 的自动补全建议中产生大量干扰。
+您可以通过将以下设置添加到 VS Code 设置中来关闭此功能。
 
 ```json [.vscode/settings.json]
 {
   "js/ts.preferences.autoImportFileExcludePatterns": [
-    "lucide-react", // or
-    "lucide-preact", // or
-    "lucide-react-native", // or
+    "lucide-react", // 或
+    "lucide-preact", // 或
+    "lucide-react-native", // 或
     "@lucide/vue",
   ]
 }
 ```
 
-## JS Docs and icon preview
-Each icon is provided with JS docs. In VS Code, you can hover over the icon component to see the JSdocs.
+## JS 文档和图标预览
 
-Also a little preview of the icon is shown.
+每个图标都提供了 JS 文档。在 VS Code 中，您可以将鼠标悬停在图标组件上以查看 JS 文档。
 
-![VS Code JS Docs](./images/vscode-hover.png)
+同时还会显示一个小的图标预览。
 
-## Third party plugins
+![VS Code JS 文档](./images/vscode-hover.png)
 
-There are several third party plugins available for VS Code that provide additional features for working with Lucide icons.
+## 第三方插件
 
-See the  [VSCode Marketplace](https://marketplace.visualstudio.com/search?term=lucide&target=VSCode&category=All%20categories&sortBy=Relevance) for available extensions.
+有几个适用于 VS Code 的第三方插件，可为使用 Lucide 图标提供额外功能。
+
+查看  [VSCode 市场](https://marketplace.visualstudio.com/search?term=lucide&target=VSCode&category=All%20categories&sortBy=Relevance) 以获取可用的扩展。

@@ -20,9 +20,21 @@ const theme: Partial<Theme> = {
     return h(DefaultTheme.Layout, null, {
       'sidebar-nav-before': () => h(FrameworkSelect),
       'home-hero-info-before': () => h(HomeHeroInfoBefore),
+      'aside-outline-before': () =>
+        h('div', {
+          class: 'wwads-cn wwads-vertical',
+          style: 'margin-top: 0; margin-bottom: 1rem; max-width: 200px;',
+          'data-id': '354',
+        }),
       'sidebar-nav-after': () => h(IconsSidebarNavAfter),
       'home-hero-image': () => h(HomeHeroIconsCard),
       'home-hero-actions-after': () => h(HomeHeroAfter),
+      'doc-after': () =>
+        h('div', {
+          class: 'wwads-cn wwads-horizontal',
+          style: 'margin-top: 1rem; margin-bottom: 1rem; max-width: 100%;',
+          'data-id': '354',
+        }),
       'layout-top': () => h(LayoutTop),
     });
   },

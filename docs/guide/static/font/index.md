@@ -1,20 +1,20 @@
 ---
-description: Using the web font version of Lucide icons in your project. Learn how to include the stylesheet and use the icons with CSS classes.
+description: 在您的项目中使用 Lucide 图标的 Web 字体版本。了解如何包含样式表并通过 CSS 类使用图标。
 nextPage:
   - getting-started
 ---
 <script setup>
 import Sandpack from '~/.vitepress/theme/components/editors/Sandpack.vue'
 </script>
-# Icon Font
+# 图标字体
 
-Lucide icons are also available as a web font. The font includes all icons as glyphs, allowing you to use them in your project with CSS classes. This can be a convenient option for projects that prefer using icon fonts.
+Lucide 图标也提供 Web 字体版本。该字体将所有图标作为字形包含在内，允许您通过 CSS 类在您的项目中使用它们。对于更喜欢使用图标字体的项目，这可能是一个方便的选择。
 
-:::warning Not recommended for high traffic production use
-The Icon font includes all icons, which can significantly increase your app's bundle size and load time. For production environments, we recommend using a bundler with tree-shaking support to include only the icons you actually use. Consider using one of the framework-specific [packages](../../../packages.md).
+:::warning 不建议用于高流量的生产环境
+图标字体包含所有图标，这会显著增加您的应用包大小和加载时间。对于生产环境，我们建议使用支持 tree-shaking 的打包工具，仅包含您实际使用的图标。考虑使用特定框架的 [包](../../../packages.md) 之一。
 :::
 
-## Using the CSS Stylesheet
+## 使用 CSS 样式表
 
 ::: code-group
 
@@ -36,19 +36,19 @@ The Icon font includes all icons, which can significantly increase your app's bu
 
 :::
 
-## Using the Icon Font
+## 使用图标字体
 
-Once you have included the stylesheet, you can use the icons in your HTML by applying the appropriate CSS classes. Each icon has a corresponding class name that you can use to display it.
+包含样式表后，您可以通过应用适当的 CSS 类在 HTML 中使用图标。每个图标都有相应的类名，您可以使用它来显示图标。
 
-For example, to display the "home" icon, you would use the following HTML:
+例如，要显示 "home" 图标，您将使用以下 HTML：
 
 ```html
 <div class="icon-house"></div>
 ```
 
-## Example with JavaScript
+## JavaScript 示例
 
-<!-- TODO: Fix this example -->
+<!-- TODO: 修复此示例 -->
 ::: sandpack {template=vanilla showTabs=false editorHeight=480 editorWidthPercentage=60 dependencies="lucide-static"}
 
 ```html /index.html [active]

@@ -1,24 +1,24 @@
 # `@lucide/angular`
 
 ::: warning
-This documentation is for `@lucide/angular`.
+此文档适用于 `@lucide/angular`。
 
-To learn about our legacy package for Angular, please refer to [`lucide-angular`](./lucide-angular).
+要了解我们旧的 Angular 包，请参阅 [`lucide-angular`](./lucide-angular)。
 :::
 
-A standalone, signal-based, zoneless implementation of Lucide icons for Angular.
+一个用于 Angular 的独立、基于信号、无区域（zoneless）的 Lucide 图标实现。
 
-**What you can accomplish:**
-- Use icons as standalone Angular components with full dependency injection support
-- Configure icons globally through modern Angular providers
-- Integrate with Angular's reactive forms and data binding
-- Build scalable applications with tree-shaken icons and lazy loading support
+**你可以实现的功能：**
+- 将图标用作具有完整依赖注入支持的独立 Angular 组件
+- 通过现代 Angular 提供者全局配置图标
+- 与 Angular 的反应式表单和数据绑定集成
+- 构建具有树摇图标和懒加载支持的可扩展应用程序
 
-## Prerequisites
+## 前提条件
 
-This package requires Angular 17+ and uses standalone components, signals, and zoneless change detection.
+此包需要 Angular 17+ 并使用独立组件、信号和无区域变更检测。
 
-## Installation
+## 安装
 
 ::: code-group
 
@@ -40,11 +40,11 @@ bun add @lucide/angular
 
 :::
 
-## How to use
+## 如何使用
 
-### Standalone icons
+### 独立图标
 
-Every icon can be imported as a ready-to-use standalone component:
+每个图标都可以作为即开即用的独立组件导入：
 
 ```html
 <svg lucideFileText></svg>
@@ -63,18 +63,18 @@ export class Foobar { }
 ```
 
 ::: tip
-Standalone icon components use the selector `svg[lucide{PascalCaseIconName}]`.
+独立图标组件使用选择器 `svg[lucide{PascalCaseIconName}]`。
 
-This ensures minimal bloating of the DOM and the ability to directly manipulate all attributes of the resulting SVG element.
+这确保了 DOM 的最小膨胀，并能够直接操作生成的 SVG 元素的所有属性。
 :::
 
-### Dynamic icon component
+### 动态图标组件
 
-You may also use the dynamic `LucideIcon` component to dynamically render icons.
+你也可以使用动态 `LucideIcon` 组件来动态渲染图标。
 
-#### With tree-shaken imports
+#### 使用 Tree-shaken 导入
 
-You may pass imported icons directly to the component:
+你可以直接将导入的图标传递给组件：
 
 ```html{3}
 @for (item of items) {
@@ -98,12 +98,12 @@ import { NavbarItem, NavbarItemModel } from './navbar-item';
 export class Navbar {
   readonly items: NavbarItemModel[] = [
     {
-      title: 'Home',
+      title: '首页',
       icon: LucideHouse,
       routerLink: [''],
     },
     {
-      title: 'Users',
+      title: '用户',
       icon: LucideUsersRound,
       routerLink: ['admin/users'],
     },
@@ -111,11 +111,11 @@ export class Navbar {
 }
 ```
 
-#### With icons provided via dependency injection
+#### 使用通过依赖注入提供的图标
 
-Alternatively, the component also accepts string inputs.
+或者，该组件也接受字符串输入。
 
-To use icons this way, first, you have to provide icons via `provideLucideIcons`:
+要以这种方式使用图标，首先，你必须通过 `provideLucideIcons` 提供图标：
 
 :::code-group
 ```ts{7-10} [app.config.ts]
@@ -151,37 +151,37 @@ export class Foobar { }
 :::
 
 ::: tip
-For optimal bundle size, provide icons at the highest appropriate level in your application.
+为了获得最佳的包大小，请在应用程序中的最高适当级别提供图标。
 
-Providing all icons at the root level may increase your initial bundle size, while providing them at feature module level enables better code splitting.
+在根级别提供所有图标可能会增加初始包大小，而在功能模块级别提供它们可以实现更好的代码分割。
 :::
 
 ::: warning
-While you may provide your icons at any level of the dependency injection tree, be aware that [Angular's DI system is hierarchical](https://angular.dev/guide/di/defining-dependency-providers#injector-hierarchy-in-angular): `LucideIcon` will only have access to the icons provided closest to it in the tree.
+虽然你可以在依赖注入树的任何级别提供图标，但请注意 [Angular 的 DI 系统是分层的](https://angular.dev/guide/di/defining-dependency-providers#injector-hierarchy-in-angular)：`LucideIcon` 只能访问树中离它最近提供的图标。
 :::
 
-## Accessible labels
+## 无障碍标签
 
-You can use the `title` input property to set the [accessible name element](https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Element/title) on the SVG:
+你可以使用 `title` 输入属性在 SVG 上设置 [无障碍名称元素](https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Element/title)：
 
 ```html
-<svg lucideIcon="house" title="Go to dashboard"></svg>
+<svg lucideIcon="house" title="前往仪表盘"></svg>
 ```
 
-This will result in the following output:
+这将产生以下输出：
 
 ```html{2}
 <svg class="lucide lucide-house" ...>
-  <title>Go to dashboard</title>
+  <title>前往仪表盘</title>
   <!-- SVG paths -->
 </svg>
 ```
 
-## Props
+## 属性
 
-You can pass additional props to adjust the icon appearance.
+你可以传递额外的属性来调整图标外观。
 
-| name                  | type      | default      |
+| 名称                  | 类型      | 默认值       |
 |-----------------------|-----------|--------------|
 | `size`                | *number*  | 24           |
 | `color`               | *string*  | currentColor |
@@ -192,9 +192,9 @@ You can pass additional props to adjust the icon appearance.
 <svg lucideHouse size="48" color="red" strokeWidth="1"></svg>
 ```
 
-## Global configuration
+## 全局配置
 
-You can use `provideLucideConfig` to configure the default property values as defined above:
+你可以使用 `provideLucideConfig` 来配置上述定义的默认属性值：
 
 ```ts{2,7-9}
 import { ApplicationConfig } from '@angular/core';
@@ -210,9 +210,9 @@ export const appConfig: ApplicationConfig = {
 };
 ```
 
-## Styling via CSS
+## 通过 CSS 样式化
 
-Icons can also be styled by using custom CSS classes:
+图标也可以通过使用自定义 CSS 类来样式化：
 
 ```html
 <svg lucideHousePlus class="my-icon"></svg>
@@ -226,17 +226,17 @@ svg.my-icon {
 }
 ```
 
-## With Lucide lab or custom icons
+## 使用 Lucide lab 或自定义图标
 
-[Lucide lab](https://github.com/lucide-icons/lucide-lab) is a collection of icons that are not part of the Lucide main library.
+[Lucide lab](https://github.com/lucide-icons/lucide-lab) 是不属于 Lucide 主库的图标集合。
 
-While they aren't provided as standalone components, they can be still be passed to the `LucideIcon` component the same way as official icons:
+虽然它们不作为独立组件提供，但仍可以像官方图标一样传递给 `LucideIcon` 组件：
 
 ```html
-<!-- Directly as LucideIconData: -->
+<!-- 直接作为 LucideIconData：-->
 <svg [lucideIcon]="CoconutIcon"></svg>
 
-<!-- As a provided icon by name: -->
+<!-- 作为按名称提供的图标：-->
 <svg lucideIcon="coconut"></svg>
 ```
 
@@ -246,32 +246,32 @@ import { coconut } from '@lucide/lab';
 
 @Component({
   templateUrl: './foobar.html',
-  // For using by name via provider:
+  // 用于通过提供者按名称使用：
   providers: [provideLucideIcons({ coconut })],
   imports: [LucideIcon]
 })
 export class Foobar {
-  // For passing directly as LucideIconData:
+  // 用于直接作为 LucideIconData 传递：
   readonly CoconutIcon = coconut;
 }
 ```
 
-## Troubleshooting
+## 故障排除
 
-### The icon is not being displayed
-If using per-icon-components:
-1. Ensure that the icon component is being imported, if using per-icon-components
-2. Check that the icon name matches exactly (case-sensitive)
+### 图标未显示
+如果使用每图标组件：
+1. 确保已导入图标组件，如果使用每图标组件
+2. 检查图标名称是否完全匹配（区分大小写）
 
-If using the dynamic component:
-1. Ensure the icon is provided via `provideLucideIcons()` if using string names
-2. Verify the icon is imported from `@lucide/angular` and not the legacy package
+如果使用动态组件：
+1. 如果使用字符串名称，确保图标已通过 `provideLucideIcons()` 提供
+2. 验证图标是从 `@lucide/angular` 导入的，而不是旧包
 
-### TypeScript errors?
-Make sure you're importing from `@lucide/angular` and not `lucide-angular`.
+### TypeScript 错误？
+确保你从 `@lucide/angular` 导入，而不是 `lucide-angular`。
 
-### Icons render with wrong defaults
-Ensure `provideLucideConfig()` is used at the right level.
+### 图标渲染默认值错误
+确保 `provideLucideConfig()` 在正确的级别使用。
 
-## Migration guide
-Migrating from `lucide-angular`? Read our [comprehensive migration guide](https://github.com/lucide-icons/lucide/blob/main/packages/angular/MIGRATION.md).
+## 迁移指南
+从 `lucide-angular` 迁移？阅读我们的 [综合迁移指南](https://github.com/lucide-icons/lucide/blob/main/packages/angular/MIGRATION.md)。

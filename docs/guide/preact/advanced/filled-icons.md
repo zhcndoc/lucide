@@ -1,18 +1,18 @@
 ---
-title: Filled Icons - Preact
-description: Learn how to use fills with Lucide icons in your Preact application, and the limitations of using fills with Lucide icons.
+title: 填充图标 - Preact
+description: 了解如何在 Preact 应用程序中使用 Lucide 图标的填充效果，以及使用 Lucide 图标填充的限制。
 ---
 <script setup>
 import Sandpack from '~/.vitepress/theme/components/editors/SandpackPreact.vue'
 </script>
 
-# Filled Icons
+# 填充图标
 
-Fills are officially not supported.
-However, all SVG properties are available on all icons.
-Fill can still be used and will work fine on certain icons.
+官方不支持填充效果。
+但是，所有 SVG 属性都可用于所有图标。
+填充仍然可以使用，并且在某些图标上效果良好。
 
-Example with stars:
+星星示例：
 
 ::: sandpack { editorHeight=580 editorWidthPercentage=60 dependencies="lucide-preact"}
 

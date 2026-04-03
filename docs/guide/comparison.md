@@ -1,26 +1,26 @@
 ---
-title: Comparison
-description: A comparison between Lucide and Feather Icons, highlighting the differences and benefits of each.
+title: 比较
+description: Lucide 与 Feather 图标之间的比较，突出两者的差异和优势。
 ---
 
-# Comparison
+# 比较
 
-## Lucide vs Feather Icons
+## Lucide 与 Feather 图标
 
-Lucide is a community-driven fork of [Feather Icons](https://github.com/feathericons/feather).
+Lucide 是 [Feather 图标](https://github.com/feathericons/feather) 的一个社区驱动的分支。
 
-The decision to create Lucide arose from growing dissatisfaction with the moderation of the Feather Icons project. With more than 300 open issues and over 100 open PRs, the Feather Icons project has been abandoned and is no longer actively maintained. Unfortunately, this means that numerous developers and designers have invested their time in contributing to Feather Icons without the possibility of their PRs being accepted.
+创建 Lucide 的决定源于对 Feather 图标项目管理的日益不满。Feather 图标项目有超过 300 个未解决的问题和超过 100 个未处理的 PR，已被遗弃且不再积极维护。不幸的是，这意味着众多开发者和设计师投入时间贡献给 Feather 图标，但他们的 PR 却没有被接受的可能。
 
-In an effort to expand the icon set while remaining true to the original minimalist design language, Lucide is driven by a community of developers and designers. We strive to grow together and maintain a faithful continuation of the project.
+为了在保持原始极简设计语言的同时扩展图标集，Lucide 由开发者和设计师社区驱动。我们努力共同成长，并保持项目的忠实延续。
 
-### Why should I choose Lucide over Feather Icons?
+### 为什么我应该选择 Lucide 而不是 Feather 图标？
 
-- Lucide has expanded its icon set by 500+ in the last few years. Lucide now has over 1000 icons, while Feather has around 287 icons.
-- Well maintained code base.
-- Active community.
+- Lucide 在过去几年中扩展了 500+ 个图标。Lucide 现在拥有超过 1000 个图标，而 Feather 大约有 287 个图标。
+- 维护良好的代码库。
+- 活跃的社区。
 
-### Should I migrate to Lucide?
+### 我应该迁移到 Lucide 吗？
 
-That depends on whether you're satisfied with the icons from Feather Icons. If that is the case, it may not be worth the effort.
-However, if you find yourself struggling and feeling limited by the icons provided by Feather, you can consider migrating.
-When we forked, we didn't remove any icons, but some icons have been renamed.
+这取决于您是否对 Feather 图标的图标感到满意。如果是这样，可能不值得花费精力。
+但是，如果您发现自己因 Feather 提供的图标而感到困难和受限，您可以考虑迁移。
+当我们创建分支时，我们没有删除任何图标，但有些图标已被重命名。

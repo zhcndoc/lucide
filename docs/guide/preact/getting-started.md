@@ -1,6 +1,6 @@
 ---
-title: Getting started - Preact
-description: This guide will help you get started with Lucide in your Preact project.
+title: 入门指南 - Preact
+description: 本指南将帮助您在 Preact 项目中开始使用 Lucide。
 ---
 <script setup lang="ts">
 import OverviewLink from '../../.vitepress/theme/components/base/OverviewLink.vue'
@@ -8,12 +8,12 @@ import OverviewLinkGrid from '../../.vitepress/theme/components/base/OverviewLin
 import { preactSidebar } from '../../.vitepress/sidebar/preact'
 </script>
 
-# Getting started
+# 入门指南
 
-This guide will help you get started with Lucide in your Preact project.
-Make sure you have a Preact environment set up. If you don't have one yet, you can create a new Preact project using Create Preact App, Vite, or any other Preact boilerplate of your choice.
+本指南将帮助您在 Preact 项目中开始使用 Lucide。
+确保您已设置好 Preact 环境。如果您还没有，可以使用 Create Preact App、Vite 或您选择的任何其他 Preact 样板项目来创建一个新的 Preact 项目。
 
-## Installation
+## 安装
 
 ::: code-group
 
@@ -35,16 +35,16 @@ bun add lucide-preact
 
 :::
 
-## Importing your first icon
+## 导入您的第一个图标
 
-Lucide is built with ES Modules, so it's completely tree-shakable.
+Lucide 是基于 ES Modules 构建的，因此它完全支持树摇（tree-shakable）。
 
-Each icon can be imported as a Preact component, which renders an inline SVG element. This way, only the icons that are imported into your project are included in the final bundle. The rest of the icons are tree-shaken away.
+每个图标都可以作为 Preact 组件导入，它会渲染一个内联 SVG 元素。这样，只有导入到项目中的图标才会包含在最终打包文件中。其余的图标会被树摇优化掉。
 
 ```jsx
 import { Camera } from 'lucide-preact';
 
-// Usage
+// 用法
 const App = () => {
   return <Camera />;
 };
@@ -52,27 +52,27 @@ const App = () => {
 export default App;
 ```
 
-## Props
+## 属性
 
-To customize the appearance of an icon, you can use the following props:
+要自定义图标的外观，您可以使用以下属性：
 
-| name                  | type      | default      |
+| 名称                  | 类型      | 默认值       |
 | --------------------- | --------- | ------------ |
 | `size`                | *number*  | 24           |
 | `color`               | *string*  | currentColor |
 | `strokeWidth`         | *number*  | 2            |
 | `absoluteStrokeWidth` | *boolean* | false        |
 
-Because icons render as SVG elements, all standard SVG attributes can also be applied as props. See the list of SVG Presentation Attributes on [MDN](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/Presentation).
+因为图标渲染为 SVG 元素，所有标准的 SVG 属性也可以作为属性应用。请参阅 [MDN](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/Presentation) 上的 SVG 表现属性列表。
 
 ```jsx
-// Usage
+// 用法
 const App = () => {
   return <Camera size={48} color="red" strokeWidth={1} />;
 };
 ```
 
-More examples and details how to use props, continue the guide:
+更多关于如何使用属性的示例和详情，请继续阅读指南：
 
 <OverviewLinkGrid>
   <OverviewLink v-for="item in preactSidebar[1].items" :key="item.link" :href="item.link" :title="item.text" :desc="item.desc"/>

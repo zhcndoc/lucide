@@ -37,7 +37,7 @@ async function handleClick(event: MouseEvent) {
     :shortcut="kbdSearchShortcut"
     class="search-box"
     >
-    Search {{ data.iconsCount }} icons...
+    搜索 {{ data.iconsCount }} 个图标...
   </FakeInput>
 </template>
 

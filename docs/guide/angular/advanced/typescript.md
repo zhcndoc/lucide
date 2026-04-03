@@ -1,18 +1,18 @@
 ---
-title: Typescript - Angular
-description: All exported types from the `@lucide/angular` package and how to use them in your Angular project.
+title: TypeScript 支持 - Angular
+description: "`@lucide/angular` 包导出的所有类型以及如何在你的 Angular 项目中使用它们。"
 ---
 
-# TypeScript
+# TypeScript 支持
 
-List of exported types from the `@lucide/angular` package.
-These can be used to type your components when using Lucide icons in a TypeScript Angular project
+`@lucide/angular` 包导出的类型列表。
+当在 TypeScript Angular 项目中使用 Lucide 图标时，这些类型可用于为你的组件指定类型。
 
-## Types
+## 类型
 
 ### `LucideIcon`
 
-Represents a self-containing Lucide icon component type that has a static `icon` property. You can use this type in schemas that declare an icon property.
+表示具有静态 `icon` 属性的自包含 Lucide 图标组件类型。你可以在声明图标属性的模式中使用此类型。
 
 ```ts
 export interface LucideIcon extends Type<LucideIconProps> {
@@ -22,7 +22,7 @@ export interface LucideIcon extends Type<LucideIconProps> {
 
 ### `LucideIconData`
 
-A Lucide icon object that fully describes an icon to be displayed.
+一个完全描述要显示的图标的 Lucide 图标对象。
 
 ```ts
 export type LucideIconData = {
@@ -32,7 +32,7 @@ export type LucideIconData = {
 };
 ```
 
-## Type guards
+## 类型守卫
 
 ### `isLucideIconData`
 

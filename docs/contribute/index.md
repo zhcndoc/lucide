@@ -1,6 +1,6 @@
 ---
-title: Contribution guide
-description: Guidelines and instructions for contributing to the Lucide project.
+title: 贡献指南
+description: 为 Lucide 项目贡献的指南和说明。
 ---
 
 <!--@include: ../../CONTRIBUTING.md -->

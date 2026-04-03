@@ -1,14 +1,14 @@
 ---
-title: Color the Lucide icon font
-description: Learn how to customize the color of Lucide icons in your static projects using CSS. This guide covers how to change icon colors with CSS classes and inline styles for web font implementations.
+title: 为 Lucide 图标字体着色
+description: 学习如何使用 CSS 在静态项目中自定义 Lucide 图标的颜色。本指南涵盖了如何通过 CSS 类和内联样式更改图标颜色，适用于 Web 字体实现。
 ---
-# Color the font
+# 为字体着色
 
-Styling the Lucide icon font with CSS is straightforward. You can change the color of the icons using the `color` property in your CSS. This allows you to easily customize the appearance of the icons to match your design.
+使用 CSS 为 Lucide 图标字体设置样式很简单。你可以使用 CSS 中的 `color` 属性来更改图标的颜色。这使你能够轻松自定义图标的外观以匹配你的设计。
 
-## Changing Icon Color
+## 更改图标颜色
 
-To change the color of the icons, simply apply the `color` property to the element that contains the icon. For example, if you want to change the color of an icon to red, you can use the following CSS:
+要更改图标的颜色，只需将 `color` 属性应用于包含图标的元素。例如，如果你想将图标的颜色更改为红色，可以使用以下 CSS：
 
 ```css
 .icon-house {
@@ -16,8 +16,8 @@ To change the color of the icons, simply apply the `color` property to the eleme
 }
 ```
 
-This will change the color of the icon with the class `icon-house` to red. You can use any valid CSS color value, such as hex codes, RGB, or named colors.
+这会将类为 `icon-house` 的图标颜色更改为红色。你可以使用任何有效的 CSS 颜色值，例如十六进制代码、RGB 或命名颜色。
 
-## Inheriting Color from Parent Elements
+## 从父元素继承颜色
 
-By default, the icons will inherit the color from their parent elements. This means that if you set a color on a parent element, all child icons will automatically take on that color unless you override it with a specific color for the icon. The same as text elements in HTML, the icon font will use the `color` property to determine its color, allowing for easy styling and consistency across your project.
+默认情况下，图标将从其父元素继承颜色。这意味着如果你在父元素上设置了颜色，所有子图标将自动采用该颜色，除非你为图标指定了特定颜色来覆盖它。与 HTML 中的文本元素一样，图标字体将使用 `color` 属性来确定其颜色，从而便于在整个项目中进行样式设置和保持一致性。

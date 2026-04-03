@@ -1,19 +1,19 @@
 ---
-title: Content Template element - Lucide
-description: Learn how to include Lucide icons inside HTML template elements using the inTemplates option.
+title: 内容模板元素 - Lucide
+description: 了解如何使用 inTemplates 选项在 HTML 模板元素中包含 Lucide 图标。
 ---
 <script setup>
 import Sandpack from '~/.vitepress/theme/components/editors/Sandpack.vue'
 </script>
 
-# Content Template element
+# 内容模板元素
 
-By default icons inside `<template>` tags are not added.
-By setting the `inTemplates` option to `true`, icons inside templates will also be replaced.
+默认情况下，`<template>` 标签内的图标不会被添加。
+通过将 `inTemplates` 选项设置为 `true`，模板内的图标也会被替换。
 
-More about [Content Template element on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/template).
+更多关于 [MDN 上的内容模板元素](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/template)。
 
-## Example using `createIcons` function with `template` element
+## 使用 `createIcons` 函数配合 `template` 元素的示例
 
 ::: sandpack {template=vanilla editorHeight=420 editorWidthPercentage=60 dependencies="lucide"}
 

@@ -74,7 +74,7 @@ defineExpose({
       @click="onClear"
       v-if="type === 'search' && modelValue"
       class="clear-button"
-      aria-label="Clear input"
+      aria-label="清空输入"
       :style="{ right: isMac ? '50px' : '68px' }"
     >
       <Icon

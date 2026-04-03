@@ -1,12 +1,12 @@
 ---
-title: Sizing - React Native
-description: Learn how to adjust the size of icons in your React Native application using the `size` prop or by using CSS.
+title: 尺寸 - React Native
+description: 学习如何使用 `size` 属性或通过 CSS 调整 React Native 应用程序中图标的大小。
 ---
-# Sizing
+# 尺寸
 
-By default, the size of all icons is `24px` by `24px`. The size is adjustable using the `size` prop and CSS.
+默认情况下，所有图标的大小为 `24px` 乘 `24px`。可以使用 `size` 属性和 CSS 调整大小。
 
-## Adjusting the icon size using the `size` prop
+## 使用 `size` 属性调整图标大小
 
 ```SnackPlayer name=State&ext=js&dependencies=react-native-svg,lucide-react-native
 import React, {useState, useEffect} from 'react';
@@ -26,9 +26,9 @@ const App = () => {
 export default App;
 ```
 
-## Adjusting the icon size via the style prop
+## 通过 style 属性调整图标大小
 
-The style properties `width` and `height` can be used to adjust the icon size.
+可以使用 style 属性中的 `width` 和 `height` 来调整图标大小。
 
 ```SnackPlayer name=State&ext=js&dependencies=react-native-svg,lucide-react-native
 import React, {useState, useEffect} from 'react';

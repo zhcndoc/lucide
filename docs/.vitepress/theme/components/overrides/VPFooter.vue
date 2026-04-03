@@ -13,15 +13,15 @@ const githubLink = computed(
 
 const links = computed(() => [
   {
-    text: 'License',
+    text: '许可证',
     href: '/license',
   },
   {
-    text: 'Contribute',
+    text: '贡献',
     href: '/contribute/',
   },
   {
-    text: 'Changelog',
+    text: '更新日志',
     href: `${githubLink.value}/releases`,
   },
   {
@@ -29,7 +29,7 @@ const links = computed(() => [
     href: `${githubLink.value}`,
   },
   {
-    text: 'Issues',
+    text: '问题',
     href: `${githubLink.value}/issues`,
   },
 ]);
@@ -49,7 +49,7 @@ const links = computed(() => [
         >
           <img
             src="/vercel.svg"
-            alt="Powered by Vercel"
+            alt="由 Vercel 提供支持"
             width="200"
           />
         </a>

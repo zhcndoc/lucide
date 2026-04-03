@@ -1,21 +1,21 @@
 ---
-title: With Lucide Lab or custom icons - Lucide
-description: Learn how to use Lucide Lab or custom icons in your Vanilla JavaScript applications.
+title: 使用 Lucide Lab 或自定义图标 - Lucide
+description: 学习如何在原生 JavaScript 应用程序中使用 Lucide Lab 或自定义图标。
 ---
 <script setup>
 import Sandpack from '~/.vitepress/theme/components/editors/Sandpack.vue'
 </script>
 
-# With Lucide Lab or custom icons
+# 使用 Lucide Lab 或自定义图标
 
-[Lucide Lab](https://github.com/lucide-icons/lucide-lab) is a collection of icons that are not part of the Lucide main library.
+[Lucide Lab](https://github.com/lucide-icons/lucide-lab) 是不属于 Lucide 主库的图标集合。
 
-They can be used by adding the `@lucide/lab` package to your project.
-All props like regular lucide icons can be passed to adjust the icon appearance.
+可以通过将 `@lucide/lab` 包添加到你的项目中来使用它们。
+所有像常规 lucide 图标一样的属性都可以传递以调整图标外观。
 
-## Using Lucide Lab icons
+## 使用 Lucide Lab 图标
 
-This creates a single icon based on the iconNode passed and renders a Lucide icon component.
+这将基于传递的 iconNode 创建单个图标并渲染一个 Lucide 图标组件。
 
 ::: sandpack {template=vanilla editorHeight=295 editorWidthPercentage=60 dependencies="lucide,@lucide/lab"}
 

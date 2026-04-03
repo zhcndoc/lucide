@@ -4,63 +4,63 @@ export const solidSidebar = [
   {
     items: [
       {
-        text: 'Overview',
+        text: '概览',
         link: '/guide/solid/',
       },
       {
-        text: 'Getting started',
+        text: '开始使用',
         link: '/guide/solid/getting-started',
-        desc: 'Learn how to get started with Lucide.',
+        desc: '了解如何开始使用 Lucide。',
       },
       {
-        text: 'Migration from v0',
+        text: '从 v0 迁移',
         link: '/guide/solid/migration',
-        desc: 'Learn how to migrate from v0 to v1 of Lucide.',
+        desc: '了解如何将 Lucide 从 v0 迁移到 v1。',
       },
     ],
   },
   {
-    text: 'Basics',
+    text: '基础',
     items: [
       {
-        text: 'Color',
-        desc: 'Adjust the color of your icons',
+        text: '颜色',
+        desc: '调整图标颜色',
         link: '/guide/solid/basics/color',
       },
       {
-        text: 'Sizing',
-        desc: 'Adjust the size of your icons',
+        text: '尺寸',
+        desc: '调整图标尺寸',
         link: '/guide/solid/basics/sizing',
       },
       {
-        text: 'Stroke width',
-        desc: 'Adjust the stroke width of your icons',
+        text: '描边宽度',
+        desc: '调整图标的描边宽度',
         link: '/guide/solid/basics/stroke-width',
       },
     ],
   },
   {
-    text: 'Advanced',
+    text: '进阶',
     items: [
       {
-        text: 'Typescript',
+        text: 'TypeScript',
         link: '/guide/solid/advanced/typescript',
-        desc: 'All exported types and how to use them',
+        desc: '所有导出类型及其用法',
       },
       {
-        text: 'Accessibility',
+        text: '无障碍',
         link: '/guide/solid/advanced/accessibility',
-        desc: 'Making your icons accessible',
+        desc: '让你的图标更易访问',
       },
       {
-        text: 'Global styling',
+        text: '全局样式',
         link: '/guide/solid/advanced/global-styling',
-        desc: 'Apply global styles to all icons',
+        desc: '为所有图标应用全局样式',
       },
       {
-        text: 'With Lucide Lab',
+        text: '使用 Lucide Lab',
         link: '/guide/solid/advanced/with-lucide-lab',
-        desc: 'Using lucide-lab with lucide-solid',
+        desc: '将 lucide-lab 与 lucide-solid 一起使用',
       },
       // {
       //   text: 'Animations',
@@ -68,14 +68,14 @@ export const solidSidebar = [
       //   desc: 'Add animations to your icons',
       // },
       {
-        text: 'Filled icons',
+        text: '填充图标',
         link: '/guide/solid/advanced/filled-icons',
-        desc: 'Using filled icons in lucide-solid',
+        desc: '在 lucide-solid 中使用填充图标',
       },
       {
-        text: 'Aliased Names',
+        text: '别名名称',
         link: '/guide/solid/advanced/aliased-names',
-        desc: 'Using aliased icon names',
+        desc: '使用别名图标名称',
       },
       // Add support for this later
       // {
@@ -86,17 +86,17 @@ export const solidSidebar = [
     ],
   },
   {
-    text: 'Resources',
+    text: '资源',
     items: [
       {
-        text: 'Accessibility in depth',
+        text: '深入了解无障碍',
         link: '/guide/accessibility',
-        desc: 'Accessibility best practices',
+        desc: '无障碍最佳实践',
       },
       {
-        text: 'VSCode',
+        text: 'VS Code',
         link: '/guide/vscode',
-        desc: 'VSCode and Lucide',
+        desc: 'VS Code 与 Lucide',
       },
     ],
   },

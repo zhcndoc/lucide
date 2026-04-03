@@ -1,21 +1,21 @@
-# Lucide Angular
+# 适用于 Angular 的 Lucide
 
 ::: warning
-This documentation is for our legacy package for Angular.
+此文档适用于我们的 Angular 遗留包。
 
-For our modern, standalone-first implementation, please refer to [`@lucide/angular`](./angular).
+对于我们现代的、优先独立组件的实现，请参阅 [`@lucide/angular`](./angular)。
 :::
 
-Angular components and services for Lucide icons that integrate with Angular's dependency injection and component system. Provides both traditional module-based and modern standalone component approaches for maximum flexibility in Angular applications.
+用于 Lucide 图标的 Angular 组件和服务，集成到 Angular 的依赖注入和组件系统中。提供传统的基于模块的方法和现代的独立组件方法，以在 Angular 应用程序中实现最大的灵活性。
 
-**What you can accomplish:**
-- Use icons as Angular components with full dependency injection support
-- Configure icons globally through Angular services and providers
-- Choose from multiple component selectors (lucide-angular, lucide-icon, i-lucide, span-lucide)
-- Integrate with Angular's reactive forms and data binding
-- Build scalable applications with tree-shaken icon bundles and lazy loading support
+**您可以实现的功能：**
+- 将图标用作具有完整依赖注入支持的 Angular 组件
+- 通过 Angular 服务和提供者全局配置图标
+- 从多个组件选择器中进行选择 (lucide-angular, lucide-icon, i-lucide, span-lucide)
+- 与 Angular 的反应式表单和数据绑定集成
+- 构建具有树摇图标包和懒加载支持的可扩展应用程序
 
-## Installation
+## 安装
 
 ::: code-group
 
@@ -37,11 +37,11 @@ bun add lucide-angular
 
 :::
 
-## How to use
+## 如何使用
 
-### Step 1: Import `LucideAngularModule`
+### 步骤 1：导入 `LucideAngularModule`
 
-In any Angular module you wish to use Lucide icons in, you have to import `LucideAngularModule`, and pick any icons you wish to use:
+在您希望使用 Lucide 图标的任何 Angular 模块中，您必须导入 `LucideAngularModule`，并挑选您希望使用的任何图标：
 
 ```js
 import { LucideAngularModule, File, House, Menu, UserCheck } from 'lucide-angular';
@@ -54,7 +54,7 @@ import { LucideAngularModule, File, House, Menu, UserCheck } from 'lucide-angula
 export class AppModule { }
 ```
 
-or using standalone version:
+或使用独立版本：
 
 ```js
 import { Component } from '@angular/core';
@@ -71,9 +71,9 @@ export class AppComponent {
   readonly FileIcon = FileIcon;
 }
 ```
-### Step 2: Use the icons in templates
+### 步骤 2：在模板中使用图标
 
-Within your templates you may now use one of the following component tags to insert an icon:
+在您的模板中，您现在可以使用以下组件标签之一来插入图标：
 
 ```html
 <lucide-angular name="file" class="my-icon"></lucide-angular>
@@ -81,7 +81,7 @@ Within your templates you may now use one of the following component tags to ins
 <i-lucide name="menu" class="my-icon"></i-lucide>
 <span-lucide name="user-check" class="my-icon"></span-lucide>
 ```
-for standalone
+对于独立组件
 ```html
 <lucide-angular [img]="FileIcon" class="my-icon"></lucide-angular>
 <lucide-icon [img]="FileIcon" class="my-icon"></lucide-icon>
@@ -89,11 +89,11 @@ for standalone
 <span-lucide [img]="FileIcon" class="my-icon"></span-lucide>
 ```
 
-### Props
+### 属性
 
-You can pass additional props to adjust the icon appearance.
+您可以传递额外的属性来调整图标外观。
 
-| name                  | type      | default      |
+| 名称                  | 类型      | 默认值      |
 | --------------------- | --------- | ------------ |
 | `size`                | *number*  | 24           |
 | `color`               | *string*  | currentColor |
@@ -104,14 +104,13 @@ You can pass additional props to adjust the icon appearance.
 <i-lucide name="house" [size]="48" color="red" [strokeWidth]="1"></i-lucide>
 ```
 
-### Global configuration
+### 全局配置
 
-You can inject the `LucideIconConfig` service in your root component to globally configure the default property values as defined above.
+您可以在根组件中注入 `LucideIconConfig` 服务，以全局配置上述定义的默认属性值。
 
-### Styling using a custom CSS class
+### 使用自定义 CSS 类进行样式设置
 
-Any extra HTML attribute is ignored, but the `class` attribute
-is passed onto the internal SVG image element and it can be used to style it:
+任何额外的 HTML 属性都会被忽略，但 `class` 属性会传递给内部 SVG 图像元素，可用于对其进行样式设置：
 
 ```css
 svg.my-icon {
@@ -121,11 +120,9 @@ svg.my-icon {
 }
 ```
 
-## Injecting multiple icon providers
+## 注入多个图标提供者
 
-You may provide additional icons using the `LUCIDE_ICONS` injection token,
-which accepts multiple providers of the interface `LucideIconsProviderInterface`
-with the utility class `LucideIconsProvider` available for easier usage:
+您可以使用 `LUCIDE_ICONS` 注入令牌提供额外的图标，该令牌接受接口 `LucideIconsProviderInterface` 的多个提供者，并提供了实用类 `LucideIconsProvider` 以便于使用：
 
 ```js
 import { LUCIDE_ICONS, LucideIconProvider } from 'lucide-angular';
@@ -141,12 +138,12 @@ const myIcons = {MyIcon};
 export class AppModule { }
 ```
 
-To add custom icons, you will first need to convert them to an [svgson format](https://github.com/elrumordelaluz/svgson).
+要添加自定义图标，您首先需要将它们转换为 [svgson 格式](https://github.com/elrumordelaluz/svgson)。
 
-## Loading all icons
+## 加载所有图标
 
 ::: danger
-You may also opt to import all icons if necessary using the following format but be aware that this will significantly increase your application build size.
+如有必要，您也可以选择使用以下格式导入所有图标，但请注意这将显著增加您的应用程序构建大小。
 :::
 
 ```js
@@ -157,10 +154,10 @@ import { icons } from 'lucide-angular';
 LucideAngularModule.pick(icons)
 ```
 
-## With Lucide Lab or custom icons
+## 使用 Lucide Lab 或自定义图标
 
-[Lucide Lab](https://github.com/lucide-icons/lucide-lab) is a collection of icons that are not part of the Lucide main library.
-They can be used in the same way as the official icons.
+[Lucide Lab](https://github.com/lucide-icons/lucide-lab) 是不属于 Lucide 主库的图标集合。
+它们的使用方式与官方图标相同。
 
 ```js
 import { LucideAngularModule } from 'lucide-angular';
@@ -174,14 +171,14 @@ import { coconut } from '@lucide/lab';
 export class AppModule { }
 ```
 
-## Accessibility
+## 无障碍性
 
-By default, we hide icons from screen readers using `aria-hidden="true"`.
+默认情况下，我们使用 `aria-hidden="true"` 向屏幕阅读器隐藏图标。
 
-You can add accessibility attributes using aria-labels.
+您可以使用 aria-labels 添加无障碍属性。
 
 ```html
-<lucide-icon name="check" aria-label="Task completed"></lucide-icon>
+<lucide-icon name="check" aria-label="任务已完成"></lucide-icon>
 ```
 
-For best practices on accessibility, please see our [accessibility guide](../accessibility.md).
+有关无障碍性的最佳实践，请参阅我们的 [无障碍性指南](../accessibility.md)。

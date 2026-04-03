@@ -71,7 +71,7 @@ function releaseTagLink(version) {
           v-if="params.createdRelease?.version"
           :class="$style.version"
         >
-          <Label>Created:</Label>
+          <Label>创建时间:</Label>
           <Badge
             :href="releaseTagLink(params.createdRelease.version)"
           >
@@ -82,7 +82,7 @@ function releaseTagLink(version) {
           v-if="params.changedRelease?.version"
           :class="$style.version"
         >
-          <Label>Last changed:</Label>
+          <Label>最后修改:</Label>
           <Badge
             :href="releaseTagLink(params.changedRelease.version)"
           >

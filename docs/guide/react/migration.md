@@ -1,6 +1,6 @@
-# Migration from v0
+# 从 v0 迁移
 
-Brand icons are removed in v1. If you are using any of the following icons, you will need to replace them with a custom SVG or an alternative icon:
+品牌图标在 v1 中已被移除。如果您正在使用以下任何图标，则需要将它们替换为自定义 SVG 或替代图标：
 
 - Chromium
 - Codepen
@@ -14,7 +14,7 @@ Brand icons are removed in v1. If you are using any of the following icons, you 
 - Instagram
 - LinkedIn
 - Pocket
-- RailSymbol (based on the British Rail logo)
+- RailSymbol（基于英国铁路标志）
 - Slack
 
-We recommend to use the official SVG icons provided by the respective brands, most of them can be found on their websites or in their brand guidelines. Alternatively, you can use the icons from [Simple Icons](https://simpleicons.org/), which provides a large collection of brand icons. Also with links to the official Brand Guidelines and SVG icons.
+我们建议使用各品牌提供的官方 SVG 图标，其中大多数可以在它们的网站或品牌指南中找到。或者，您可以使用 [Simple Icons](https://simpleicons.org/) 中的图标，该网站提供了大量的品牌图标集合，同时也包含指向官方品牌指南和 SVG 图标的链接。

@@ -1,6 +1,6 @@
 ---
-title: Lucide for React Native
-description: Lucide provides a React Native icon component library that makes it easy to integrate icons into your React Native applications. Each icon is available as a standalone React Native component, allowing for seamless integration and customization.
+title: 适用于 React Native 的 Lucide
+description: Lucide 提供了一个 React Native 图标组件库，使得将图标集成到 React Native 应用程序中变得轻而易举。每个图标都可作为独立的 React Native 组件使用，从而实现无缝集成和定制。
 nextPage:
   - getting-started
 ---
@@ -13,25 +13,25 @@ import { reactNativeSidebar } from '../../.vitepress/sidebar/react-native'
 
 <!--@include: ../../../docs/images/package-logos/lucide-react-native.svg -->
 
-# Lucide for React Native
+# 适用于 React Native 的 Lucide
 
-Lucide provides a React Native icon component library that makes it easy to integrate icons into your React Native applications.
-Each icon is available as a standalone React component, allowing for seamless integration and customization.
+Lucide 提供了一个 React Native 图标组件库，使得将图标集成到 React Native 应用程序中变得轻而易举。
+每个图标都可作为独立的 React Native 组件使用，从而实现无缝集成和定制。
 
-List of features:
+功能列表：
 
-- **Easy to use** – Import icons and use them directly in JSX.
-- **Customizable** – Adjust size, color, stroke width, and other properties via props.
-- **Tree-shakable** – Only the icons you import are included in your final bundle.
-- **TypeScript support** – Fully typed components for a better developer experience.
+- **易于使用** – 导入图标并在 JSX 中直接使用。
+- **可定制** – 通过 props 调整大小、颜色、描边宽度和其他属性。
+- **支持 Tree-shaking** – 只有你导入的图标才会包含在最终打包文件中。
+- **TypeScript 支持** – 完全类型化的组件，提供更好的开发者体验。
 
-## Overview
+## 概述
 
 <OverviewLinkGrid>
   <OverviewLink v-for="item in reactNativeSidebar[0].items.slice(1)" :key="item.link" :href="item.link" :title="item.text" :desc="item.desc"/>
 </OverviewLinkGrid>
 
-### Basics
+### 基础
 {{''}}
 
 <OverviewLinkGrid>
@@ -44,7 +44,7 @@ List of features:
   />
 </OverviewLinkGrid>
 
-### Advanced
+### 高级
 {{''}}
 
 <OverviewLinkGrid>
@@ -57,7 +57,7 @@ List of features:
   />
 </OverviewLinkGrid>
 
-### Resources
+### 资源
 {{''}}
 
 <OverviewLinkGrid>
