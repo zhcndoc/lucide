@@ -5,7 +5,7 @@ description: 了解 `lucide-react` 包导出的不同类型以及如何在你的
 # TypeScript 支持
 
 来自 `lucide-react` 包的导出类型列表。
-当在 TypeScript React 项目中使用 Lucide 图标时，这些类型可用于为你的组件添加类型。
+在 TypeScript React 项目中使用 Lucide 图标时，这些类型可用于为你的组件添加类型。
 
 ## `LucideProps`
 
