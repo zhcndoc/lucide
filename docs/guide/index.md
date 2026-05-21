@@ -30,7 +30,7 @@ Lucide 包含具有不同变体和状态的图标，允许用户选择最适合�
 
 ## 官方包
 
-Lucide 的官方包旨在适用于不同平台，使用户更容易将图标集成到他们的项目中。这些包适用于各种技术，包括 [Web (Vanilla)](https://lucide.zhcndoc.com/guide/packages/lucide)、[React](https://lucide.zhcndoc.com/guide/packages/lucide-react)、[React Native](https://lucide.zhcndoc.com/guide/packages/lucide-react-native)、[Vue](https://lucide.zhcndoc.com/guide/packages/lucide-vue)、[Vue 3](https://lucide.zhcndoc.com/guide/packages/lucide-vue-next)、[Svelte](https://lucide.zhcndoc.com/guide/packages/lucide-svelte)、[Preact](https://lucide.zhcndoc.com/guide/packages/lucide-preact)、[Solid](https://lucide.zhcndoc.com/guide/packages/lucide-solid)、[Angular](https://lucide.zhcndoc.com/guide/packages/angular)、[Astro](https://lucide.zhcndoc.com/guide/packages/lucide-astro) 和 [NodeJS](https://lucide.zhcndoc.com/guide/packages/lucide-static#nodejs)。
+Lucide 的官方包旨在适配不同平台，让用户更容易将图标集成到他们的项目中。这些包适用于多种技术，包括 [Web（原生）](./lucide/index.md)、[React](./react/index.md)、[React Native](./react-native/index.md)、[Vue](./vue/index.md)、[Svelte](./svelte/index.md)、[Preact](./preact/index.md)、[Solid](./solid/index.md)、[Angular](./angular/index.md)、[Astro](./astro/index.md) 和 [静态](./static/index.md)。
 
 ## 社区
 

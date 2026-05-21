@@ -2,12 +2,13 @@
 
 用于 Lucide 图标的 Vue 2 组件，可与 Vue 的 Options API 和模板系统集成。每个图标都是一个 Vue 组件，渲染为内联 SVG，为仍在使用 Vue 2 的遗留应用提供熟悉的 Vue 开发模式。
 
-**你可以实现：**
-- 将图标用作带有 Options API 集成的 Vue 2 组件
-- 使用现代图标组件维护遗留的 Vue 2 应用
+**你可以实现的功能：**
+
+- 使用图标作为 Vue 2 组件，并与 Options API 集成
+- 使用现代图标组件维护传统的 Vue 2 应用
 - 与 Vue 2 的模板系统和组件生命周期集成
 - 使用 Vue 2 熟悉的语法和模式构建应用
-- 在计划迁移到 Vue 3 时弥合差距
+- 在规划迁移到 Vue 3 的同时实现平滑过渡
 
 ## 安装
 
@@ -155,7 +156,7 @@ const icon = computed(() => icons[props.name]);
 
 ```vue
 <script setup>
-import { Check } from 'lucide-vue-next';
+import { Check } from '@lucide/vue';
 </script>
 
 <template>

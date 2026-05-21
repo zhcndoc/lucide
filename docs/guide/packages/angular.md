@@ -3,16 +3,17 @@
 ::: warning
 此文档适用于 `@lucide/angular`。
 
-要了解我们旧的 Angular 包，请参阅 [`lucide-angular`](./lucide-angular)。
+要了解我们为 Angular 提供的旧版包，请参阅 [`lucide-angular`](https://v0.lucide.dev/guide/packages/lucide-angular)。
 :::
 
 一个用于 Angular 的独立、基于信号、无区域（zoneless）的 Lucide 图标实现。
 
 **你可以实现的功能：**
-- 将图标用作具有完整依赖注入支持的独立 Angular 组件
+
+- 将图标作为独立的 Angular 组件使用，并完全支持依赖注入
 - 通过现代 Angular 提供者全局配置图标
-- 与 Angular 的反应式表单和数据绑定集成
-- 构建具有树摇图标和懒加载支持的可扩展应用程序
+- 与 Angular 的响应式表单和数据绑定集成
+- 借助可被 tree-shake 的图标和懒加载支持构建可扩展应用
 
 ## 前提条件
 
@@ -118,6 +119,7 @@ export class Navbar {
 要以这种方式使用图标，首先，你必须通过 `provideLucideIcons` 提供图标：
 
 :::code-group
+
 ```ts{7-10} [app.config.ts]
 import { ApplicationConfig } from '@angular/core';
 import { provideLucideIcons, LucideCircleCheck, LucideCircleX } from '@lucide/angular';
@@ -148,6 +150,7 @@ import { LucideIcon } from '@lucide/angular';
 })
 export class Foobar { }
 ```
+
 :::
 
 ::: tip
@@ -173,7 +176,7 @@ export class Foobar { }
 ```html{2}
 <svg class="lucide lucide-house" ...>
   <title>前往仪表盘</title>
-  <!-- SVG paths -->
+  <!-- SVG 路径 -->
 </svg>
 ```
 
@@ -259,19 +262,25 @@ export class Foobar {
 ## 故障排除
 
 ### 图标未显示
-如果使用每图标组件：
-1. 确保已导入图标组件，如果使用每图标组件
+
+如果使用单图标组件：
+
+1. 确保已导入该图标组件，如果使用单图标组件
 2. 检查图标名称是否完全匹配（区分大小写）
 
 如果使用动态组件：
-1. 如果使用字符串名称，确保图标已通过 `provideLucideIcons()` 提供
-2. 验证图标是从 `@lucide/angular` 导入的，而不是旧包
 
-### TypeScript 错误？
-确保你从 `@lucide/angular` 导入，而不是 `lucide-angular`。
+1. 如果使用字符串名称，确保通过 `provideLucideIcons()` 提供了该图标
+2. 验证图标是从 `@lucide/angular` 导入的，而不是旧版包
 
-### 图标渲染默认值错误
-确保 `provideLucideConfig()` 在正确的级别使用。
+### TypeScript 报错？
+
+确保你导入的是 `@lucide/angular`，而不是 `lucide-angular`。
+
+### 图标渲染时默认值不正确
+
+确保在合适的层级使用了 `provideLucideConfig()`。
 
 ## 迁移指南
-从 `lucide-angular` 迁移？阅读我们的 [综合迁移指南](https://github.com/lucide-icons/lucide/blob/main/packages/angular/MIGRATION.md)。
+
+要从 `lucide-angular` 迁移？请阅读我们的[完整迁移指南](https://github.com/lucide-icons/lucide/blob/main/packages/angular/MIGRATION.md)。
