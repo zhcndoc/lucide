@@ -15,24 +15,22 @@ import { svelteSidebar } from '../../.vitepress/sidebar/svelte'
 
 ## 安装
 
-<!-- TODO: v1 正式发布后移除 -->
-
 ::: code-group
 
 ```sh [pnpm]
-pnpm install @lucide/svelte@next
+pnpm install @lucide/svelte
 ```
 
 ```sh [yarn]
-yarn add @lucide/svelte@next
+yarn add @lucide/svelte
 ```
 
 ```sh [npm]
-npm install @lucide/svelte@next
+npm install @lucide/svelte
 ```
 
 ```sh [bun]
-bun add @lucide/svelte@next
+bun add @lucide/svelte
 ```
 
 :::
