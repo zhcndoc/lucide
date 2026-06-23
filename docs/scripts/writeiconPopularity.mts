@@ -35,6 +35,18 @@ interface AnalyticsResponse {
   }[];
 }
 
+// Analytics module disabled - using default popularity values (0) for all icons
+console.log('Using default popularity values (0) for all icons.');
+
+const writePopularityPromises = Object.entries(defaultIconNamePopularity).map(([iconName, count]) => {
+  const location = path.resolve(iconPopularityDirectory, `${iconName}.json`);
+  return fs.promises.writeFile(location, JSON.stringify({ count }, null, 2), 'utf-8');
+});
+
+await Promise.all(writePopularityPromises);
+console.log('Successfully written default icon popularity data for', writePopularityPromises.length, 'icons.');
+
+/* Original analytics code - commented out
 if (process.env.LUCIDE_ANALYTICS_TOKEN === undefined) {
   console.error('LUCIDE_ANALYTICS_TOKEN environment variable is not set. Please set it to fetch analytics data.');
   process.exit(1);
@@ -96,4 +108,4 @@ try {
 } catch (error) {
   console.error('Error fetching analytics data:', error);
 }
-
+*/
