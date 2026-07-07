@@ -101,6 +101,7 @@ export default defineConfig({
       },
       { text: '软件包', link: '/packages' },
       { text: '展示', link: '/showcase' },
+      { text: '商品', link: 'https://merch.lucide.dev/' },
       {
         text: '简中文档',
         link: 'https://www.zhcndoc.com',
