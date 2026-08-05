@@ -12,6 +12,10 @@ import Sandpack from '~/.vitepress/theme/components/editors/SandpackAngular.vue'
 
 虽然它们不作为独立组件提供，但仍可以像官方图标一样传递给 `LucideIcon` 组件：
 
+::: info 限制
+仅支持遵循 Lucide [代码规范](../../../contribute/icon-design-guide.md#code-conventions) 的自定义图标。
+:::
+
 ### 直接作为 LucideIconData
 
 ::: sandpack {template=angular showTabs=false editorHeight=400 editorWidthPercentage=60 dependencies="@lucide/angular,@lucide/lab"}
@@ -52,7 +56,7 @@ import { LucideDynamicIcon } from '@lucide/angular';
     <svg lucideIcon="bat-ball"></svg>
   `,
   imports: [LucideDynamicIcon],
-  styleUrls: ['./app.component.css'],
+  styleUrls: ['./app/app.component.css'],
   encapsulation: ViewEncapsulation.None,
 })
 export class App {

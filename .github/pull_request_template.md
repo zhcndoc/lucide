@@ -1,59 +1,61 @@
-<!-- Thank you for contributing! -->
+<!-- 感谢您的贡献！ -->
 
 <!--
-PR Title Guidelines:
+PR 标题规范：
 
-Please use the format: <type>(<scope>): <short description>
+请使用以下格式：<type>(<scope>): <short description>
 
-Example: feat(icons): added `camera` icon
+示例：feat(icons): 添加 `camera` 图标
 
-Available types: fix, feat, perf, docs, style, refactor, test, chore, ci, build
-Common scopes: icons, docs, studio, site, dev
+可用类型：fix、feat、perf、docs、style、refactor、test、chore、ci、build
+常见作用域：icons、docs、studio、site、dev
 -->
 
-<!-- Insert `closes #issueNumber` here if merging this PR will resolve an existing issue -->
-## Description
-<!-- Please insert your description here and provide info about the "what" this PR is contribution -->
+<!-- 如果合并此 PR 将解决现有 issue，请在此处填写 `closes #issueNumber` -->
+## 描述
+<!-- 请在此处填写您的描述，并提供有关此 PR “内容”的信息 -->
 
-### Icon use case <!-- ONLY for new icons, remove this part if not icon PR -->
-<!-- What is the purpose of this icon? For each icon added, please insert at least two real life use cases (the more the better). Text like "it's a car icon" is not accepted. -->
+### 图标使用场景 <!-- 仅适用于新图标，如果不是图标 PR，请删除此部分 -->
+<!-- 此图标的用途是什么？对于添加的每个图标，请至少提供两个实际使用场景（越多越好）。不接受“这是一个汽车图标”之类的描述。 -->
 
-### Alternative icon designs <!-- ONLY for new icons, remove this part if not icon PR -->
-<!-- If you have any alternative icon designs, please attach them here. -->
+### 图标替代设计 <!-- 仅适用于新图标，如果不是图标 PR，请删除此部分 -->
+<!-- 如果您有任何图标替代设计，请在此处附上。 -->
 
-## Icon Design Checklist <!-- ONLY for new icons, remove this part if not icon PR -->
+## 图标设计检查清单 <!-- 仅适用于新图标，如果不是图标 PR，请删除此部分 -->
 
-### Concept <!-- ONLY for new icons -->
-<!-- All of these requirements must be fulfilled. -->
-<!-- IMPORTANT! Please read our official statement on brand logos in Lucide: -->
+### 概念 <!-- 仅适用于新图标 -->
+<!-- 以下所有要求都必须满足。 -->
+<!-- 重要！请阅读我们关于 Lucide 中品牌标志的官方声明： -->
 <!-- https://github.com/lucide-icons/lucide/blob/main/BRAND_LOGOS_STATEMENT.md -->
-- [ ] I have provided valid use cases for each icon.
-- [ ] I have [not added any brand or logo icon](https://github.com/lucide-icons/lucide/blob/main/BRAND_LOGOS_STATEMENT.md).
-- [ ] I have not used any hate symbols.
-- [ ] I have not included any religious, war/violence related or political imagery.
+- [ ] 我已为每个图标提供了有效的使用场景。
+- [ ] 我[没有添加任何品牌或徽标图标](https://github.com/lucide-icons/lucide/blob/main/BRAND_LOGOS_STATEMENT.md)。
+- [ ] 我没有使用任何仇恨符号。
+- [ ] 我没有包含任何宗教、战争/暴力相关或政治图像。
 
-### Author, credits & license<!-- ONLY for new icons. -->
-<!-- Please choose one of the following, and put an "x" next to it. -->
-- [ ] The icons are solely my own creation.
-- [ ] The icons were originally created in #<issueNumber> by @<githubUser>
-- [ ] I've based them on the following Lucide icons: <!-- provide the list of icons -->
-- [ ] I've based them on the following design: <!-- provide source URL and license permitting use -->
+### 作者、致谢与许可证<!-- 仅适用于新图标。 -->
+<!-- 请从以下选项中选择一个，并在其旁边填入“x”。 -->
+- [ ] 这些图标完全由我本人创作。
+- [ ] 这些图标最初由 @<githubUser> 在 #<issueNumber> 中创建
+- [ ] 我基于以下 Lucide 图标进行了创作：<!-- 提供图标列表 -->
+- [ ] 我基于以下设计进行了创作：<!-- 提供来源 URL 以及允许使用的许可证 -->
 
-### Naming <!-- ONLY for new icons -->
-<!-- All of these requirements must be fulfilled. -->
-- [ ] I've read and followed the [naming conventions](https://lucide.dev/contribute/icon-design-guide#naming-conventions)
-- [ ] I've named icons by what they are rather than their use case.
-- [ ] I've provided meta JSON files in `icons/[iconName].json`.
+### 命名 <!-- 仅适用于新图标 -->
+<!-- 以下所有要求都必须满足。 -->
+- [ ] 我已阅读并遵循[命名规范](https://lucide.dev/contribute/icon-design-guide#naming-conventions)
+- [ ] 我根据图标所代表的对象而非其使用场景为图标命名。
+- [ ] 我已在 `icons/[iconName].json` 中提供元数据 JSON 文件。
 
-### Design <!-- ONLY for new icons -->
-<!-- All of these requirements must be fulfilled. -->
-- [ ] I've read and followed the [icon design guidelines](https://lucide.dev/contribute/icon-design-guide)
-- [ ] I've made sure that the icons look sharp on low DPI displays.
-- [ ] I've made sure that the icons look consistent with the icon set in size, optical volume and density.
-- [ ] I've made sure that the icons are visually centered.
-- [ ] I've correctly optimized all icons to three points of precision.
+### 设计 <!-- 仅适用于新图标 -->
+<!-- 以下所有要求都必须满足。 -->
 
-## Before Submitting <!-- For every PR! -->
-<!-- All of these requirements must be fulfilled. -->
-- [ ] I've read the [Contribution Guidelines](https://github.com/lucide-icons/lucide/blob/main/CONTRIBUTING.md).
-- [ ] I've checked if there was an existing PR that solves the same issue.
+- [ ] 我已阅读并遵循[图标设计指南](https://lucide.dev/contribute/icon-design-guide)
+- [ ] 我已确认这些图标[尚不存在](https://lucide.dev/icons)，包括 [Lab 目录](https://github.com/lucide-icons/lucide/tree/main/lab)中的图标。
+- [ ] 我已确保这些图标在低 DPI 显示屏上看起来清晰。
+- [ ] 我已确保这些图标在尺寸、视觉体量和密度方面与图标集保持一致。
+- [ ] 我已确保这些图标在视觉上居中。
+- [ ] 我已将所有图标正确优化至三位精度。
+
+## 提交前 <!-- 适用于每个 PR！ -->
+<!-- 所有这些要求都必须满足。 -->
+- [ ] 我已阅读[贡献指南](https://github.com/lucide-icons/lucide/blob/main/CONTRIBUTING.md)。
+- [ ] 我已检查是否已有解决相同问题的 PR。

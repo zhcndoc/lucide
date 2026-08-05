@@ -157,8 +157,8 @@ description: 为 Lucide 图标库设计图标的指南和最佳实践。
 
 ### 最小化路径
 
-路径代码有时会变得很大。为了减小文件大小，我们喜欢最小化代码。
-我们推荐使用 [Lucide Studio](https://studio.lucide.dev/) 将路径整理为 3 位精度。
+路径代码有时会变得相当庞大。为了减小文件大小，我们希望对代码进行压缩。
+我们建议使用 [Lucide Studio](https://studio.lucide.dev/?utm_source=lucide.dev&utm_medium=design-guide) 将路径整理为精确到 3 位的小数。
 
 ### 允许的元素
 

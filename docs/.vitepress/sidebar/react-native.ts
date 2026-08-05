@@ -72,6 +72,11 @@ export const reactNativeSidebar = [
         link: '/guide/react-native/advanced/combining-icons',
         desc: '将多个图标组合成一个',
       },
+      {
+        text: 'Optimizations',
+        link: '/guide/react-native/advanced/optimizations',
+        desc: 'Optimizing your app for performance',
+      },
     ],
   },
   {
