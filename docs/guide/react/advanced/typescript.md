@@ -16,6 +16,10 @@ interface LucideProps {
   size?: number | string;
   color?: string;
   strokeWidth?: number;
+  nonScalingStroke?: boolean;
+  /**
+   * @deprecated
+   */
   absoluteStrokeWidth?: boolean;
   [key: string]: any; // 任何其他 SVG 属性
 }

@@ -90,7 +90,7 @@ export const solidSidebar = [
     items: [
       {
         text: '深入了解无障碍',
-        link: '/guide/accessibility',
+        link: '/how-to/accessibility',
         desc: '无障碍最佳实践',
       },
       {

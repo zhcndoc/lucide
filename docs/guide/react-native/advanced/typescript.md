@@ -2,6 +2,7 @@
 title: TypeScript 支持 - React Native
 description: 了解 `lucide-react-native` 包导出的不同类型以及如何在你的 React Native 应用程序中使用它们。
 ---
+
 # TypeScript 支持
 
 `lucide-react-native` 包导出的类型列表。
@@ -16,13 +17,18 @@ interface LucideProps {
   size?: number | string;
   color?: string;
   strokeWidth?: number;
+  nonScalingStroke?: boolean;
+  /**
+   * @deprecated
+   */
   absoluteStrokeWidth?: boolean;
   [key: string]: any; // 任何其他 SVG props，由 react-native-svg 支持
 }
 ```
 
 ### 使用 `LucideProps`
-你可以使用 `LucideProps` 接口为你的自定义图标组件添加类型，或者当你需要处理图标 props 时。
+
+你可以使用 `LucideProps` 接口为自定义图标组件添加类型，或在需要处理图标 props 时使用。
 
 ```tsx
 import { Camera, type LucideProps } from 'lucide-react-native';
@@ -75,6 +81,7 @@ type IconNode = [elementName: string, attrs: Record<string, string | number>][];
 ```
 
 ### 使用 `IconNode`
+
 当你需要处理图标的原始 SVG 结构时，可以使用 `IconNode` 类型。
 
 ```tsx
@@ -88,7 +95,11 @@ const customIcon: IconNode = [
 
 const MyCustomIcon = () => {
   return (
-    <Icon iconNode={customIcon} size={24} color="blue" />
+    <Icon
+      iconNode={customIcon}
+      size={24}
+      color="blue"
+    />
   );
 };
 

@@ -2,6 +2,7 @@
 title: 全局样式 - Angular
 description: 学习如何使用 CSS 或 provideLucideConfig 提供者在 Angular 应用中全局样式化所有图标。
 ---
+
 <script setup>
 import Sandpack from '~/.vitepress/theme/components/editors/SandpackAngular.vue'
 </script>
@@ -29,9 +30,9 @@ import { provideLucideConfig } from '@lucide/angular';
 export const appConfig: ApplicationConfig = {
   providers: [
     provideLucideConfig({
-      strokeWidth: 1.5
+      strokeWidth: 1.5,
     }),
-  ]
+  ],
 };
 ```
 
@@ -65,7 +66,7 @@ export const appConfig: ApplicationConfig = {
 ```
 
 ```ts /src/app/app.component.ts
-import { Component, ViewEncapsulation } from "@angular/core";
+import { Component, ViewEncapsulation } from '@angular/core';
 import {
   LucideCakeSlice,
   LucideCandy,
@@ -76,7 +77,7 @@ import {
   LucideSandwich,
   LucideWine,
   LucideDessert,
-} from "@lucide/angular";
+} from '@lucide/angular';
 
 @Component({
   selector: 'app',
@@ -92,28 +93,27 @@ import {
     LucideDessert,
   ],
   template: `<div class="grid">
-      <svg lucideCakeSlice />
-      <svg lucideCandy />
-      <svg lucideApple />
-      <svg lucideCookie />
-      <svg lucideMartini />
-      <svg lucideIceCream2 />
-      <svg lucideSandwich />
-      <svg lucideWine />
-      <svg lucideDessert />
-    </div>`,
+    <svg lucideCakeSlice />
+    <svg lucideCandy />
+    <svg lucideApple />
+    <svg lucideCookie />
+    <svg lucideMartini />
+    <svg lucideIceCream2 />
+    <svg lucideSandwich />
+    <svg lucideWine />
+    <svg lucideDessert />
+  </div>`,
   styleUrls: ['./app.component.css', './icon.css'],
   encapsulation: ViewEncapsulation.None,
 })
-export class App {
-}
+export class App {}
 ```
 
 :::
 
-### 绝对描边宽度
+### 非缩放描边
 
-为了保持描边宽度恒定而不受图标大小影响，请将 `vector-effect: non-scaling-stroke` 应用于图标的子元素。请参阅 [absolute-stroke-width](../basics/stroke-width.md#absolute-stroke-width) 了解更多详情。
+要使描边宽度不受图标大小影响而保持不变，请将 `vector-effect: non-scaling-stroke` 应用到图标的子元素上。更多详情请参阅[非缩放描边](../basics/stroke-width.md#non-scaling-strokes)。
 
 ::: sandpack {template=angular editorHeight=300 dependencies="@lucide/angular"}
 
@@ -137,7 +137,7 @@ export class App {
 ```
 
 ```ts /src/app/app.component.ts
-import { Component, ViewEncapsulation } from "@angular/core";
+import { Component, ViewEncapsulation } from '@angular/core';
 import {
   LucideTentTree,
   LucideCaravan,
@@ -148,7 +148,7 @@ import {
   LucideMap,
   LucideCloudMoon,
   LucideSparkles,
-} from "@lucide/angular";
+} from '@lucide/angular';
 
 @Component({
   selector: 'app',
@@ -164,21 +164,20 @@ import {
     LucideSparkles,
   ],
   template: `<div class="grid">
-      <svg lucideTentTree />
-      <svg lucideCaravan />
-      <svg lucideFlameKindling />
-      <svg lucideMountainSnow />
-      <svg lucideTrees />
-      <svg lucideAxe />
-      <svg lucideMap />
-      <svg lucideCloudMoon />
-      <svg lucideSparkles />
-    </div>`,
+    <svg lucideTentTree />
+    <svg lucideCaravan />
+    <svg lucideFlameKindling />
+    <svg lucideMountainSnow />
+    <svg lucideTrees />
+    <svg lucideAxe />
+    <svg lucideMap />
+    <svg lucideCloudMoon />
+    <svg lucideSparkles />
+  </div>`,
   styleUrls: ['./app.component.css', './icon.css'],
   encapsulation: ViewEncapsulation.None,
 })
-export class App {
-}
+export class App {}
 ```
 
 :::

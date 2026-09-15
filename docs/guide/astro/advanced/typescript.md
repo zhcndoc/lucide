@@ -18,14 +18,20 @@ interface LucideProps extends SVGAttributes<SVGSVGElement> {
   color?: string;
   size?: number | string;
   'stroke-width'?: number | string;
+  nonScalingStroke?: boolean;
+  /**
+   * @deprecated
+   */
   absoluteStrokeWidth?: boolean;
   [key: string]: any; // 任何其他 SVG 属性
 }
 ```
 
 ### 使用 `IconProps`
+
 <!-- 将此重命名为 LucideProps -->
-你可以使用 `IconProps` 接口为你的自定义图标组件的 props 指定类型。
+
+你可以使用 `IconProps` 接口为自定义图标组件的 props 指定类型。
 
 ```astro
 ---
@@ -50,7 +56,7 @@ const Icon = icons[name];
 import type { Component } from 'astro/types';
 import type { IconProps } from '@lucide/astro';
 
-type LucideIcon = Component<IconProps>
+type LucideIcon = Component<IconProps>;
 ```
 
 ### 使用 `LucideIcon`
@@ -103,12 +109,13 @@ const menuItems: MenuItem[] = [
 
 ```ts
 type IconNode = [
-  elementName: 'circle' | 'ellipse'| 'g' | 'line' | 'path' | 'polygon' | 'polyline' | 'rect',
-  attrs: HTMLAttributes<'svg'>
+  elementName: 'circle' | 'ellipse' | 'g' | 'line' | 'path' | 'polygon' | 'polyline' | 'rect',
+  attrs: HTMLAttributes<'svg'>,
 ][];
 ```
 
 ### 使用 `IconNode`
+
 当你需要处理图标的原始 SVG 结构时，可以使用 `IconNode` 类型。
 
 ```astro [CustomIcon.astro]

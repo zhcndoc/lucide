@@ -2,6 +2,7 @@
 title: 组合图标 - Vue
 description: 学习如何在 Vue 应用中通过嵌套 SVG 元素将多个图标组合成一个图标。
 ---
+
 <script setup>
 import Sandpack from '~/.vitepress/theme/components/editors/SandpackVue.vue'
 </script>
@@ -15,22 +16,24 @@ import Sandpack from '~/.vitepress/theme/components/editors/SandpackVue.vue'
 
 ```vue src/App.vue [active]
 <script setup>
-import { Scan, User } from "@lucide/vue";
+import { Scan, User } from '@lucide/vue';
 </script>
 
 <template>
   <div class="app">
-    <Scan :size="48">
+    <Scan
+      :size="48"
+      nonScalingStroke
+    >
       <User
         :size="12"
         x="6"
         y="6"
-        absoluteStrokeWidth
+        nonScalingStroke
       />
     </Scan>
   </div>
 </template>
-
 ```
 
 :::
@@ -54,7 +57,7 @@ import { Scan, User } from "@lucide/vue";
 
 ```vue src/App.vue [active]
 <script setup>
-import { Mail } from "@lucide/vue";
+import { Mail } from '@lucide/vue';
 
 const hasUnreadMessages = true;
 </script>
@@ -73,7 +76,6 @@ const hasUnreadMessages = true;
     </Mail>
   </div>
 </template>
-
 ```
 
 :::
@@ -86,7 +88,7 @@ const hasUnreadMessages = true;
 
 ```vue src/App.vue [active]
 <script setup>
-import { File } from "@lucide/vue";
+import { File } from '@lucide/vue';
 </script>
 
 <template>
@@ -104,7 +106,6 @@ import { File } from "@lucide/vue";
     </File>
   </div>
 </template>
-
 ```
 
 :::

@@ -29,7 +29,7 @@
 
 ### 设计新图标
 
-如果您有设计技能，请考虑为 Lucide 库贡献新图标。查看我们的 [图标设计指南](/contribute/icon-design-guide.md)，获取创建符合 Lucide 风格图标的提示和指南。
+如果您具备设计技能，可以考虑为 Lucide 图标库贡献新图标。查看我们的 [图标设计指南](/contribute/icons/design-principles.md)，了解创建符合 Lucide 风格的图标的提示和指南。
 
 ### 贡献代码
 

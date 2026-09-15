@@ -2,6 +2,7 @@
 title: 组合图标 - Svelte
 description: 学习如何在 Svelte 应用程序中通过嵌套 SVG 元素将多个图标组合成一个图标。
 ---
+
 <script setup>
 import Sandpack from '~/.vitepress/theme/components/editors/SandpackSvelte.vue';
 </script>
@@ -20,12 +21,12 @@ import User from '@lucide/svelte/icons/user';
 </script>
 
 <div class="app">
-  <Scan size="48">
+  <Scan size="48" nonScalingStroke>
     <User
       size="12"
       x="6"
       y="6"
-      absoluteStrokeWidth
+      nonScalingStroke
     />
   </Scan>
 </div>

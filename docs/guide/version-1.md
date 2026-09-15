@@ -63,7 +63,7 @@ import OverviewLinkGrid from '../.vitepress/theme/components/base/OverviewLinkGr
 
 我们通过默认将 `aria-hidden` 设置为 `true` 改进了图标的无障碍功能。这一变化确保屏幕阅读器将忽略纯装饰性的图标，从而提高应用程序的整体无障碍性。如果您需要使图标可访问，可以提供适当的 `aria-label` 或向图标元素添加 `title` 属性。
 
-查看我们的 [无障碍深入指南](/guide/accessibility) 以获取更多关于使图标可访问的详细信息和最佳实践。
+有关使图标可访问的更多详细信息和最佳实践，请参阅我们的[无障碍功能深入指南](/how-to/accessibility)。
 
 ## 移除了 UMD 构建，现在仅支持 ESM 和 CJS
 

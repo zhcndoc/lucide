@@ -11,7 +11,7 @@ const { page } = useData();
 const router = useRouter();
 
 const frameworks = [
-  { name: 'Vanilla', icon: '/framework-logos/js.svg', value: '/guide/lucide/' },
+  { name: '原生 JavaScript', icon: '/framework-logos/js.svg', value: '/guide/lucide/' },
   { name: 'React', icon: '/framework-logos/react.svg', value: '/guide/react/' },
   { name: 'Vue', icon: '/framework-logos/vue.svg', value: '/guide/vue/' },
   { name: 'Svelte', icon: '/framework-logos/svelte.svg', value: '/guide/svelte/' },
@@ -29,7 +29,7 @@ const frameworks = [
     iconDark: '/framework-logos/astro-dark.svg',
     value: '/guide/astro/',
   },
-  { name: 'Static', icon: '/framework-logos/svg.svg', value: '/guide/static/' },
+  { name: '静态资源', icon: '/framework-logos/svg.svg', value: '/guide/static/' },
 ];
 
 const fallbackFramework = useLocalStorage('lucide-docs-fallback-framework', frameworks[1]);

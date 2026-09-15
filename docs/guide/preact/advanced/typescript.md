@@ -2,7 +2,8 @@
 title: TypeScript 支持 - Preact
 description: 了解 `lucide-preact` 包导出的不同类型以及如何在你的 Preact 应用程序中使用它们。
 ---
-# TypeScript 支持
+
+# TypeScript
 
 `lucide-preact` 包导出的类型列表。
 当在 TypeScript Preact 项目中使用 Lucide 图标时，这些类型可用于为组件添加类型定义。
@@ -16,13 +17,18 @@ interface LucideProps {
   size?: number | string;
   color?: string;
   strokeWidth?: number;
+  nonScalingStroke?: boolean;
+  /**
+   * @deprecated
+   */
   absoluteStrokeWidth?: boolean;
   [key: string]: any; // 任何其他 SVG 属性
 }
 ```
 
 ### 使用 `LucideProps`
-你可以使用 `LucideProps` 接口为你的自定义图标组件添加类型，或者在需要处理图标 props 时使用。
+
+你可以使用 `LucideProps` 接口为自定义图标组件添加类型，或者在需要处理图标 props 时使用它。
 
 ```tsx
 import { type LucideProps } from 'lucide-preact';
@@ -76,6 +82,7 @@ type IconNode = [elementName: string, attrs: Record<string, string | number>][];
 ```
 
 ### 使用 `IconNode`
+
 当你需要处理图标的原始 SVG 结构时，可以使用 `IconNode` 类型。
 
 ```tsx
@@ -89,7 +96,11 @@ const customIcon: IconNode = [
 
 const MyCustomIcon = () => {
   return (
-    <Icon iconNode={customIcon} size={24} color="blue" />
+    <Icon
+      iconNode={customIcon}
+      size={24}
+      color="blue"
+    />
   );
 };
 

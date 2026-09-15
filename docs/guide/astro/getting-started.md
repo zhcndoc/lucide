@@ -54,13 +54,13 @@ import { Camera } from '@lucide/astro';
 
 要自定义图标的外观，你可以使用以下属性：
 
-|  名称                   |   类型    |  默认值     |
-| ----------------------- | --------- | ------------ |
-| `size`                  | *number*  | 24           |
-| `color`                 | *string*  | currentColor |
-| `stroke-width`          | *number*  | 2            |
-| `absoluteStrokeWidth`   | *boolean* | false        |
-| `default-class`         | *string*  | lucide-icon  |
+| name               | type      | default      |
+| ------------------ | --------- | ------------ |
+| `size`             | _number_  | 24           |
+| `color`            | _string_  | currentColor |
+| `stroke-width`     | _number_  | 2            |
+| `nonScalingStroke` | _boolean_ | false        |
+| `default-class`    | _string_  | lucide-icon  |
 
 因为图标渲染为 SVG 元素，所有标准的 SVG 属性也可以作为属性应用。请参阅 [MDN](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/Presentation) 上的 SVG 展示属性列表。
 
@@ -76,4 +76,4 @@ import { Camera } from '@lucide/astro';
 
 <OverviewLinkGrid>
   <OverviewLink v-for="item in astroSidebar[1].items" :key="item.link" :href="item.link" :title="item.text" :desc="item.desc"/>
-</OverviewLinkGrid>
+</OverviewLinkGrid>。

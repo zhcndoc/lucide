@@ -4,6 +4,7 @@ import { groupIconMdPlugin, groupIconVitePlugin } from 'vitepress-plugin-group-i
 import sidebar from './sidebar';
 import snackPlayer from './markdown/snackPlayer';
 import sandpackPlugin from './markdown/sandpack';
+import examplePlugin from './markdown/example';
 import { readFile } from 'node:fs/promises';
 import { resourcesSidebar } from './sidebar/resources';
 import llmstxt from 'vitepress-plugin-llms';
@@ -21,6 +22,7 @@ const description = '由社区打造的精美且一致的图标工具包。';
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  lang: 'zh-CN',
   title,
   titleTemplate: ':title - Lucide 中文文档',
   description,
@@ -31,6 +33,7 @@ export default defineConfig({
     config(md) {
       md.use(groupIconMdPlugin);
       md.use(snackPlayer);
+      md.use(examplePlugin);
       md.use(sandpackPlugin, {
         defaultFiles: {
           '/styles.css': {
@@ -96,7 +99,8 @@ export default defineConfig({
         text: '资源',
         items: [
           ...resourcesSidebar[0].items,
-          { text: '图标设计指南', link: '/contribute/icon-design-guide' },
+          { text: '如何使用图标', link: '/how-to/' },
+          { text: '贡献图标', link: '/contribute/icons/' },
         ],
       },
       { text: '软件包', link: '/packages' },
@@ -106,8 +110,48 @@ export default defineConfig({
         text: '简中文档',
         link: 'https://www.zhcndoc.com',
         target: '_blank',
-      }
+      },
     ],
+    outline: {
+      label: '本页内容',
+    },
+    darkModeSwitchLabel: '外观',
+    lightModeSwitchTitle: '切换到浅色主题',
+    darkModeSwitchTitle: '切换到深色主题',
+    sidebarMenuLabel: '菜单',
+    returnToTopLabel: '返回顶部',
+    langMenuLabel: '切换语言',
+    skipToContentLabel: '跳转到内容',
+    search: {
+      provider: 'local',
+      options: {
+        translations: {
+          button: {
+            buttonText: '搜索',
+            buttonAriaLabel: '搜索',
+          },
+          modal: {
+            displayDetails: '显示详细列表',
+            resetButtonTitle: '重置搜索',
+            backButtonTitle: '关闭搜索',
+            noResultsText: '没有找到与以下内容匹配的结果：',
+            footer: {
+              selectText: '选择',
+              selectKeyAriaLabel: '回车',
+              navigateText: '导航',
+              navigateUpKeyAriaLabel: '向上箭头',
+              navigateDownKeyAriaLabel: '向下箭头',
+              closeText: '关闭',
+              closeKeyAriaLabel: '退出',
+            },
+          },
+        },
+      },
+    },
+    docFooter: {
+      prev: '上一页',
+      next: '下一页',
+    },
     sidebar,
     socialLinks: [
       { icon: 'github', link: 'https://github.com/lucide-icons/lucide' },
@@ -119,6 +163,7 @@ export default defineConfig({
     },
     editLink: {
       pattern: 'https://github.com/zhcndoc/lucide/edit/main/docs/:path',
+      text: '编辑此页',
     },
     // carbonAds: {
     //   code: 'CWYIC53U',

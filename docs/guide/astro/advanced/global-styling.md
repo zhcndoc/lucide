@@ -27,9 +27,9 @@ description: 学习如何使用 CSS 在 Astro 应用程序中为 Lucide 图标�
 }
 ```
 
-### 绝对描边宽度
+### 非缩放描边
 
-对于全局绝对描边宽度样式，可以将 `vector-effect: non-scaling-stroke` CSS 属性应用于子元素。无论图标大小如何，这将保持描边宽度不变。请参阅 [absolute-stroke-width](../basics/stroke-width.md#absolute-stroke-width) 获取更多信息。
+要全局设置非缩放描边宽度，可以将 `vector-effect: non-scaling-stroke` CSS 属性应用于子元素。无论图标大小如何，这都将使描边宽度保持相同大小。有关更多信息，请参阅[非缩放描边](../basics/stroke-width.md#non-scaling-strokes)。
 
 ```css
 .lucide {

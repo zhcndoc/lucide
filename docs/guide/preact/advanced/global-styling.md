@@ -2,6 +2,7 @@
 title: 全局样式 - Preact
 description: 学习如何使用 CSS 或 Lucide 上下文提供者在你的 Preact 应用中全局样式化所有 Lucide 图标。
 ---
+
 <script setup>
 import Sandpack from '~/.vitepress/theme/components/editors/SandpackPreact.vue'
 </script>
@@ -34,9 +35,9 @@ const App = () => (
 
 这会将 `color`、`size` 和 `strokeWidth` props 应用于作为 `LucideProvider` 子元素的所有图标。
 
+## 使用 CSS 设置样式
 
-## 使用 CSS 进行样式化
-使用 CSS 可以轻松完成图标样式化。
+使用 CSS 可以轻松地为图标设置样式。
 
 每个图标都应用了一个名为 `lucide` 的类属性。这个类名可以在 CSS 文件中用于定位应用中所有正在使用的图标。
 
@@ -74,9 +75,9 @@ import {
   Sandwich,
   Wine,
   Dessert,
-} from "lucide-preact";
-import { h } from "preact";
-import "./icon.css";
+} from 'lucide-preact';
+import { h } from 'preact';
+import './icon.css';
 
 function App() {
   return (
@@ -99,10 +100,9 @@ export default App;
 
 :::
 
+### 非缩放描边
 
-### 绝对描边宽度
-
-对于全局绝对描边宽度样式化，`vector-effect: non-scaling-stroke` CSS 属性可以应用于子元素。这将保持描边宽度大小不变，无论图标大小如何。参见 [absolute-stroke-width](../basics/stroke-width.md#absolute-stroke-width) 获取更多信息。
+要全局设置非缩放描边宽度样式，可以将 `vector-effect: non-scaling-stroke` CSS 属性应用于子元素。无论图标的大小如何，这都会使描边宽度保持相同的大小。有关更多信息，请参阅[非缩放描边](../basics/stroke-width.md#non-scaling-strokes)。
 
 ::: sandpack {editorHeight=480 editorWidthPercentage=60 dependencies="lucide-preact"}
 
@@ -136,9 +136,9 @@ import {
   Map,
   CloudMoon,
   Sparkles,
-} from "lucide-preact";
-import { h } from "preact";
-import "./icon.css";
+} from 'lucide-preact';
+import { h } from 'preact';
+import './icon.css';
 
 function App() {
   return (

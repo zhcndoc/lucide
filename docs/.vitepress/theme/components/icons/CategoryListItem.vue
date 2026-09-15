@@ -1,6 +1,55 @@
 <script setup lang="ts">
 import { useCategoryView } from '../../composables/useCategoryView';
 
+const categoryTitleTranslations: Record<string, string> = {
+  Accessibility: '无障碍',
+  'Accounts & access': '账户与访问',
+  Animals: '动物',
+  Arrows: '箭头',
+  Buildings: '建筑',
+  Charts: '图表',
+  Communication: '通信',
+  Connectivity: '连接',
+  Cursors: '光标',
+  Design: '设计',
+  'Coding & development': '编码与开发',
+  Devices: '设备',
+  Emoji: '表情符号',
+  'File icons': '文件图标',
+  Finance: '金融',
+  'Food & beverage': '食品与饮料',
+  Gaming: '游戏',
+  Home: '家居',
+  Layout: '布局',
+  Mail: '邮件',
+  Mathematics: '数学',
+  Medical: '医疗',
+  Multimedia: '多媒体',
+  Nature: '自然',
+  'Navigation & Places': '导航与地点',
+  Notification: '通知',
+  People: '人物',
+  Photography: '摄影',
+  Science: '科学',
+  Seasons: '季节',
+  Security: '安全',
+  Shapes: '形状',
+  Shopping: '购物',
+  Social: '社交',
+  Sports: '运动',
+  Sustainability: '可持续发展',
+  'Text formatting': '文本格式',
+  'Time & calendar': '时间与日历',
+  Tools: '工具',
+  Transportation: '交通',
+  Travel: '旅行',
+  Weather: '天气',
+};
+
+function translateCategoryTitle(title: string) {
+  return categoryTitleTranslations[title] ?? title;
+}
+
 interface Header {
   level: number;
   title: string;
@@ -42,15 +91,18 @@ function onClick(categoryName: string) {
         class="outline-link"
         :href="link"
         @click="onClick(name)"
-        :title="title"
+        :title="translateCategoryTitle(title)"
         :class="{
           inactive: iconCount === 0,
         }"
       >
         <span>
-          {{ title }}
+          {{ translateCategoryTitle(title) }}
         </span>
-        <span class="icon-count" :aria-label="`Count of icons in ${title}`">
+        <span
+          class="icon-count"
+          :aria-label="`${translateCategoryTitle(title)}图标数量`"
+        >
           {{ iconCount }}
         </span>
       </a>

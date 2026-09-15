@@ -2,7 +2,8 @@
 title: 组合图标 - Solid
 description: 学习如何在 Solid 应用中通过嵌套 SVG 元素将多个图标组合成一个图标。
 ---
-<!-- 尚未生效 -->
+
+<!-- 尚未正常工作 -->
 <script setup>
 import Sandpack from '~/.vitepress/theme/components/editors/Sandpack.vue'
 </script>
@@ -21,12 +22,15 @@ import User from 'lucide-solid/icons/user';
 function App() {
   return (
     <div class="app">
-      <Scan size={48}>
+      <Scan
+        size={48}
+        nonScalingStroke
+      >
         <User
           size={12}
           x={6}
           y={6}
-          absoluteStrokeWidth
+          nonScalingStroke
         />
       </Scan>
     </div>

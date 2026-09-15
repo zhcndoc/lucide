@@ -2,6 +2,7 @@
 title: 入门 - Vue
 description: 本指南将帮助你在 Vue 项目中开始使用 Lucide。
 ---
+
 <script setup>
 import OverviewLink from '../../.vitepress/theme/components/base/OverviewLink.vue'
 import OverviewLinkGrid from '../../.vitepress/theme/components/base/OverviewLinkGrid.vue'
@@ -55,13 +56,13 @@ import { Camera } from '@lucide/vue';
 
 要自定义图标的外观，你可以使用以下属性：
 
-|  名称                   |   类型    |  默认值     |
-| ----------------------- | --------- | ------------ |
-| `size`                  | *number*  | 24           |
-| `color`                 | *string*  | currentColor |
-| `stroke-width`          | *number*  | 2            |
-| `absoluteStrokeWidth`   | *boolean* | false        |
-| `default-class`         | *string*  | lucide-icon  |
+| name               | type      | default      |
+| ------------------ | --------- | ------------ |
+| `size`             | _number_  | 24           |
+| `color`            | _string_  | currentColor |
+| `stroke-width`     | _number_  | 2            |
+| `nonScalingStroke` | _boolean_ | false        |
+| `default-class`    | _string_  | lucide-icon  |
 
 ### 应用属性
 
@@ -69,7 +70,11 @@ import { Camera } from '@lucide/vue';
 
 ```vue
 <template>
-  <Camera :size="48" color="red" :stroke-width="1" />
+  <Camera
+    :size="48"
+    color="red"
+    :stroke-width="1"
+  />
 </template>
 ```
 

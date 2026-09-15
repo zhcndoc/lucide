@@ -13,7 +13,7 @@ import Sandpack from '~/.vitepress/theme/components/editors/SandpackAngular.vue'
 虽然它们不作为独立组件提供，但仍可以像官方图标一样传递给 `LucideIcon` 组件：
 
 ::: info 限制
-仅支持遵循 Lucide [代码规范](../../../contribute/icon-design-guide.md#code-conventions) 的自定义图标。
+仅支持遵循 Lucide [代码规范](../../../contribute/icons/code-conventions.md#code-conventions) 的自定义图标。
 :::
 
 ### 直接作为 LucideIconData
@@ -31,7 +31,7 @@ import { coconut } from '@lucide/lab';
     <svg [lucideIcon]="icon()"></svg>
   `,
   imports: [LucideDynamicIcon],
-  styleUrls: ['./app.component.css'],
+  styleUrls: ['./app/app.component.css'],
   encapsulation: ViewEncapsulation.None,
 })
 export class App {
@@ -116,7 +116,7 @@ import { LucideBottleChampagne } from "../icons/bottle-champagne";
   selector: 'app',
   template: `<svg lucideBottleChampagne></svg>`,
   imports: [LucideBottleChampagne],
-  styleUrls: ['./app.component.css'],
+  styleUrls: ['./app/app.component.css'],
   encapsulation: ViewEncapsulation.None,
 })
 export class App {

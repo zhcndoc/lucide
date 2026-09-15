@@ -1,7 +1,8 @@
 ---
 title: 描边宽度 - Solid
-description: 了解如何使用 `strokeWidth` prop 调整 Solid 应用程序中图标的描边宽度，或使用 `absoluteStrokeWidth` prop 调整描边宽度的外观。
+description: 了解如何在 Solid 应用中使用 `strokeWidth` prop 调整图标的描边宽度，或使用 `nonScalingStroke` prop 调整描边宽度的外观。
 ---
+
 <script setup>
 import Sandpack from '~/.vitepress/theme/components/editors/Sandpack.vue'
 </script>
@@ -30,21 +31,22 @@ function App() {
 
 export default App;
 ```
+
 :::
 
-## 绝对描边宽度
+## 非缩放描边
 
-当调整 `size` prop 时，描边宽度的大小将相对于图标的大小，这是默认的 SVG 行为。引入 `absoluteStrokeWidth` prop 是为了调整此行为，使描边宽度恒定，无论图标大小如何。
+调整 `size` prop 时，描边宽度的大小将相对于图标的大小，这是默认的 SVG 行为。引入 `nonScalingStroke` prop 可调整此行为，使描边宽度无论图标大小如何都保持不变。
 
-这意味着当启用 `absoluteStrokeWidth` 且图标的 `size` 设置为 `48px` 时，屏幕上的 `strokeWidth` 仍将保持为 `2px`。
+这意味着当启用 `nonScalingStroke` 且图标的 `size` 设置为 `48px` 时，屏幕上的 `strokeWidth` 仍将为 `2px`。
 
 注意 `2px` 是 Lucide 图标的默认描边宽度，此值可调整为任意大小。
 
-![绝对描边宽度对比](../../../images/absolute-stroke-width-compare.png?raw=true "绝对描边宽度对比")
+<!--@include: ../../../images/non-scaling-stroke-compare.svg -->
 
-### 使用 `absoluteStrokeWidth` prop 调整描边宽度
+### 使用 `nonScalingStroke` prop 调整描边宽度
 
-将 `absoluteStrokeWidth` 设置为 `true` 将使描边宽度变为绝对值。
+将 `nonScalingStroke` 设置为 `true` 将使描边宽度不随图标缩放。
 
 ::: sandpack {template=vite-solid showTabs=false editorHeight=320 editorWidthPercentage=60 dependencies="lucide-solid"}
 
@@ -56,7 +58,7 @@ function App() {
     <div class="app">
       <RollerCoaster
         size={96}
-        absoluteStrokeWidth={true}
+        nonScalingStroke
       />
     </div>
   );
@@ -64,4 +66,5 @@ function App() {
 
 export default App;
 ```
+
 :::

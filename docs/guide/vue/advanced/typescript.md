@@ -2,6 +2,7 @@
 title: TypeScript 支持 - Vue
 description: 了解 \`@lucide/vue\` 包导出的不同类型以及如何在 Vue 应用程序中使用它们。
 ---
+
 # TypeScript 支持
 
 \`@lucide/vue\` 包导出的类型列表。
@@ -16,15 +17,21 @@ interface LucideProps {
   size?: number | string;
   color?: string;
   strokeWidth?: number;
+  nonScalingStroke?: boolean;
+  /**
+   * @deprecated
+   */
   absoluteStrokeWidth?: boolean;
   [key: string]: any; // 任何其他 SVG 属性
 }
 ```
 
-### 使用 \`LucideProps\`
-你可以使用 \`LucideProps\` 接口为你的自定义图标组件的 props 添加类型。
+### 使用 `LucideProps`
+
+你可以使用 `LucideProps` 接口为自定义图标组件的 props 添加类型。
 
 ::: code-group
+
 ```vue [IconWrapper.vue]
 <script lang="ts" setup>
 import { type LucideProps } from '@lucide/vue';
@@ -39,6 +46,7 @@ defineProps<LucideProps>();
   </div>
 </template>
 ```
+
 :::
 
 ## \`LucideIcon\`
@@ -54,6 +62,7 @@ type LucideIcon = React.FC<LucideProps>;
 当你需要直接使用图标组件时，可以使用 \`LucideIcon\` 类型。
 
 ::: code-group
+
 ```vue [IconButton.vue]
 <script lang="ts" setup>
 import { type LucideProps } from '@lucide/vue';
@@ -67,10 +76,14 @@ defineProps<{
 
 <template>
   <button :aria-label="label">
-    <component :is="icon" :size="16" />
+    <component
+      :is="icon"
+      :size="16"
+    />
   </button>
 </template>
 ```
+
 :::
 
 ## \`IconNode\`
@@ -82,10 +95,12 @@ defineProps<{
 type IconNode = [elementName: string, attrs: Record<string, string | number>][];
 ```
 
-### 使用 \`IconNode\`
-当你需要处理图标的原始 SVG 结构时，可以使用 \`IconNode\` 类型。
+### 使用 `IconNode`
+
+当你需要处理图标的原始 SVG 结构时，可以使用 `IconNode` 类型。
 
 ::: code-group
+
 ```vue [CustomIcon.vue]
 <script lang="ts" setup>
 import { type IconNode, Icon } from '@lucide/vue';
@@ -98,7 +113,12 @@ const customIcon: IconNode = [
 </script>
 
 <template>
-  <Icon :iconNode="customIcon" size="24" color="blue" />
+  <Icon
+    :iconNode="customIcon"
+    size="24"
+    color="blue"
+  />
 </template>
 ```
+
 :::

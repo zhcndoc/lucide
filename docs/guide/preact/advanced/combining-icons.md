@@ -2,6 +2,7 @@
 title: 组合图标 - Preact
 description: 学习如何在 Preact 应用中通过嵌套 SVG 元素将多个图标组合成一个图标。
 ---
+
 <script setup>
 import Sandpack from '~/.vitepress/theme/components/editors/SandpackPreact.vue'
 </script>
@@ -14,18 +15,21 @@ import Sandpack from '~/.vitepress/theme/components/editors/SandpackPreact.vue'
 ::: sandpack {showTabs=false editorHeight=400 editorWidthPercentage=60 dependencies="lucide-preact"}
 
 ```jsx App.js [active]
-import { Scan, User } from "lucide-preact";
-import { h } from "preact";
+import { Scan, User } from 'lucide-preact';
+import { h } from 'preact';
 
 function App() {
   return (
     <div className="app">
-      <Scan size={48}>
+      <Scan
+        size={48}
+        nonScalingStroke
+      >
         <User
           size={12}
           x={6}
           y={6}
-          absoluteStrokeWidth
+          nonScalingStroke
         />
       </Scan>
     </div>
@@ -33,8 +37,8 @@ function App() {
 }
 
 export default App;
-
 ```
+
 :::
 
 这是有效的，因为 [SVG 可以嵌套](https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Element/svg#nested_svg_element)，并且图标支持所有 SVG 属性。
@@ -55,8 +59,8 @@ export default App;
 ::: sandpack {showTabs=false editorHeight=580 editorWidthPercentage=60 dependencies="lucide-preact"}
 
 ```jsx App.js [active]
-import { Mail } from "lucide-preact";
-import { h } from "preact";
+import { Mail } from 'lucide-preact';
+import { h } from 'preact';
 
 function App() {
   const hasUnreadMessages = true;
@@ -79,8 +83,8 @@ function App() {
 }
 
 export default App;
-
 ```
+
 :::
 
 ### 带文本元素的示例
@@ -90,8 +94,8 @@ export default App;
 ::: sandpack {showTabs=false editorHeight=400 editorWidthPercentage=60 dependencies="lucide-preact"}
 
 ```jsx App.js [active]
-import { File } from "lucide-preact";
-import { h } from "preact";
+import { File } from 'lucide-preact';
+import { h } from 'preact';
 
 function App() {
   return (
@@ -112,6 +116,6 @@ function App() {
 }
 
 export default App;
-
 ```
+
 :::

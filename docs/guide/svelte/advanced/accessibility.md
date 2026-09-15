@@ -17,7 +17,7 @@ Lucide 图标默认带有 `aria-hidden="true"`。在几乎所有情况下，这�
 
 关于这方面的更广泛解释，以及如何在应用中无障碍地使用图标的其他最佳实践，请参阅我们关于无障碍性的详细指南：
 
-<OverviewLink href="/guide/accessibility" title="无障碍图标" desc="在您的应用中实现无障碍图标的最佳实践。"/>
+<OverviewLink href="/how-to/accessibility" title="无障碍图标" desc="在您的应用中实现无障碍图标的最佳实践。"/>
 
 只有当图标**本身传达基本含义**时，才应使其具有无障碍性。下面的部分解释了如何在 Svelte 中做到这一点。
 

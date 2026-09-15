@@ -2,6 +2,7 @@
 title: TypeScript 支持 - Svelte
 description: 了解 `@lucide/svelte` 包导出的不同类型以及如何在你的 Svelte 应用程序中使用它们。
 ---
+
 # TypeScript 支持
 
 @lucide/svelte 包导出的类型列表。
@@ -17,6 +18,10 @@ interface LucideProps extends SVGAttributes<SVGSVGElement> {
   color?: string;
   size?: number | string;
   strokeWidth?: number | string;
+  nonScalingStroke?: boolean;
+  /**
+   * @deprecated
+   */
   absoluteStrokeWidth?: boolean;
   children?: Snippet;
   [key: string]: any; // 任何其他 SVG 属性
@@ -24,9 +29,11 @@ interface LucideProps extends SVGAttributes<SVGSVGElement> {
 ```
 
 ### 使用 `LucideProps`
-你可以使用 `LucideProps` 接口为你的自定义图标组件的 props 指定类型。
+
+你可以使用 `LucideProps` 接口为自定义图标组件的 props 指定类型。
 
 ::: code-group
+
 ```svelte [IconWrapper.svelte]
 <script lang="ts">
 import { Camera, type LucideProps } from '@lucide/svelte';
@@ -40,6 +47,7 @@ let props: LucideProps = $props();
   </div>
 </template>
 ```
+
 :::
 
 ## `LucideIcon`
@@ -49,7 +57,7 @@ let props: LucideProps = $props();
 ```ts
 import type { Component } from 'svelte';
 
-type LucideIcon = Component<LucideProps>
+type LucideIcon = Component<LucideProps>;
 ```
 
 ### 使用 `LucideIcon`
@@ -135,6 +143,7 @@ type LucideIcon = Component<LucideProps>
 {/each}
 
 ```
+
 :::
 
 ## `IconNode`
@@ -144,15 +153,17 @@ type LucideIcon = Component<LucideProps>
 
 ```ts
 type IconNode = [
-  elementName: 'circle' | 'ellipse'| 'g' | 'line' | 'path' | 'polygon' | 'polyline' | 'rect',
-  attrs: SVGAttributes<SVGSVGElement>
+  elementName: 'circle' | 'ellipse' | 'g' | 'line' | 'path' | 'polygon' | 'polyline' | 'rect',
+  attrs: SVGAttributes<SVGSVGElement>,
 ][];
 ```
 
 ### 使用 `IconNode`
+
 当你需要处理图标的原始 SVG 结构时，可以使用 `IconNode` 类型。
 
 ::: code-group
+
 ```svelte [CustomIcon.svelte]
 <script lang="ts">
 import { type IconNode, Icon } from '@lucide/svelte';
@@ -166,4 +177,5 @@ const customIcon: IconNode = [
 
 <Icon iconNode={customIcon} size="24" color="blue" />
 ```
+
 :::

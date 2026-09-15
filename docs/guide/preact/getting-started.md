@@ -2,6 +2,7 @@
 title: 入门指南 - Preact
 description: 本指南将帮助您在 Preact 项目中开始使用 Lucide。
 ---
+
 <script setup lang="ts">
 import OverviewLink from '../../.vitepress/theme/components/base/OverviewLink.vue'
 import OverviewLinkGrid from '../../.vitepress/theme/components/base/OverviewLinkGrid.vue'
@@ -56,19 +57,25 @@ export default App;
 
 要自定义图标的外观，您可以使用以下属性：
 
-| 名称                  | 类型      | 默认值       |
-| --------------------- | --------- | ------------ |
-| `size`                | *number*  | 24           |
-| `color`               | *string*  | currentColor |
-| `strokeWidth`         | *number*  | 2            |
-| `absoluteStrokeWidth` | *boolean* | false        |
+| name               | type      | default      |
+| ------------------ | --------- | ------------ |
+| `size`             | _number_  | 24           |
+| `color`            | _string_  | currentColor |
+| `strokeWidth`      | _number_  | 2            |
+| `nonScalingStroke` | _boolean_ | false        |
 
 因为图标渲染为 SVG 元素，所有标准的 SVG 属性也可以作为属性应用。请参阅 [MDN](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/Presentation) 上的 SVG 表现属性列表。
 
 ```jsx
 // 用法
 const App = () => {
-  return <Camera size={48} color="red" strokeWidth={1} />;
+  return (
+    <Camera
+      size={48}
+      color="red"
+      strokeWidth={1}
+    />
+  );
 };
 ```
 

@@ -2,6 +2,7 @@
 title: 全局样式 - Solid
 description: 学习如何在 Solid 应用中使用 CSS 或 Lucide 上下文提供者全局样式化所有 Lucide 图标。
 ---
+
 <script setup>
 import Sandpack from '~/.vitepress/theme/components/editors/Sandpack.vue'
 </script>
@@ -36,9 +37,9 @@ const App = () => (
 
 这会将 `color`、`size` 和 `strokeWidth` 属性应用于 `LucideProvider` 的所有子图标。
 
+## 使用 CSS 设置样式
 
-## 使用 CSS 进行样式化
-使用 CSS 可以轻松完成图标样式化。
+使用 CSS 可以轻松地为图标设置样式。
 
 每个图标都应用了一个名为 `lucide` 的类属性。这个类名可以在 CSS 文件中用于定位应用中使用的全部图标。
 
@@ -75,7 +76,7 @@ import IceCream2 from 'lucide-solid/icons/ice-cream-2';
 import Sandwich from 'lucide-solid/icons/sandwich';
 import Wine from 'lucide-solid/icons/wine';
 import Dessert from 'lucide-solid/icons/dessert';
-import "./icon.css";
+import './icon.css';
 
 function App() {
   return (
@@ -95,11 +96,12 @@ function App() {
 
 export default App;
 ```
+
 :::
 
-### 绝对描边宽度
+### 非缩放描边
 
-对于全局绝对描边宽度样式化，`vector-effect: non-scaling-stroke` CSS 属性可以应用于子元素。这将保持描边宽度大小不变，无论图标大小如何。参见 [absolute-stroke-width](../basics/stroke-width.md#absolute-stroke-width) 获取更多信息。
+对于全局非缩放描边宽度样式，可以将 `vector-effect: non-scaling-stroke` CSS 属性应用于子元素。无论图标大小如何，这都能保持描边宽度不变。有关更多信息，请参阅[非缩放描边](../basics/stroke-width.md#non-scaling-strokes)。
 
 ::: sandpack {template=vite-solid editorHeight=300 editorWidthPercentage=60 dependencies="lucide-solid"}
 
@@ -120,7 +122,6 @@ export default App;
   grid-template-rows: 1fr 1fr 1fr;
   gap: 6px;
 }
-
 ```
 
 ```tsx App.tsx
@@ -133,7 +134,7 @@ import Axe from 'lucide-solid/icons/axe';
 import Map from 'lucide-solid/icons/map';
 import CloudMoon from 'lucide-solid/icons/cloud-moon';
 import Sparkles from 'lucide-solid/icons/sparkles';
-import "./icon.css";
+import './icon.css';
 
 function App() {
   return (

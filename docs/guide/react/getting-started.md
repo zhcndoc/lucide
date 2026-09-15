@@ -54,12 +54,12 @@ export default App;
 
 要自定义图标的外观，你可以使用以下属性：
 
-| 名称                  | 类型      | 默认值       |
-| --------------------- | --------- | ------------ |
-| `size`                | *number*  | 24           |
-| `color`               | *string*  | currentColor |
-| `strokeWidth`         | *number*  | 2            |
-| `absoluteStrokeWidth` | *boolean* | false        |
+| name               | type      | default      |
+|--------------------| --------- | ------------ |
+| `size`             | *number*  | 24           |
+| `color`            | *string*  | currentColor |
+| `strokeWidth`      | *number*  | 2            |
+| `nonScalingStroke` | *boolean* | false        |
 
 因为图标渲染为 SVG 元素，所有标准的 SVG 属性也可以作为属性应用。请参阅 [MDN](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/Presentation) 上的 SVG 表现属性列表。
 

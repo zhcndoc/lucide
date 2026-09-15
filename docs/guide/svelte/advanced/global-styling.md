@@ -2,6 +2,7 @@
 title: 全局样式 - Svelte
 description: 学习如何使用 CSS 或 Lucide 上下文提供者在你的 Svelte 应用中全局样式化所有 Lucide 图标。
 ---
+
 <script setup>
 import Sandpack from '~/.vitepress/theme/components/editors/SandpackSvelte.vue';
 </script>
@@ -89,11 +90,12 @@ import "./icon.css";
   <Dessert />
 </div>
 ```
+
 :::
 
-### 绝对描边宽度
+### 非缩放描边
 
-对于全局绝对描边宽度样式化，`vector-effect: non-scaling-stroke` CSS 属性可以应用于子元素。这将保持描边宽度大小不变，无论图标大小如何。参见 [absolute-stroke-width](../basics/stroke-width.md#absolute-stroke-width) 获取更多信息。
+要进行全局非缩放描边宽度样式设置，可以将 `vector-effect: non-scaling-stroke` CSS 属性应用于子元素。这样无论图标大小如何，描边宽度都会保持不变。有关更多信息，请参阅[非缩放描边](../basics/stroke-width.md#non-scaling-strokes)。
 
 ::: sandpack {template=vite-svelte editorHeight=420 editorWidthPercentage=55}
 
@@ -143,4 +145,5 @@ import "./icon.css";
   <Sparkles />
 </div>
 ```
+
 :::

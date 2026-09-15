@@ -2,6 +2,7 @@
 title: TypeScript 支持 - Solid
 description: 了解 `lucide-solid` 包导出的不同类型以及如何在你的 Solid 应用程序中使用它们。
 ---
+
 # TypeScript 支持
 
 来自 `lucide-solid` 包的导出类型列表。
@@ -16,13 +17,18 @@ interface LucideProps extends SVGAttributes {
   size?: number | string;
   color?: string;
   strokeWidth?: number;
+  nonScalingStroke?: boolean;
+  /**
+   * @deprecated
+   */
   absoluteStrokeWidth?: boolean;
   [key: string]: any; // 任何其他 SVG 属性
 }
 ```
 
 ### 使用 `LucideProps`
-你可以使用 `LucideProps` 接口来为你的自定义图标组件定义类型，或者当你需要处理图标 props 时。
+
+你可以使用 `LucideProps` 接口为自定义图标组件指定类型，或在需要处理图标 props 时使用它。
 
 ```tsx
 import { type LucideProps } from 'lucide-solid';
@@ -76,6 +82,7 @@ type IconNode = [elementName: string, attrs: Record<string, string | number>][];
 ```
 
 ### 使用 `IconNode`
+
 当你需要处理图标的原始 SVG 结构时，可以使用 `IconNode` 类型。
 
 ```tsx
@@ -89,7 +96,11 @@ const customIcon: IconNode = [
 
 const MyCustomIcon = () => {
   return (
-    <Icon iconNode={customIcon} size={24} color="blue" />
+    <Icon
+      iconNode={customIcon}
+      size={24}
+      color="blue"
+    />
   );
 };
 

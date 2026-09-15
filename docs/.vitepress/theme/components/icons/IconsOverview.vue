@@ -22,19 +22,18 @@ const ICON_SIZE = 56;
 const ICON_GRID_GAP = 8;
 const SORTING = [
   {
-    name: 'Popularity',
+    name: '热门程度',
     value: 'popularity',
   },
   {
-    name: 'Release date',
+    name: '发布日期',
     value: 'release-date',
   },
   {
-    name: 'Name',
+    name: '名称',
     value: 'name',
   },
-]
-
+];
 
 const initialGridItems = computed(() => {
   if (containerWidth.value === 0) return 120;
@@ -50,7 +49,7 @@ const props = defineProps<{
 }>();
 
 const activeIconName = ref(null);
-const selectedSort = ref(SORTING[0])
+const selectedSort = ref(SORTING[0]);
 
 const { execute: fetchTags, data: tags, isFetching: isFetchingTags } = useFetchTags();
 const {
@@ -88,9 +87,13 @@ const mappedIcons = computed(() => {
     return sortedIcons.value;
   }
 
+  if (categories.value == null) {
+    return sortedIcons.value;
+  }
+
   return sortedIcons.value.map((icon) => {
     const iconTags = tags.value[icon.name];
-    const iconCategories = categories.value?.[icon.name] ?? [];
+    const iconCategories = categories.value[icon.name] ?? [];
 
     return {
       ...icon,
@@ -115,7 +118,7 @@ const searchResults = useSearch(searchQueryDebounced, mappedIcons, [
 
 const searchPlaceholder = useSearchPlaceholder(searchQuery, searchResults);
 const isSearchMetadataLoading = computed(
-  () => searchQuery.value.length > 0 && (tags.value == null || categories.value == null),
+  () => searchQuery.value.length > 0 && !isFetchingTags && !isFetchingCategories,
 );
 
 const chunkedIcons = computed(() => {
@@ -187,7 +190,7 @@ function handleCloseDrawer() {
   >
     <StickyBar>
       <InputSearch
-        :placeholder="`Search ${icons.length} icons…`"
+        :placeholder="`搜索 ${icons.length} 个图标…`"
         v-model="searchQuery"
         ref="searchInput"
         :shortcut="kbdSearchShortcut"

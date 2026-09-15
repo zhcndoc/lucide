@@ -2,6 +2,7 @@
 title: 入门指南 - Angular
 description: 本指南将帮助您在 Angular 项目中开始使用 Lucide。
 ---
+
 <script setup>
 import OverviewLink from '../../.vitepress/theme/components/base/OverviewLink.vue'
 import OverviewLinkGrid from '../../.vitepress/theme/components/base/OverviewLinkGrid.vue'
@@ -56,7 +57,7 @@ import { LucideFileText } from '@lucide/angular';
   template: '<svg lucideFileText></svg>',
   imports: [LucideFileText],
 })
-export class App { }
+export class App {}
 ```
 
 ### 动态图标组件
@@ -74,7 +75,7 @@ import { LucideDynamicIcon, LucideCircleCheck, LucideCircleX } from '@lucide/ang
 })
 export class App {
   protected readonly model = signal<boolean>(true);
-  protected readonly icon = computed(() => this.model() ? LucideCircleCheck : LucideCircleX);
+  protected readonly icon = computed(() => (this.model() ? LucideCircleCheck : LucideCircleX));
 }
 ```
 
@@ -82,18 +83,24 @@ export class App {
 
 要自定义图标的外观，您可以使用以下输入属性：
 
-|  名称                   |   类型    |  默认值     |
-| ----------------------- | --------- | ------------ |
-| `size`                  | *number*  | 24           |
-| `color`                 | *string*  | currentColor |
-| `strokeWidth`           | *number*  | 2            |
-| `absoluteStrokeWidth`   | *boolean* | false        |
-| `title`                 | *string*  | null         |
+| 名称               | 类型      | 默认值       |
+| ------------------ | --------- | ------------ |
+| `size`             | _number_  | 24           |
+| `color`            | _string_  | currentColor |
+| `strokeWidth`      | _number_  | 2            |
+| `nonScalingStroke` | _boolean_ | false        |
+| `title`            | _string_  | null         |
 
 由于图标渲染为 SVG 元素，所有标准 SVG 属性也可以应用。请参阅 [MDN](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/Presentation) 上的 SVG 表现属性列表。
 
 ```html
-<svg lucideHouse [size]="48" color="red" [strokeWidth]="1" title="Home"></svg>
+<svg
+  lucideHouse
+  [size]="48"
+  color="red"
+  [strokeWidth]="1"
+  title="Home"
+></svg>
 ```
 
 有关如何使用这些输入属性的更多示例和详细信息，请继续阅读指南：
