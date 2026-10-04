@@ -25,7 +25,7 @@ Lucide Svelte 提供了一个名为 `setLucideProps` 的上下文 API，允许�
 你可以在主入口文件或顶层组件中调用 `setLucideProps` 来为所有图标设置默认属性。
 
 ```js
-import { setLucideProps } from '@lucide/svelte';
+import { setLucideProps } from '@lucide/svelte/context';
 
 setLucideProps({
   size: 32,

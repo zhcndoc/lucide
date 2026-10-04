@@ -153,6 +153,7 @@ deno add lucide-solid
 ```
 
 :::
+> 对于 Solid 2，请使用 `@lucide/solid`；对于 Solid 1，请使用 `lucide-solid` 软件包。Solid 2 仍处于候选发布版本阶段。
 
 更多详情，请参阅 [文档](./solid/index.md)。
 

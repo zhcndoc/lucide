@@ -15,6 +15,10 @@ const defaultSandpackCSS = await readFile(
   fileURLToPath(new URL('./theme/sandpack-default.css', import.meta.url)),
   'utf-8',
 );
+const iconStyleHeadScript = await readFile(
+  fileURLToPath(new URL('./theme/iconStyleHead.js', import.meta.url)),
+  'utf-8',
+);
 
 const title = 'Lucide 中文文档';
 const socialTitle = 'Lucide 图标';
@@ -85,7 +89,10 @@ export default defineConfig({
       }) as unknown as UserConfig['vite']['plugins'][0],
     ],
   },
-  head: getHeadConfig({ title, description, socialTitle }),
+  head: [
+    ...getHeadConfig({ title, description, socialTitle }),
+    ['script', {}, iconStyleHeadScript],
+  ],
   transformPageData,
   themeConfig: {
     logo: {
@@ -98,7 +105,7 @@ export default defineConfig({
       {
         text: '资源',
         items: [
-          ...resourcesSidebar[0].items,
+          ...resourcesSidebar[0].items.map(({ text, link }) => ({ text, link })),
           { text: '如何使用图标', link: '/how-to/' },
           { text: '贡献图标', link: '/contribute/icons/' },
         ],

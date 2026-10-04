@@ -36,6 +36,52 @@ bun add lucide-solid
 
 :::
 
+:::: info 使用 Solid 2？
+
+Lucide 为每个主要 Solid 版本提供一个软件包。本指南介绍 **Solid 1** 和 `lucide-solid` 软件包。如果你的应用使用 Solid 2，请改为安装 `@lucide/solid`：
+
+::: code-group
+
+```sh [pnpm]
+pnpm add @lucide/solid
+```
+
+```sh [yarn]
+yarn add @lucide/solid
+```
+
+```sh [npm]
+npm install @lucide/solid
+```
+
+```sh [bun]
+bun add @lucide/solid
+```
+
+:::
+
+这两个软件包导出的图标组件及其 props 相同，因此本指南的其余部分无需更改——只有导入说明符不同：
+
+```jsx
+import { Camera } from '@lucide/solid';
+```
+
+Solid 本身有所不同。最有可能影响你围绕 Lucide 编写的代码的变化：
+
+| | `lucide-solid` | `@lucide/solid` |
+| -------------------- | ----------------------------- | ----------------------- |
+| Solid 版本         | `^1.4.7`                      | `^2.0.0-rc.0`           |
+| DOM 运行时包   | `solid-js/web`                | `@solidjs/web`          |
+| `jsxImportSource`     | `solid-js`                    | `@solidjs/web`          |
+| 拆分图标 props  | `splitProps(props, ['size'])` | `omit(props, 'size')`   |
+| 提供上下文     | `<Ctx.Provider value={…}>`    | `<Ctx value={…}>`       |
+
+完整列表请参阅 [Solid 2 迁移指南](https://github.com/solidjs/solid/blob/next/documentation/solid-2.0/MIGRATION.md)。
+
+Solid 2 仍处于候选发布版本阶段，因此 `@lucide/solid` 也应视为预发布版本。本指南中的实时示例均运行在 Solid 1 上。
+
+::::
+
 ## 导入你的第一个图标
 
 Lucide 是基于 ES Modules 构建的，因此它完全支持 tree-shaking。

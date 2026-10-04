@@ -61,10 +61,10 @@ interface ButtonProps {
   label: string;
 }
 
-const IconButton = ({ icon: Icon, label }) => {
+const IconButton = (props: ButtonProps) => {
   return (
-    <button aria-label={label}>
-      <Icon size={16} />
+    <button aria-label={props.label}>
+      <props.icon size={16} />
     </button>
   );
 };

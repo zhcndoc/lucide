@@ -18,7 +18,7 @@ import {
 } from "lucide-solid";
 ```
 
-### 在 IDE 中关闭自动完成
+## 在 IDE 中关闭自动完成
 
 ```json [.vscode/settings.json]
 {

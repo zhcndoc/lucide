@@ -39,7 +39,7 @@ interface Placeholder {
   finePrint?: string;
 }
 
-const brandPlaceholders: Placeholder[] = shallowReadonly([
+const brandPlaceholders: readonly Placeholder[] = shallowReadonly([
   {
     title: '哇哦！这是一个吓人的品牌标志！',
     message:
@@ -103,7 +103,7 @@ const brandPlaceholders: Placeholder[] = shallowReadonly([
   },
 ]);
 
-const notFoundPlaceholders: Omit<Placeholder, 'title'>[] = shallowReadonly([
+const notFoundPlaceholders: readonly Omit<Placeholder, 'title'>[] = shallowReadonly([
   {
     message: '我们已经全局搜索过这个图标，但还是没找到。',
     icon: markRaw(bird),
@@ -130,7 +130,7 @@ const notFoundPlaceholders: Omit<Placeholder, 'title'>[] = shallowReadonly([
   },
 ]);
 
-function randomItem<T>(arr: T[]): T {
+function randomItem<T>(arr: readonly T[]): T {
   return arr[Math.floor(Math.random() * arr.length)];
 }
 

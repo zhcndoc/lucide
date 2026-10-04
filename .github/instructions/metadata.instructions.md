@@ -11,9 +11,9 @@ JSON 元数据描述符的 schema 可在 `icon.schema.json` 中找到。它定�
 
 ## 标签
 
-`tags` 属性是一个字符串数组，用于描述图标并可用于搜索。
-请根据 `icon.schema.json` 验证标签，以确保其格式正确并符合定义的结构。
-根据图标名称和 PR 描述中提供的使用场景提供标签建议。参考仓库中现有的标签，以保持一致性并避免重复。不要建议使用“icon”等词，并且最好使用单个词。标签应始终使用小写，也可以包含空格（例如 `magnifying glass`）。图标名称不应包含在标签中，因为它已经被指定。
+The `tags` property is an array of strings that describe the icon and can be used for searching.
+Validate the tags against the `icon.schema.json` to ensure they are correctly formatted and adhere to the defined structure.
+Provide tag suggestions based on the name of the icon and the use cases provided in the PR description. Use the existing tags in the repository as a reference for consistency and to avoid duplicates. Don't suggest words like: 'icon' and preferably use single words. Tags should always be in lowercase, and may also contain spaces (e.g. `magnifying glass`). Don't include the full icon name, its space-separated form, or any individual part of its kebab-case name because those terms are already searchable. For example, don't suggest `mail-search`, `mail search`, `mail`, or `search` for the `mail-search` icon.
 
 ## 分类
 
