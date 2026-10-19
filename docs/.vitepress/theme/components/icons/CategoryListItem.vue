@@ -27,7 +27,7 @@ const categoryTitleTranslations: Record<string, string> = {
   Multimedia: '多媒体',
   Nature: '自然',
   'Navigation & Places': '导航与地点',
-  Notification: '通知',
+  Notifications: '通知',
   People: '人物',
   Photography: '摄影',
   Science: '科学',
