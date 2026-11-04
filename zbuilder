@@ -1,0 +1,32 @@
+FROM node:24-bookworm AS builder
+
+WORKDIR /app
+
+ENV CI=true \
+    NITRO_PRESET=node-server
+
+RUN corepack enable pnpm
+
+COPY . .
+
+RUN pnpm install --frozen-lockfile --filter @lucide/docs...
+
+RUN pnpm --filter @lucide/docs run docs:build
+
+RUN mkdir -p docs/.vitepress/public \
+    && cp -r docs/.vercel/output/static/. docs/.vitepress/public/ \
+    && pnpm --filter @lucide/docs run build:api
+
+FROM node:24-bookworm-slim
+
+WORKDIR /app
+
+ENV NODE_ENV=production \
+    HOST=0.0.0.0 \
+    PORT=8080
+
+COPY --from=builder /app/docs/.output ./.output
+
+EXPOSE 8080
+
+CMD ["node", ".output/server/index.mjs"]

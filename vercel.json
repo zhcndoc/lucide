@@ -1,6 +1,0 @@
-{
-  "framework": null,
-  "buildCommand": "cd docs && pnpm run docs:build",
-  "installCommand": "npm install -g pnpm && pnpm install",
-  "outputDirectory": "docs/.vercel/output/static"
-}
