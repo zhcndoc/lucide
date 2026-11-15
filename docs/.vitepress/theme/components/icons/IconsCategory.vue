@@ -17,6 +17,7 @@ export type CategoryRow = CategoryNameRow | CategoryIconsRow;
 
 <script setup lang="ts">
 import IconGrid from './IconGrid.vue'
+import { translateCategoryTitle } from '../../utils/translateCategoryTitle';
 
 defineProps<{
   activeIconName: string | null
@@ -32,7 +33,7 @@ const emit = defineEmits(['setActiveIcon'])
     class="title"
   >
     <a class="header-anchor" :href="`#${categoryRow.name}`" :aria-label="`Permalink to &quot;${categoryRow.title}&quot;`">&ZeroWidthSpace;</a>
-    {{ categoryRow.title }}
+    {{ translateCategoryTitle(categoryRow.title) }}
   </h2>
   <IconGrid
     v-else-if="categoryRow.type === 'icons'"

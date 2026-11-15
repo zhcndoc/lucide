@@ -89,6 +89,7 @@ export default defineConfig({
           'index.md',
           'packages.md',
           'showcase.md',
+          'sponsor.md',
           'brand-logo-statement.md',
           'icons/**', // Not working, need investigation
         ],
@@ -143,6 +144,9 @@ export default defineConfig({
     socialLinks: [
       { icon: 'github', link: 'https://github.com/lucide-icons/lucide' },
       { icon: 'discord', link: 'https://discord.gg/EH6nSts' },
+      { icon: 'x', link: 'https://x.com/lucide_icons' },
+      { icon: 'linkedin', link: 'https://www.linkedin.com/company/lucide-icons/' },
+      { icon: 'bluesky', link: 'https://bsky.app/profile/lucide-icons.bsky.social' },
     ],
     footer: {
       message: `<a style="text-decoration: none;" target="_blank" href="https://www.zhcndoc.com">简中文档</a> | <a style="text-decoration: none;" rel="nofollow" target="_blank" href="https://beian.miit.gov.cn">沪ICP备2024070610号-3</a>`,

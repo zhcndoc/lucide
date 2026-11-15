@@ -38,7 +38,7 @@ const pickIcons = [
   'map-pinned',
   'megaphone',
   'moon',
-  'eighth-note',
+  'sixteenth-notes',
   'phone',
   'power-off',
   'radio',

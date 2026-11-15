@@ -1,54 +1,6 @@
 <script setup lang="ts">
 import { useCategoryView } from '../../composables/useCategoryView';
-
-const categoryTitleTranslations: Record<string, string> = {
-  Accessibility: '无障碍',
-  'Accounts & access': '账户与访问',
-  Animals: '动物',
-  Arrows: '箭头',
-  Buildings: '建筑',
-  Charts: '图表',
-  Communication: '通信',
-  Connectivity: '连接',
-  Cursors: '光标',
-  Design: '设计',
-  'Coding & development': '编码与开发',
-  Devices: '设备',
-  Emoji: '表情符号',
-  'File icons': '文件图标',
-  Finance: '金融',
-  'Food & beverage': '食品与饮料',
-  Gaming: '游戏',
-  Home: '家居',
-  Layout: '布局',
-  Mail: '邮件',
-  Mathematics: '数学',
-  Medical: '医疗',
-  Multimedia: '多媒体',
-  Nature: '自然',
-  'Navigation & Places': '导航与地点',
-  Notifications: '通知',
-  People: '人物',
-  Photography: '摄影',
-  Science: '科学',
-  Seasons: '季节',
-  Security: '安全',
-  Shapes: '形状',
-  Shopping: '购物',
-  Social: '社交',
-  Sports: '运动',
-  Sustainability: '可持续发展',
-  'Text formatting': '文本格式',
-  'Time & calendar': '时间与日历',
-  Tools: '工具',
-  Transportation: '交通',
-  Travel: '旅行',
-  Weather: '天气',
-};
-
-function translateCategoryTitle(title: string) {
-  return categoryTitleTranslations[title] ?? title;
-}
+import { translateCategoryTitle } from '../../utils/translateCategoryTitle';
 
 interface Header {
   level: number;
@@ -120,22 +72,45 @@ function onClick(categoryName: string) {
   padding-left: 13px;
 }
 
+/* Each category is a soft pill on hover: the name slides in a little and the count badge
+   takes the brand colour. The category in view keeps the brand colour. */
 .outline-link {
   display: flex;
-  align-items: baseline;
-  line-height: 28px;
+  align-items: center;
+  margin: 1px -8px;
+  padding: 0 6px 0 8px;
+  line-height: 26px;
   color: var(--vp-c-text-2);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  transition: color 0.5s;
+  border-radius: 6px;
+  transition:
+    color 0.25s,
+    background-color 0.25s;
+  transition-duration: 0.25s;
   font-weight: 500;
 }
 
+.outline-link > span:first-child {
+  transition: transform 0.25s ease;
+  transition-duration: 0.25s;
+}
+
 .outline-link:hover,
-.outline-link.active {
+.outline-link:focus-visible {
+  outline: none;
   color: var(--vp-c-text-1);
-  transition: color 0.25s;
+  background-color: var(--vp-c-default-soft);
+}
+
+.outline-link:hover > span:first-child,
+.outline-link:focus-visible > span:first-child {
+  transform: translateX(3px);
+}
+
+.outline-link.active {
+  color: var(--vp-c-brand-1);
 }
 
 .outline-link.inactive {
@@ -148,10 +123,26 @@ function onClick(categoryName: string) {
 }
 
 .icon-count {
-  opacity: 0.5;
   margin-left: auto;
+  padding: 0 6px;
+  min-width: 26px;
+  line-height: 18px;
+  text-align: center;
   font-size: 11px;
-  font-weight: 400;
+  font-weight: 500;
+  color: var(--vp-c-text-3);
+  border-radius: 9px;
+  transition:
+    color 0.25s,
+    background-color 0.25s;
+  transition-duration: 0.25s;
+}
+
+.outline-link:hover .icon-count,
+.outline-link:focus-visible .icon-count,
+.outline-link.active .icon-count {
+  color: var(--vp-c-brand-1);
+  background-color: color-mix(in srgb, var(--vp-c-brand) 14%, transparent);
 }
 
 .outline-link.inactive .icon-count {

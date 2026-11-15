@@ -21,16 +21,20 @@ const links = computed(() => [
     text: '贡献',
     href: '/contribute/',
   },
-  // {
-  //   text: '更新日志',
-  //   href: `${githubLink.value}/releases`,
-  // },
+  {
+    text: '赞助',
+    href: '/sponsor',
+  },
+  {
+    text: '更新日志',
+    href: `${githubLink.value}/releases`,
+  },
   {
     text: 'GitHub',
     href: `${githubLink.value}`,
   },
   {
-    text: '问题',
+    text: '问题反馈',
     href: `${githubLink.value}/issues`,
   },
 ]);
@@ -51,16 +55,6 @@ const links = computed(() => [
           <img
             src="/vercel.svg"
             alt="由 Vercel 提供支持"
-            width="200"
-          />
-        </a>
-        <a
-          href="https://www.digitalocean.com/?refcode=b0877a2caebd&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge"
-          rel="noreferrer noopener"
-        >
-          <img
-            src="/digitalocean.svg"
-            alt="Digital Ocean"
             width="200"
           />
         </a>

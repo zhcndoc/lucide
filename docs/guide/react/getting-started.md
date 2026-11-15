@@ -50,6 +50,17 @@ const App = () => {
 export default App;
 ```
 
+### 单独导入一个图标
+
+你也可以每次只导入一个图标。这会绕过图标汇总入口；在运行时解析模块（例如服务器端渲染）时尤其有用，并且只需加载较小的类型声明，而不是完整声明。
+
+```tsx
+import Camera from 'lucide-react/icons/camera';
+import type { LucideProps } from 'lucide-react/types';
+```
+
+这些单图标入口仅支持 ES Modules。Node.js 20.19 和 22.12 或更新版本可使用 `require()`；较旧版本请改为从包的根入口导入图标。
+
 ## 属性
 
 要自定义图标的外观，你可以使用以下属性：

@@ -1,84 +1,133 @@
 ---
 applyTo: "icons/*.json"
 ---
-# JSON 元数据描述符
+# JSON Metadata Descriptor
 
-JSON 元数据描述符的 schema 可在 `icon.schema.json` 中找到。它定义了与每个图标配套的 JSON 文件的必需属性和可选属性。JSON 元数据描述符应放置在图标 SVG 文件所在的同一目录中，并且应与 SVG 文件同名，但使用 `.json` 扩展名。例如，如果 SVG 文件名为 `home.svg`，则 JSON 元数据描述符应命名为 `home.json`。
+The schema for the JSON metadata descriptor can be found in `icon.schema.json`. It defines the required and optional properties for the JSON files that accompany each icon. The JSON metadata descriptor should be placed in the same directory as the SVG file of the icon and should have the same name as the SVG file, but with a `.json` extension. For example, if the SVG file is named `home.svg`, the JSON metadata descriptor should be named `home.json`.
 
-## 贡献者
+## Contributors
 
-`contributors` 属性是一个必需的数组，包含创建或为该图标做出贡献的人员的 GitHub 用户名。它用于向贡献者致谢并跟踪图标的历史记录。如果 PR 作者尚未列出，且他们对该图标的 SVG 做出了重大贡献，请将其添加到 `contributors` 数组中。
+The `contributors` property is a required array of GitHub usernames for the people who created or contributed to the icon. It is used to give credit to contributors and to track the icon's history. Add the PR author to the `contributors` array if they are not already listed and they have made a significant contribution to the icon's SVG.
 
-## 标签
+## Tags
 
 The `tags` property is an array of strings that describe the icon and can be used for searching.
 Validate the tags against the `icon.schema.json` to ensure they are correctly formatted and adhere to the defined structure.
 Provide tag suggestions based on the name of the icon and the use cases provided in the PR description. Use the existing tags in the repository as a reference for consistency and to avoid duplicates. Don't suggest words like: 'icon' and preferably use single words. Tags should always be in lowercase, and may also contain spaces (e.g. `magnifying glass`). Don't include the full icon name, its space-separated form, or any individual part of its kebab-case name because those terms are already searchable. For example, don't suggest `mail-search`, `mail search`, `mail`, or `search` for the `mail-search` icon.
 
-## 分类
+## Categories
 
-`categories` 属性是一个字符串数组，用于指定图标所属的分类，例如“devices”、“interface”、“media”等。有关允许值的更多详细信息，请参阅 `icon.schema.json` 中的 `categories` 属性。应根据 PR 描述中提供的使用场景以及仓库中的现有分类选择分类。分类应与图标相关，并帮助用户在搜索特定类型的图标时找到该图标。图标名称不应包含在分类中，因为它已经被指定。请根据图标名称和 PR 描述中提供的使用场景提出分类建议。参考仓库中现有的分类，以保持一致性并避免重复。分类应始终使用小写，且不应包含空格。
+The `categories` property is an array of strings that specify the categories to which the icon belongs, such as "devices", "interface", "media", etc. See the `categories` property in the `icon.schema.json` for more details on the allowed values. The categories should be chosen based on the use cases provided in the PR description and the existing categories in the repository. The categories should be relevant to the icon and should help users find the icon when searching for specific types of icons. The name of icon should not be included in the categories, as it is already specified. Suggest categories based on the name of the icon and the use cases provided in the PR description. Use the existing categories in the repository as a reference for consistency and to avoid duplicates. Categories should always be in lowercase and should not contain spaces.
 
-## 使用场景
+## Extending metadata from other icons
 
-`use-cases` 属性是一个字符串数组，用于描述图标适用的具体场景。每个使用场景都应简洁明了地传达图标适用的上下文。参考仓库中现有的使用场景，以保持一致性并避免重复。
+Some icons are variants of another icon (for example `alarm-clock-minus` is an `alarm-clock`). Instead of repeating the same values, an icon can inherit `tags`, `categories`, or `contributors` from its **base icon** using an inline `"$extends:<icon-name>"` marker placed directly inside the relevant array. At build time each marker is replaced, in place, with the referenced icon's fully resolved values for that same field.
 
-### 编写图标使用场景
+```jsonc
+{
+  "tags": ["$extends:alarm-clock", "$group:minus"],
+  "categories": ["$extends:alarm-clock"],
+  "contributors": ["$extends:alarm-clock", "some-user"]
+}
+```
 
-使用场景应告诉读者**图标将在真实界面中何处以及为何使用**。每个条目都应让从未见过该图标的人了解它的用途。
+When checking or adding a `$extends:` marker:
 
-### 格式
+- A marker must be exactly `"$extends:"` followed by the name of an **existing** icon — one that has its own `icons/<icon-name>.json` and `icons/<icon-name>.svg`. The icon name is the file name without the `.json` extension, written in lowercase kebab-case. Referencing a non-existent icon is invalid.
+- Markers are only supported inside the `tags`, `categories`, and `contributors` arrays. They are not a separate property.
+- Only use `$extends:` for the icon's **base icon** — the thing the icon _is_ (`file-plus` is a `file`, `alarm-clock-minus` is an `alarm-clock`). Never extend a **modifier** icon such as `plus`, `minus`, `x` or `check`: their tags describe that glyph on its own (`minus` carries `divider`, `hr`, `markdown`, `separator`…), which makes no sense on an alarm clock. Use a group for the modifier's meaning instead.
+- An icon may not extend itself, and circular chains (A extends B, B extends A) are not allowed.
+- Ordering is preserved: inherited values are inserted at the marker's position, so place `$extends:` markers where the inherited values should appear (conventionally first, before the icon's own literal values).
+- Run `pnpm checkIcons` to validate all references. It fails on missing icons, self-references, and circular dependencies. Do not assume a marker is valid without confirming the target icon exists.
 
-- 将每个使用场景写成短语，而不是句子。以现在分词动词开头：*表示……*、*指示……*、*标记……*、*显示……*、*确认……*、*切换……*、*分类……*、*搜索……*。
-- 控制在大约 4–12 个词，每个条目表达一个明确的想法。
-- 不要添加结尾句号，也不要添加开头的项目符号、编号或连字符（周围的格式会提供这些内容）。
-- 每个图标至少提供 1 个使用场景，并按最常见的场景优先排序。若有多个彼此不同且有用的场景，可以超过 4 个。与其提供许多薄弱或重复的条目，不如优先提供较少但有力的条目。
+## Groups
 
-### 语气
+`$extends:` says what an icon **is**; `$group:` says what its variant suffix (`-plus`, `-check`, `-off`…) **means**. A `"$group:<group-name>"` marker inside `tags` is replaced, in place, with the tags of `groups/<group-name>.json`.
 
-- 从界面的角度描述功能：“指示低电量”——而不是请求者的故事（“我需要一个显示……的图标”）。
-- 在有帮助时说明具体上下文：*在智能家居应用中*、*在导航应用中*、*在文本编辑器中*、*在地图上*。上下文能让使用场景自成一体、易于理解。
-- 保持中立和客观。不要使用第一人称、营销形容词（“完美适用于”、“非常适合”、“美观”）或表情符号。
+```jsonc
+{
+  // `file-minus` is a file, and its `-minus` variant means "remove"
+  "tags": ["$extends:file", "$group:minus", "erase"],
+  "categories": ["$extends:file"]
+}
+```
 
-### 应排除的内容
+When checking or adding a `$group:` marker:
 
-- **请求者的个人叙述。** “我正在构建一个 SvelteKit UI，需要……”→ 删除这些背景，只保留功能。
-- **对其他 issue、PR 或图标 ID 的引用。** 不要写“如 #1865 中所述”、“与 git-branch-plus 互补”、“同上”、“参见 #2055”。
-- **设计或实现相关的讨论。** Bezier 偏移、网格对齐、路径切割、“该图标运行得非常完美”——这些都不是使用场景。
-- **重复图标名称。** 对于 `microchip`，“microchip”不是使用场景；应描述其所代表的内容（“表示处理器、芯片或嵌入式硬件”）。
-- **链接、图片标签、表情符号和 Markdown 产物。**
-- **元评论。** “不言自明”、“大量使用场景”、“显而易见 :)”。
+- A marker must be exactly `"$group:"` followed by the name of an existing file in `groups/`, without the `.json` extension, in lowercase kebab-case.
+- `$group:` is allowed **only** inside `tags`. It is not valid in `categories` or `contributors`.
+- Groups are named after the variant suffix: `file-plus` uses `$group:plus`, `file-question-mark` uses `$group:question-mark`. Suffixes with the same meaning share a group: `mail-exclamation-point` uses `$group:exclamation-mark`, and every currency suffix uses `$group:currency`.
+- The same suffix can mean different things in different contexts — `-off` means "disabled" on `wifi-off` but "allergy free" on `wheat-off` — so only use the group when the icon carries the group's meaning, and keep context-specific tags as literals.
+- Do not repeat a tag a group already provides, and do not use the same group twice in one array.
+- Conventional order: the `$extends:` base icon first, then `$group:` markers, then the icon's own literal tags.
+- Run `pnpm checkIcons` to validate the markers. It fails on unknown groups, on `$group:` outside `tags`, and on literals that a marker already provides.
 
-### 交叉污染
+## There should not be duplicates
 
-当一个请求同时涉及多个图标时，只将每个使用场景分配给实际描述它的图标。带有另一个图标名称前缀的项目符号属于那个图标，而不是当前图标。不要让 `briefcase-medical` 的含义混入 `briefcase-business`。
+Never list a value that a `$extends:` or `$group:` marker already provides. Before adding a literal `tag`, `category`, or `contributor`, look at the referenced icon's metadata: if that icon already contains the value, do not also add it as a literal entry in the same array — the inherited value already covers it. For example, if `alarm-clock` already has the tag `morning`, an icon that uses `"$extends:alarm-clock"` in its `tags` must **not** also list `"morning"`.
 
-### 变体
+Likewise, do not reference the same icon more than once in a single field (no duplicate `$extends:` markers), and do not repeat literal values. The `tags`, `categories`, and `contributors` arrays must contain only unique entries (`uniqueItems` in `icon.schema.json`), and after extends resolution the final arrays must not contain any duplicates.
 
-相关图标应使用**针对变体的**措辞，而不是共用一段描述。`battery-low` → “指示低电量”；`battery-full` → “……满电……”。`square-arrow-right-enter` → 登录／加入；`-exit` → 登出／导出。不要直接复制同一系列中其他图标的相同描述。
+## Use Cases
 
-### 从源材料中提取
+The `use-cases` property is an array of strings that describe the specific scenarios in which the icon would be used. Each use case should be concise and clearly convey the context in which the icon is applicable. Use the existing use cases in the repository as a reference for consistency and to avoid duplicates.
 
-从描述、评论或链接的 issue 中提取信息时：
+### Writing icon use-cases
 
-- 优先使用**明确说明的用途**，而不是背景故事。提取功能，舍弃轶事。
-- 如果来源列出了确实不同的用途，将其保留为单独的条目；如果只是用五种方式重复同一个想法，则合并为一个。
-- 将介绍行与其项目符号合并（“用于表示：”＋“陶器”→“表示陶器”）。
-- 如果唯一的信息只是噪音（重复名称、链接、“谢谢！”），则不要凭空编造使用场景，让图标不包含使用场景。
-- 绝不要编造没有得到图标含义或来源支持的使用场景。
+A use-case tells a reader **where and why an icon would be used in a real interface**. Each entry should let someone who has never seen the icon understand what it's for.
 
-## 示例
+### Format
 
-良好：
+- Write each use-case as a short phrase, not a sentence. Start with a present participle verb: *Representing…*, *Indicating…*, *Marking…*, *Showing…*, *Confirming…*, *Toggling…*, *Categorizing…*, *Searching…*.
+- Keep it to roughly 4–12 words. One clear idea per entry.
+- No trailing period. No leading bullet, number, or dash (the surrounding format supplies that).
+- Give each icon 1 or more use-cases, ordered most-common first. More than 4 use-cases are allowed when they are distinct and useful. Prefer fewer strong entries over many weak or repetitive ones.
 
-- `ambulance` → “在导航应用中指引用户前往附近的急救服务”
-- `calendar-sync` → “表示重复事件、促销或限时优惠”
-- `globe-x` → “指示设备或应用处于离线或无法访问状态”
-- `heading-2` → “在文本编辑器中应用二级标题”
+### Voice
 
-较差 → 修正后：
+- Write from the interface's perspective, describing the function: "Indicating a low battery charge level" — not the requester's story ("I need an icon that shows…").
+- Name the concrete context where useful: *in smart home apps*, *in navigation apps*, *in text editors*, *on maps*. Context is what makes a use-case self-explanatory.
+- Be neutral and factual. No first person, no marketing adjectives ("perfect for", "ideal", "beautiful"), no emoji.
 
-- ~~“我需要一个防火墙图标 :-)”~~ → “在网络安全平台上表示防火墙和防火墙规则”
-- ~~“如上”~~ → “表示交易、协议或合作关系”
-- ~~“microchip”~~ → “表示处理器、芯片或嵌入式硬件”
-- ~~“与其他货币符号的使用场景相同，但土耳其里拉除外”~~ → “显示土耳其里拉的价格或金额”
+### What to exclude
+
+- **The requester's personal narrative.** "I'm building a SvelteKit UI and need…" → drop the framing, keep the function.
+- **References to other issues, PRs, or icons by ID.** No "As provided in #1865", "complementary to git-branch-plus", "same as above", "see #2055".
+- **Design/implementation chatter.** Bezier offsets, grid alignment, path cuts, "the icon works perfectly" — none of that is a use-case.
+- **Restating the icon's name.** For `microchip`, "microchip" is not a use-case; describe what it represents ("Representing processors, chips, or embedded hardware").
+- **Links, image tags, emoji, and markdown artifacts.**
+- **Meta-commentary.** "Self-explanatory", "lots and lots of use cases", "obvious :)".
+
+### Cross-contamination
+
+When a request covers several icons at once, assign each use-case only to the icon it actually describes. A bullet prefixed with another icon's name belongs to that icon, not this one. Don't let `briefcase-medical`'s meanings leak into `briefcase-business`.
+
+### Variants
+
+Related icons should get **variant-specific** wording, not one shared blurb. `battery-low` → "Indicating a low battery charge level"; `battery-full` → "…full…". `square-arrow-right-enter` → sign in / join; `-exit` → sign out / export. Resist copying the same line across a family.
+
+### Deriving from source material
+
+When mining descriptions, comments, or linked issues:
+
+- Prefer the **stated purpose** over the backstory. Extract the function, discard the anecdote.
+- If a source lists genuinely distinct uses, keep them as separate entries; if it repeats one idea five ways, collapse to one.
+- Merge an intro line with its bullets ("To represent:" + "pottery" → "Representing pottery").
+- If the only signal is noise (a name restatement, a link, "thanks!"), leave the icon without a use-case rather than inventing one.
+- Never fabricate a use-case that isn't supported by the icon's meaning or the source.
+
+## Examples
+
+Good:
+
+- `ambulance` → "Directing users to nearby emergency services in navigation apps"
+- `calendar-sync` → "Representing recurring events, promotions, or limited-time offers"
+- `globe-x` → "Indicating a device or application is offline or unreachable"
+- `heading-2` → "Applying a level-2 heading in text editors"
+
+Poor → fixed:
+
+- ~~"I need a firewall icon :-)"~~ → "Representing firewalls and firewall rules on cybersecurity platforms"
+- ~~"As above"~~ → "Signifying a deal, agreement, or partnership"
+- ~~"microchip"~~ → "Representing processors, chips, or embedded hardware"
+- ~~"Same use cases as the other currency symbols, except Turkish lira"~~ → "Displaying prices or amounts in Turkish lira"

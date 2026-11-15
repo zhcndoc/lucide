@@ -21,7 +21,7 @@ JSON 文件必须使用与 SVG 文件相同的基本名称：
 
 - `home.svg` -> `home.json`
 - `arrow-up.svg` -> `arrow-up.json`
-- `square-parking.svg` -> `square-parking.json`
+- `square-letter-p.svg` -> `square-letter-p.json`
 
 所有图标元数据文件都必须通过 `icon.schema.json` 的验证。
 
@@ -135,6 +135,36 @@ JSON 文件必须使用与 SVG 文件相同的基本名称：
 
 当一个请求涉及多个图标时，只将每个使用场景分配给它所描述的图标。不要将元数据复制到它未描述的图标上。
 
+## 重用元数据：`$extends:` 和 `$group:`
+
+变体图标不必重复与其他图标相同的元数据。构建时会解析两个内联标记，并在原位置替换为对应的值。
+
+`$extends:<icon-name>` 表示“基于什么”。它会引入变体所基于图标中已解析的 `tags`、`categories` 或 `contributors`。
+
+`$group:<group-name>` 表示“执行什么操作”。它会引入 `groups/<group-name>.json` 中的标签。这些标签是可复用的小集合，用于描述图标变体的后缀（`plus`、`minus`、`check`、`off` 等）；该标记只能用于 `tags`。
+
+`file-minus` 是一个文件图标，其 `-minus` 变体表示“移除”：
+
+```json
+{
+  "tags": ["$extends:file", "$group:minus", "erase"],
+  "categories": ["$extends:file"]
+}
+```
+
+解析后：
+
+```json
+{
+  "tags": ["document", "remove", "delete", "erase"],
+  "categories": ["files"]
+}
+```
+
+`$extends:` 只用于**基础图标**，也就是说明这个图标本身是什么。不要扩展 `plus`、`minus`、`x` 或 `check` 等修饰图标：这些图标的标签描述的是它们自身的图形（例如 `minus` 带有 `divider`、`hr`、`markdown` 等标签），用于文件或闹钟就不合适。此时应使用变体对应的分组（如 `$group:minus`），其中的标签描述的是变体的含义，而不是图形本身。
+
+条目顺序应为：基础图标、分组、图标自身的标签。不要重复标记已经提供的值，否则 `pnpm checkIcons` 会失败。
+
 ## 别名
 
 某些图标可以包含可选的 `aliases` 字段，用于表示其他名称。
@@ -147,6 +177,12 @@ JSON 文件必须使用与 SVG 文件相同的基本名称：
 
 ```sh
 pnpm run lint:json:icons
+```
+
+`$extends:`、`$group:` 标记及分组文件也会单独检查：
+
+```sh
+pnpm checkIcons
 ```
 
 你也可以使用 Prettier 格式化已更改的文件：
@@ -166,4 +202,5 @@ pnpm exec prettier "icons/*.json" --check
 - 标签为小写，并且有助于搜索。
 - 分类符合 `icon.schema.json` 的要求。
 - 元数据针对具体图标及其变体。
-- `pnpm run lint:json:icons` 已通过。
+- 重用元数据时，基础图标使用 `$extends:`，修饰含义使用 `$group:`，且不重复已有值。
+- `pnpm run lint:json:icons` 和 `pnpm checkIcons` 均已通过。

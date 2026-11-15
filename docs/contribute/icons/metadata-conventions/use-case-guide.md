@@ -3,7 +3,7 @@ description: 了解为 Lucide 图标编写用例的最佳实践
 ---
 
 <script setup>
-import { batteryLow, creditCard, crop, handshake, heading2, microchip, search, squareParking, triangleAlert, wifiOff } from '~/.vitepress/data/iconNodes';
+import { batteryLow, creditCard, crop, handshake, heading2, microchip, search, squareLetterP, triangleExclamationPoint, wifiOff } from '~/.vitepress/data/iconNodes';
 import LucideIcon from '~/.vitepress/theme/components/base/LucideIcon.vue';
 </script>
 
@@ -55,10 +55,10 @@ import LucideIcon from '~/.vitepress/theme/components/base/LucideIcon.vue';
 每个条目都应涵盖一个明确的想法。将不同含义拆分为单独的条目。
 
 :::: example
-::: do <LucideIcon name="square-parking" :iconNode="squareParking" /> 在地图上标记停车位置
+::: do <LucideIcon name="square-letter-p" :iconNode="squareLetterP" /> 在地图上标记停车位置
 这句话**简短、清晰，并聚焦于一个界面功能**。
 :::
-::: dont <LucideIcon name="square-parking" :iconNode="squareParking" /> 标记停车、交通、地图、汽车、车库和地点
+::: dont <LucideIcon name="square-letter-p" :iconNode="squareLetterP" /> 标记停车、交通、地图、汽车、车库和地点
 这读起来像一个**标签列表**，并且**混合了多个想法**。
 :::
 ::::
@@ -120,10 +120,10 @@ import LucideIcon from '~/.vitepress/theme/components/base/LucideIcon.vue';
 仅使用纯文本。格式应放在文档中，而不是元数据值中。
 
 :::: example
-::: do <LucideIcon name="triangle-alert" :iconNode="triangleAlert" /> 警告用户某项操作具有破坏性
+::: do <LucideIcon name="triangle-exclamation-point" :iconNode="triangleExclamationPoint" /> 警告用户某项操作具有破坏性
 这适用于搜索、生成的页面以及其他使用元数据的地方。
 :::
-::: dont <LucideIcon name="triangle-alert" :iconNode="triangleAlert" /> <span>**警告**用户某项操作具有破坏性 ⚠️</span>
+::: dont <LucideIcon name="triangle-exclamation-point" :iconNode="triangleExclamationPoint" /> <span>**警告**用户某项操作具有破坏性 ⚠️</span>
 Markdown 和表情符号可能会**显示在生成的界面中**，使元数据**更难复用**。
 :::
 ::::

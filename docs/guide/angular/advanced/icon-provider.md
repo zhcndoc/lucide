@@ -31,7 +31,7 @@ export const appConfig: ApplicationConfig = {
 
 ```html [app.html]
 <svg lucideIcon="square-check"></svg>
-<svg lucideIcon="circle-alert"></svg>
+<svg lucideIcon="circle-exclamation-point"></svg>
 ```
 
 ## 名称如何解析

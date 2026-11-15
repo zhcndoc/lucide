@@ -2,7 +2,6 @@
 title: 介绍
 description: Lucide 简介，这是一个开源图标库，为数字和非数字项目提供 1600+ 矢量 (svg) 文件用于显示图标和符号。
 nextPage:
-  - comparison
   - installation
 ---
 

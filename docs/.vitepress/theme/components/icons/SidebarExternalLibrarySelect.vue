@@ -3,6 +3,8 @@ import Checkbox from '../base/Checkbox.vue';
 import SidebarTitle from './SidebarTitle.vue';
 import { useExternalLibs } from '../../composables/useExternalLibs';
 import { ExternalLibs } from '../../types';
+import { watch } from 'vue';
+import { track } from '../../utils/openpanel';
 
 interface ExternalLibrary {
   name: string;
@@ -17,6 +19,15 @@ const externalLibraries: ExternalLibrary[] = [
 ];
 
 const { selectedLibs } = useExternalLibs();
+
+watch(selectedLibs, (libs, previousLibs) => {
+  for (const { value } of externalLibraries) {
+    const enabled = libs.includes(value);
+    if (enabled !== previousLibs.includes(value)) {
+      track('icons_external_lib_toggle', { library: value, enabled });
+    }
+  }
+});
 </script>
 
 <template>

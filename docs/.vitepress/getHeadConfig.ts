@@ -13,14 +13,7 @@ const getHeadConfig = ({
     'link',
     {
       rel: 'preconnect',
-      href: 'https://www.zhcndoc.com',
-    },
-  ],
-  [
-    'script',
-    {
-      src: 'https://www.zhcndoc.com/js/common.js',
-      async: '',
+      href: 'https://insights.lucide.dev',
     },
   ],
   [
